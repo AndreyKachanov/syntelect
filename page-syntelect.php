@@ -1,12 +1,10 @@
-
 <?php
 /**
  * Template name: Syntelect
 */
 get_header('syntelect'); ?>
-
-
 			<div style="border: 1px solid red;" class="container">
+			<p class="test">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Безорфографичный, переулка ручеек рыбными! Напоивший меня приставка он его эта.</p>
 			<?php
 			while ( have_posts() ) : the_post();
 

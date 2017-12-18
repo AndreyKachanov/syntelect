@@ -77,8 +77,8 @@ gulp.task('grid', function() {
 	    offset: '30px', /* gutter width px || % */
 	    mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
 	    container: {
-	        maxWidth: '1920px', /* max-width оn very large screen */
-	        fields: '30px' /* side fields */
+	        maxWidth: '1134px', /* max-width оn very large screen */
+	        fields: '15px' /* side fields */
 	    },
 	    breakPoints: {
 	        lg: {

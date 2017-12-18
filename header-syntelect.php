@@ -1,15 +1,3 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package syntelect
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -21,9 +9,69 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<div id="my-page">
+		<div id="my-header">
+			<header class="site-header">
+				<div class="wrapper">
+					<div class="menu-block">
+ 						<h1 class="logo">
+						    <a href="/"
+						    	<? if (get_field('logo')['image']) echo "style='background: url(" . get_field('logo')['image'] . ") no-repeat; width: " . getimagesize(get_field('logo')['image'])[0] .  "px; height: " . getimagesize(get_field('logo')['image'])[1] . "px;'"?> 
+						    >
+						    	<?=(get_field('logo')['title'] ?? '')?>
+						    </a>
+						</h1>						
+ 						<div class="menu">
+							<? if($menu_items = get_field('items')): ?>
+								<nav>
+									<ul>
+										<li class="home">
+											<a class="fa fa-home active" href="/"></a>
+										</li>
+										<? foreach($menu_items as $item): ?>
+											<li class="item">
+												<a href="#<?=$item['block_name']?>">
+													<?=$item['item_name']?>
+												</a>
+											</li>
+										<? endforeach; ?>
+									</ul>	
+								</nav>
+							<? endif; ?>							
+						</div> 
+ 						<div class="btn-block">
+							<div class="btn btn-light"><?=(get_field('contact_us_now') ?? '')?></div>							
+						</div>
+															
+					</div>					
+				</div>
+				<div class="slider-block">
+					<div class="wrapper">
+						<div class="slider"> ...our manufacturing capabilities limited by yours ideas...</div>
+					</div>
+				</div>
+			</header>			
+		</div>
+		<div id="my-content">
+			<div id="about"></div>
+			<div id="why"></div>
+			<div id="services"></div>
+			<div id="process"></div>
+					
+		</div>		
+		<div id="my-footer">
+			<div id="contacts"></div>			
+		</div>
+	</div>
 
-	<p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptatum adipisci quia excepturi, odio eos odit eum sunt praesentium sed!</p>
-	
+
+
+
+
+<!-- 	<ul>
+		<li><a class="fa fa-home active" href="/"></a></li>
+	</ul> -->
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'syntelect' ); ?></a>
 

@@ -2,13 +2,175 @@
 @import "libs"
 @import "vars"
 
++reset()
+
+.wrapper
+	+wrapper()
+
 body
-	background-color: #ccc
+	min-width: 320px
+	background-color: #fff
+
+h1, .h1, h2, .h2, h3, .h3
+	text-align: center
+	color: $accent
+	text-align: center
+
+h2, .h2
+	font-size: 35px
+	margin: 20px 0
+
+.btn  
+	display: inline-block
+	cursor: pointer
+	border-radius: 25px
+	text-align: center
+	font-family: "Opensans", sans-serif
+	font-size: 15px
+	line-height: 20px
+	padding: 10.5px 25.5px 10.5px 25.5px
+	&-light  
+		color: #1100C2
+		border: 2px solid #1100C2
+		&::before
+			content: "\f003"
+			color: #1100C2
+			font-family: "FontAwesome"
+			font-size: 18px
+			line-height: 18px
+			margin-right: 10px
+		&:hover
+			color: #fff
+			border-color: #fff
+			background-color: #1100C2
+			&::before
+				color: #fff			
+    
+       
+.site-header       
+	.wrapper
+		.menu-block
+			+row-flex()
+
+
+			justify-content: space-between
+			align-items: center
+			min-height: 110px
+			background-color: #FFF
+			// box-shadow: 0px 5px 20px 0 rgba(75,101,129,0.4)
+     
+			// border: 1px solid #000
+			
+			>*
+				// border: 1px solid #000
+			// .test1
+			// 	+size(1)
+			.logo
+				+size(2)
+				margin-left: 3px
+				margin-top: -7px 
+				// border: 1px solid red 
+				a
+					display: block
+					text-indent: -9999px
+			.menu
+				+size(5)
+				margin-left: -104px
+				margin-top: 12px
+				nav 
+					ul
+						display: flex
+						flex-wrap: nowrap
+
+						li:nth-of-type(2)
+							a::before
+								display: none
+
+
+						li.home
+							position: relative
+							top: -4px
+							right: 18px
+							a
+								font-size: 20px
+								line-height: 17px
+								color: #1100C2							
+								text-decoration: none
+								&:hover
+									color: #21184C
+
+
+						
+						li.item //li.item - пункты меню
+							position: relative
+
+							&:hover
+								&::after
+									content: ''
+									position: absolute
+									bottom: 0
+									right: 6%
+									width: 85%
+									height: 2px
+									background-color: #1000C2
+
+								a
+									color: #21184C
+									&::before
+										background-color: #1000C2				
+							a
+								display: block
+								position: relative
+								font-size: 14px
+								line-height: 17px
+								letter-spacing: 0.6px
+								text-transform: uppercase
+								color: #1100C2
+								font-family: $default-font
+								font-weight: normal
+								text-decoration: none
+								padding-right: 10px
+								padding-left: 10px
+								padding-bottom: 8px
+								white-space: nowrap
+								&::before
+									content: ''
+									position: absolute
+									left: 0px
+									top: 5%
+									height: 50%
+									width: 1px
+									background-color: #A9ADB9
+	 
+
+			.btn-block
+				+size(3)
+				margin-right: 6px
+				margin-bottom: 3px
+ 
+
+
+	.slider-block
+		border: 1px solid red
+		max-width: 1920px
+		// padding: 0 15px
+		margin: 0px auto 50px auto
+		.wrapper
+			border: 1px solid #000			
+
+
+			
+
+// .about-us
+// 	background: url('../img/bg_foto_splash.png') no-repeat top right
 
 .test
 	color: $accent
-	// font-family: $default-font
-	font-family: "Raleway", sans-serif
-	font-size: 16px
-	line-height: 19px;	
-	font-weight: 600
+	text-transform: uppercase
+	font-family: $default-font
+	// font-family: "Raleway", sans-serif
+	font-size: 14px
+	line-height: 17px
+
+
+
