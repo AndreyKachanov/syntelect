@@ -29,6 +29,9 @@ h2, .h2
 	font-size: 15px
 	line-height: 20px
 	padding: 10.5px 25.5px 10.5px 25.5px
+	text-decoration: none
+	&:visited
+		color:#1100C2
 	&-light  
 		color: #1100C2
 		border: 2px solid #1100C2
@@ -52,19 +55,15 @@ h2, .h2
 		.menu-block
 			+row-flex()
 
-
 			justify-content: space-between
 			align-items: center
 			min-height: 110px
 			background-color: #FFF
 			// box-shadow: 0px 5px 20px 0 rgba(75,101,129,0.4)
-     
 			// border: 1px solid #000
-			
 			>*
 				// border: 1px solid #000
-			// .test1
-			// 	+size(1)
+
 			.logo
 				+size(2)
 				margin-left: 3px
@@ -86,8 +85,7 @@ h2, .h2
 							a::before
 								display: none
 
-
-						li.home
+						li.home //кнопка Home
 							position: relative
 							top: -4px
 							right: 18px
@@ -125,7 +123,7 @@ h2, .h2
 								line-height: 17px
 								letter-spacing: 0.6px
 								text-transform: uppercase
-								color: #1100C2
+								color: #08005A
 								font-family: $default-font
 								font-weight: normal
 								text-decoration: none
@@ -147,16 +145,68 @@ h2, .h2
 				+size(3)
 				margin-right: 6px
 				margin-bottom: 3px
- 
 
-
-	.slider-block
+	.slider-full
 		border: 1px solid red
+		// width: 100vw
 		max-width: 1920px
+		min-height: 757px
+		background-repeat: no-repeat
+		background-position: top right
+		background-size: 913px 757px
+		height: 100vh
+		// background: url('../img/bg_foto_splash.png') no-repeat top right
+		// background-size: cover
+  //  		background-position: center		
+		// background-size: contain	
 		// padding: 0 15px
 		margin: 0px auto 50px auto
 		.wrapper
-			border: 1px solid #000			
+			border: 1px solid red
+			.slider-block
+				+row-flex()
+				.slider
+					+size(6)
+					border: 1px solid green
+					min-height: 500px
+
+					.quotes
+						position: relative
+						margin: 50px auto 0px 
+						max-width: 500px
+
+						.quote-dots
+							margin: 0 auto
+							text-align: center
+
+							.dot-fill
+								background-color: #000
+
+							.nav-dot
+								display: inline-block
+								height: 10px
+								width: 10px
+								border-radius: 50px
+								border: 1px solid #000
+								margin-right: 10px
+								cursor: pointer
+								&:last-of-type
+									margin: 0
+							
+						.quote-contain
+							.show
+								opacity: 1 !important
+								visibility: visible !important
+
+							.quote-rotate
+								position: absolute
+								top: 20px
+								opacity: 0
+								overflow: visible
+								visibility: hidden
+								transition: opacity, 0.3s, ease
+								padding-bottom: 10px
+													 							
 
 
 			

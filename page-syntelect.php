@@ -17,17 +17,17 @@ get_header('syntelect'); ?>
 			<p style="font-weight: bold;"><?=get_field('text')?></p>
 			<hr>
 			<?php
-				if (get_field('top_slider')) {
+				// if (get_field('top_slider')) {
 
-					$slides = get_field("top_slider");
+				// 	$slides = get_field("top_slider");
 					
-					foreach ($slides as $slide) {
-						echo "<p>";
-						echo $slide['url'];
-						echo $slide['caption'];
-						echo "</p>";
-					}
-				}
+				// 	foreach ($slides as $slide) {
+				// 		echo "<p>";
+				// 		echo $slide['url'];
+				// 		echo $slide['caption'];
+				// 		echo "</p>";
+				// 	}
+				// }
 
 			?>
 			</div>

@@ -16,13 +16,13 @@
 					<div class="menu-block">
  						<h1 class="logo">
 						    <a href="/"
-						    	<? if (get_field('logo')['image']) echo "style='background: url(" . get_field('logo')['image'] . ") no-repeat; width: " . getimagesize(get_field('logo')['image'])[0] .  "px; height: " . getimagesize(get_field('logo')['image'])[1] . "px;'"?> 
+						    	<?php if (get_field('logo')['image']) echo "style='background: url(" . get_field('logo')['image'] . ") no-repeat; width: " . getimagesize(get_field('logo')['image'])[0] .  "px; height: " . getimagesize(get_field('logo')['image'])[1] . "px;'"?> 
 						    >
 						    	<?=(get_field('logo')['title'] ?? '')?>
 						    </a>
 						</h1>						
  						<div class="menu">
-							<? if($menu_items = get_field('items')): ?>
+							<? if ($menu_items = get_field('items')): ?>
 								<nav>
 									<ul>
 										<li class="home">
@@ -40,14 +40,35 @@
 							<? endif; ?>							
 						</div> 
  						<div class="btn-block">
-							<div class="btn btn-light"><?=(get_field('contact_us_now') ?? '')?></div>							
+							<a href="#contacts" class="btn btn-light">
+								<?=(get_field('contact_us_now') ?? '')?>									
+							</a>							
 						</div>
-															
+														
 					</div>					
 				</div>
-				<div class="slider-block">
+
+				<div class="slider-full" 
+					<?php if (get_field('slider_repeater')[0]['slider_group']['image']) echo "style='background-image: url(" . get_field('slider_repeater')[0]['slider_group']['image'] . ");'"; 
+					?> 
+				>
 					<div class="wrapper">
-						<div class="slider"> ...our manufacturing capabilities limited by yours ideas...</div>
+						<div class="slider-block">
+							<div class="slider">
+								<? if ($sliders = get_field('slider_repeater')): ?>
+								    <div class="quotes">
+									    <div class="quote-dots"></div>
+										    <div class="quote-contain">																
+										 		<? foreach($sliders as $slide): ?>
+										 			<div class="quote-rotate">
+										 				<?=($slide['slider_group']['text'] ?? '')?>
+										 			</div>
+										 		<? endforeach; ?>
+							 				</div>
+							 		</div>			
+							 	<? endif; ?>													
+							</div>
+						</div>
 					</div>
 				</div>
 			</header>			
