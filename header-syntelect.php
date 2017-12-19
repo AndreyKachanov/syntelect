@@ -4,6 +4,14 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	
+	<? if(!get_img_path()): ?>
+		<script> glob_slides_img = ["<?=get_template_directory_uri()?>/img/bg_foto_splash.png"]; glob_effect = "hide";</script>
+	<? elseif(count(get_img_path()) == 1): ?>
+		<script> glob_slides_img = <?=json_encode(get_img_path()); ?>; glob_effect = "hide";</script>		
+	<? else: ?>	
+		<script> glob_slides_img = <?=json_encode(get_img_path()); ?>; glob_effect = "clip";</script>
+	<? endif; ?>
 
 	<?php wp_head(); ?>
 </head>
@@ -51,13 +59,14 @@
 					</div>
 				</div>
 				<div id="change-bg" class="slider-full" 
-					<?php if (get_field('slider_repeater')[0]['slider_group']['image']) echo "style='background-image: url(" . get_field('slider_repeater')[0]['slider_group']['image'] . ");'"; 
+					<?php //if (get_field('slider_repeater')[0]['slider_group']['image']) echo "style='background-image: url(" . get_field('slider_repeater')[0]['slider_group']['image'] . ");'"; 
 					?> 
 				>
 					<div class="wrapper">
 						<div class="slider-block">
 							<div class="slider">
 								<? if ($sliders = get_field('slider_repeater')): ?>
+									<?php  ?>
 									    <div class="quotes">
 										    <div class="quote-dots"></div>
 											    <div class="quote-contain">																

@@ -173,3 +173,22 @@ function syntelect_js() {
 //         $scripts->registered['jquery']->deps = array_diff( $scripts->registered['jquery']->deps, array( 'jquery-migrate' ) );
 //     }
 // } );
+
+
+function get_img_path() {
+	$img_path = [];
+
+	if (!$sliders = get_field('slider_repeater'))
+		return false;
+
+	foreach ($sliders as $slide) 
+		$img_path[] = ($slide['slider_group']['image'] ?? '');
+
+	// var_dump($img_path);
+	// die();
+
+	if (!$img_path)
+		return false;
+
+	return $img_path;	
+}

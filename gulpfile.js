@@ -22,13 +22,14 @@ gulp.task('common-js', function() {
 		'js/common.js',
 		])
 	.pipe(concat('common.min.js'))
-	.pipe(uglify())
+	// .pipe(uglify())
 	.pipe(gulp.dest('js/'));
 });
 
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		// 'libs/jquery/dist/jquery.min.js',
+		'libs/jquery-bgswitcher/jquery.bgswitcher.js',
 		'js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

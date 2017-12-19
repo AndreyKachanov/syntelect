@@ -1,0 +1,15 @@
+{
+  "name": "jquery-bgswitcher",
+  "homepage": "https://github.com/rewish/jquery-bgswitcher",
+  "version": "0.4.3",
+  "_release": "0.4.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.3",
+    "commit": "8d31c4254e3ef55244010f7f1f588b5704de1255"
+  },
+  "_source": "https://github.com/rewish/jquery-bgswitcher.git",
+  "_target": "^0.4.3",
+  "_originalSource": "https://github.com/rewish/jquery-bgswitcher.git",
+  "_direct": true
+}
