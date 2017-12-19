@@ -2301,6 +2301,19 @@ img {
       padding-left: 15px;
       padding-right: 15px; } }
 
+.fixed {
+  position: fixed;
+  top: -150px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  -webkit-transition: 0.4s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
+  -o-transition: 0.4s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
+  transition: 0.4s top cubic-bezier(0.3, 0.73, 0.3, 0.74); }
+
+.slideDown {
+  top: 0 !important; }
+
 body {
   min-width: 320px;
   background-color: #fff; }
@@ -2323,10 +2336,33 @@ h2, .h2 {
   font-family: "Opensans", sans-serif;
   font-size: 15px;
   line-height: 20px;
-  padding: 10.5px 25.5px 10.5px 25.5px;
+  padding: 10.5px 23.5px 10.5px 23.5px;
   text-decoration: none; }
   .btn:visited {
     color: #1100C2; }
+  .btn-bg {
+    background-color: #1100C2;
+    -webkit-box-shadow: 0 2px 10px 0 #4D5AFF;
+            box-shadow: 0 2px 10px 0 #4D5AFF;
+    color: #fff !important;
+    padding: 12.5px 25.5px; }
+    .btn-bg::before {
+      content: "\f003";
+      color: #fff;
+      font-family: "FontAwesome";
+      font-size: 18px;
+      line-height: 18px;
+      margin-right: 10px; }
+    .btn-bg:hover {
+      color: #1100C2 !important;
+      border-color: #fff;
+      background-color: #fff !important;
+      border: 2px solid #1100C2;
+      -webkit-box-shadow: none !important;
+              box-shadow: none !important;
+      padding: 10.5px 23.5px; }
+      .btn-bg:hover::before {
+        color: #1100C2 !important; }
   .btn-light {
     color: #1100C2;
     border: 2px solid #1100C2; }
@@ -2340,109 +2376,118 @@ h2, .h2 {
     .btn-light:hover {
       color: #fff;
       border-color: #fff;
-      background-color: #1100C2; }
+      background-color: #1100C2;
+      border: 2px solid #1100C2; }
       .btn-light:hover::before {
         color: #fff; }
 
-.site-header .wrapper .menu-block {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+.site-header .menu-full {
+  z-index: 99999999999999999999;
+  max-width: 1920px;
   min-height: 110px;
-  background-color: #FFF; }
-  .site-header .wrapper .menu-block .logo {
-    width: -webkit-calc(16.66667% - 30px);
-    width: calc(16.66667% - 30px);
-    margin-left: 3px;
-    margin-top: -7px; }
-    .site-header .wrapper .menu-block .logo a {
-      display: block;
-      text-indent: -9999px; }
-  .site-header .wrapper .menu-block .menu {
-    width: -webkit-calc(41.66667% - 30px);
-    width: calc(41.66667% - 30px);
-    margin-left: -104px;
-    margin-top: 12px; }
-    .site-header .wrapper .menu-block .menu nav ul {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: nowrap;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap; }
-      .site-header .wrapper .menu-block .menu nav ul li:nth-of-type(2) a::before {
-        display: none; }
-      .site-header .wrapper .menu-block .menu nav ul li.home {
-        position: relative;
-        top: -4px;
-        right: 18px; }
-        .site-header .wrapper .menu-block .menu nav ul li.home a {
-          font-size: 20px;
-          line-height: 17px;
-          color: #1100C2;
-          text-decoration: none; }
-          .site-header .wrapper .menu-block .menu nav ul li.home a:hover {
-            color: #21184C; }
-      .site-header .wrapper .menu-block .menu nav ul li.item {
-        position: relative; }
-        .site-header .wrapper .menu-block .menu nav ul li.item:hover::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 6%;
-          width: 85%;
-          height: 2px;
-          background-color: #1000C2; }
-        .site-header .wrapper .menu-block .menu nav ul li.item:hover a {
-          color: #21184C; }
-          .site-header .wrapper .menu-block .menu nav ul li.item:hover a::before {
-            background-color: #1000C2; }
-        .site-header .wrapper .menu-block .menu nav ul li.item a {
-          display: block;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 20px 0 rgba(75, 101, 129, 0.4);
+          box-shadow: 5px 5px 20px 0 rgba(75, 101, 129, 0.4); }
+  .site-header .menu-full .wrapper .menu-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    z-index: 9999;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 110px;
+    background-color: #FFF; }
+    .site-header .menu-full .wrapper .menu-block .logo {
+      width: -webkit-calc(16.66667% - 30px);
+      width: calc(16.66667% - 30px);
+      margin-left: 3px;
+      margin-top: -7px; }
+      .site-header .menu-full .wrapper .menu-block .logo a {
+        display: block;
+        text-indent: -9999px; }
+    .site-header .menu-full .wrapper .menu-block .menu {
+      width: -webkit-calc(41.66667% - 30px);
+      width: calc(41.66667% - 30px);
+      margin-left: -104px;
+      margin-top: 12px; }
+      .site-header .menu-full .wrapper .menu-block .menu nav ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap; }
+        .site-header .menu-full .wrapper .menu-block .menu nav ul li:nth-of-type(2) a::before {
+          display: none; }
+        .site-header .menu-full .wrapper .menu-block .menu nav ul li.home {
           position: relative;
-          font-size: 14px;
-          line-height: 17px;
-          letter-spacing: 0.6px;
-          text-transform: uppercase;
-          color: #08005A;
-          font-family: "Raleway", sans-serif;
-          font-weight: normal;
-          text-decoration: none;
-          padding-right: 10px;
-          padding-left: 10px;
-          padding-bottom: 8px;
-          white-space: nowrap; }
-          .site-header .wrapper .menu-block .menu nav ul li.item a::before {
+          top: -4px;
+          right: 18px; }
+          .site-header .menu-full .wrapper .menu-block .menu nav ul li.home a {
+            font-size: 20px;
+            line-height: 17px;
+            color: #1100C2;
+            text-decoration: none; }
+            .site-header .menu-full .wrapper .menu-block .menu nav ul li.home a:hover {
+              color: #21184C; }
+        .site-header .menu-full .wrapper .menu-block .menu nav ul li.item {
+          position: relative; }
+          .site-header .menu-full .wrapper .menu-block .menu nav ul li.item:hover::after {
             content: '';
             position: absolute;
-            left: 0px;
-            top: 5%;
-            height: 50%;
-            width: 1px;
-            background-color: #A9ADB9; }
-  .site-header .wrapper .menu-block .btn-block {
-    width: -webkit-calc(25% - 30px);
-    width: calc(25% - 30px);
-    margin-right: 6px;
-    margin-bottom: 3px; }
+            bottom: 0;
+            right: 6%;
+            width: 85%;
+            height: 2px;
+            background-color: #1000C2; }
+          .site-header .menu-full .wrapper .menu-block .menu nav ul li.item:hover a {
+            color: #21184C; }
+            .site-header .menu-full .wrapper .menu-block .menu nav ul li.item:hover a::before {
+              background-color: #1000C2; }
+          .site-header .menu-full .wrapper .menu-block .menu nav ul li.item a {
+            display: block;
+            position: relative;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #08005A;
+            font-family: "Raleway", sans-serif;
+            font-weight: normal;
+            text-decoration: none;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 8px;
+            white-space: nowrap; }
+            .site-header .menu-full .wrapper .menu-block .menu nav ul li.item a::before {
+              content: '';
+              position: absolute;
+              left: 0px;
+              top: 5%;
+              height: 50%;
+              width: 1px;
+              background-color: #A9ADB9; }
+    .site-header .menu-full .wrapper .menu-block .btn-block {
+      width: -webkit-calc(25% - 30px);
+      width: calc(25% - 30px);
+      margin-right: 6px;
+      margin-bottom: 3px; }
 
 .site-header .slider-full {
-  border: 1px solid red;
+  position: relative;
   max-width: 1920px;
   min-height: 757px;
   background-repeat: no-repeat;
@@ -2451,56 +2496,75 @@ h2, .h2 {
           background-size: 913px 757px;
   height: 100vh;
   margin: 0px auto 50px auto; }
-  .site-header .slider-full .wrapper {
-    border: 1px solid red; }
-    .site-header .slider-full .wrapper .slider-block {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-      margin-left: -15px;
-      margin-right: -15px; }
-      .site-header .slider-full .wrapper .slider-block .slider {
-        width: -webkit-calc(50% - 30px);
-        width: calc(50% - 30px);
-        border: 1px solid green;
-        min-height: 500px; }
-        .site-header .slider-full .wrapper .slider-block .slider .quotes {
-          position: relative;
-          margin: 50px auto 0px;
-          max-width: 500px; }
-          .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-dots {
-            margin: 0 auto;
-            text-align: center; }
-            .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-dots .dot-fill {
-              background-color: #000; }
-            .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-dots .nav-dot {
-              display: inline-block;
-              height: 10px;
-              width: 10px;
-              -webkit-border-radius: 50px;
-                      border-radius: 50px;
-              border: 1px solid #000;
-              margin-right: 10px;
-              cursor: pointer; }
-              .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-dots .nav-dot:last-of-type {
-                margin: 0; }
-          .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-contain .show {
-            opacity: 1 !important;
-            visibility: visible !important; }
-          .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-contain .quote-rotate {
-            position: absolute;
-            top: 20px;
-            opacity: 0;
-            overflow: visible;
-            visibility: hidden;
-            -webkit-transition: opacity, 0.3s, ease;
-            -o-transition: opacity, 0.3s, ease;
-            transition: opacity, 0.3s, ease;
-            padding-bottom: 10px; }
+  .site-header .slider-full .wrapper .slider-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .site-header .slider-full .wrapper .slider-block .slider {
+      width: -webkit-calc(50% - 30px);
+      width: calc(50% - 30px);
+      min-height: 100vh;
+      position: relative;
+      height: 100%; }
+      .site-header .slider-full .wrapper .slider-block .slider .quotes {
+        z-index: 99;
+        width: 100%;
+        position: absolute;
+        top: 176px; }
+        .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-dots {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex; }
+          .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-dots .dot-fill {
+            background-color: #CFF1FF !important; }
+          .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-dots .nav-dot {
+            height: 16px;
+            width: 16px;
+            display: inline-block;
+            -webkit-border-radius: 50px;
+                    border-radius: 50px;
+            background-color: rgba(158, 170, 194, 0.5);
+            margin-right: 10px;
+            cursor: pointer; }
+            .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-dots .nav-dot:last-of-type {
+              margin: 0; }
+        .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-contain .show {
+          opacity: 1 !important;
+          visibility: visible !important; }
+        .site-header .slider-full .wrapper .slider-block .slider .quotes .quote-contain .quote-rotate {
+          position: absolute;
+          top: 26px;
+          left: -2px;
+          opacity: 0;
+          overflow: visible;
+          visibility: hidden;
+          -webkit-transition: opacity, 0.3s, ease;
+          -o-transition: opacity, 0.3s, ease;
+          transition: opacity, 0.3s, ease;
+          font-family: "Raleway", sans-serif;
+          font-weight: normal;
+          font-size: 48px;
+          color: #1100C2;
+          line-height: 56px; }
+      .site-header .slider-full .wrapper .slider-block .slider a {
+        position: absolute;
+        top: 448px;
+        z-index: 99; }
+      .site-header .slider-full .wrapper .slider-block .slider .syntel-bg {
+        position: absolute;
+        top: 358px;
+        color: #F4F5F8;
+        font-family: "Raleway", sans-serif;
+        font-weight: normal;
+        font-size: 120px;
+        line-height: 141px; }
 
 .test {
   color: #1219c2;

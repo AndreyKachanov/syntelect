@@ -7,6 +7,23 @@
 .wrapper
 	+wrapper()
 
+.fixed
+  position: fixed
+  top: -150px
+  left: 0
+  right: 0
+  z-index: 999
+  transition: 0.4s top cubic-bezier(.3, .73, .3, .74)
+
+.slideDown
+	top: 0 !important
+
+// .sticky
+//   position: fixed
+//   display: none
+
+
+
 body
 	min-width: 320px
 	background-color: #fff
@@ -28,13 +45,39 @@ h2, .h2
 	font-family: "Opensans", sans-serif
 	font-size: 15px
 	line-height: 20px
-	padding: 10.5px 25.5px 10.5px 25.5px
+	padding: 10.5px 23.5px 10.5px 23.5px
 	text-decoration: none
 	&:visited
 		color:#1100C2
+
+	&-bg
+		background-color: #1100C2	
+		box-shadow: 0 2px 10px 0 #4D5AFF
+		color: #fff !important
+		padding: 12.5px 25.5px
+		&::before
+			content: "\f003"
+			color: #fff
+			font-family: "FontAwesome"
+			font-size: 18px
+			line-height: 18px
+			margin-right: 10px
+		&:hover
+			color: #1100C2 !important
+			border-color: #fff
+			background-color: #fff !important
+			border: 2px solid #1100C2
+			box-shadow: none !important
+			padding: 10.5px 23.5px
+			&::before
+				color: #1100C2 !important
+
+
 	&-light  
 		color: #1100C2
 		border: 2px solid #1100C2
+		// padding-right: 23.5px
+		// padding-left: 23.5px
 		&::before
 			content: "\f003"
 			color: #1100C2
@@ -46,109 +89,125 @@ h2, .h2
 			color: #fff
 			border-color: #fff
 			background-color: #1100C2
+			border: 2px solid #1100C2
 			&::before
 				color: #fff			
     
        
-.site-header       
-	.wrapper
-		.menu-block
-			+row-flex()
-
-			justify-content: space-between
-			align-items: center
-			min-height: 110px
-			background-color: #FFF
-			// box-shadow: 0px 5px 20px 0 rgba(75,101,129,0.4)
-			// border: 1px solid #000
-			>*
+.site-header
+	.menu-full
+		z-index: 99999999999999999999
+		// position: fixed
+		max-width: 1920px
+		// width: 100vw
+		min-height: 110px
+		background-color: #fff
+		box-shadow: 5px 5px 20px 0 rgba(75,101,129,0.4)
+		// box-shadow: 0 5px 5px -5px #333
+		// border: 1px solid red       
+		.wrapper
+			.menu-block
+				// position: fixed
+				// .menu-wrap
+				+row-flex()
+				// position: fixed
+				z-index: 9999
+				// width: 1134px
+				justify-content: space-between
+				align-items: center
+				min-height: 110px
+				background-color: #FFF
+				// box-shadow: 0px 5px 20px 0 rgba(75,101,129,0.4)
 				// border: 1px solid #000
+				>*
+					// border: 1px solid #000
 
-			.logo
-				+size(2)
-				margin-left: 3px
-				margin-top: -7px 
-				// border: 1px solid red 
-				a
-					display: block
-					text-indent: -9999px
-			.menu
-				+size(5)
-				margin-left: -104px
-				margin-top: 12px
-				nav 
-					ul
-						display: flex
-						flex-wrap: nowrap
+				.logo
+					+size(2)
+					margin-left: 3px
+					margin-top: -7px 
+					// border: 1px solid red 
+					a
+						display: block
+						text-indent: -9999px
+				.menu
+					+size(5)
+					margin-left: -104px
+					margin-top: 12px
+					nav 
+						ul
+							display: flex
+							flex-wrap: nowrap
 
-						li:nth-of-type(2)
-							a::before
-								display: none
+							li:nth-of-type(2)
+								a::before
+									display: none
 
-						li.home //кнопка Home
-							position: relative
-							top: -4px
-							right: 18px
-							a
-								font-size: 20px
-								line-height: 17px
-								color: #1100C2							
-								text-decoration: none
-								&:hover
-									color: #21184C
-
-
-						
-						li.item //li.item - пункты меню
-							position: relative
-
-							&:hover
-								&::after
-									content: ''
-									position: absolute
-									bottom: 0
-									right: 6%
-									width: 85%
-									height: 2px
-									background-color: #1000C2
-
-								a
-									color: #21184C
-									&::before
-										background-color: #1000C2				
-							a
-								display: block
+							li.home //кнопка Home
 								position: relative
-								font-size: 14px
-								line-height: 17px
-								letter-spacing: 0.6px
-								text-transform: uppercase
-								color: #08005A
-								font-family: $default-font
-								font-weight: normal
-								text-decoration: none
-								padding-right: 10px
-								padding-left: 10px
-								padding-bottom: 8px
-								white-space: nowrap
-								&::before
-									content: ''
-									position: absolute
-									left: 0px
-									top: 5%
-									height: 50%
-									width: 1px
-									background-color: #A9ADB9
-	 
+								top: -4px
+								right: 18px
+								a
+									font-size: 20px
+									line-height: 17px
+									color: #1100C2							
+									text-decoration: none
+									&:hover
+										color: #21184C
 
-			.btn-block
-				+size(3)
-				margin-right: 6px
-				margin-bottom: 3px
+
+							
+							li.item //li.item - пункты меню
+								position: relative
+
+								&:hover
+									&::after
+										content: ''
+										position: absolute
+										bottom: 0
+										right: 6%
+										width: 85%
+										height: 2px
+										background-color: #1000C2
+
+									a
+										color: #21184C
+										&::before
+											background-color: #1000C2				
+								a
+									display: block
+									position: relative
+									font-size: 14px
+									line-height: 17px
+									letter-spacing: 0.6px
+									text-transform: uppercase
+									color: #08005A
+									font-family: $default-font
+									font-weight: normal
+									text-decoration: none
+									padding-right: 10px
+									padding-left: 10px
+									padding-bottom: 8px
+									white-space: nowrap
+									&::before
+										content: ''
+										position: absolute
+										left: 0px
+										top: 5%
+										height: 50%
+										width: 1px
+										background-color: #A9ADB9
+		 
+
+				.btn-block
+					+size(3)
+					margin-right: 6px
+					margin-bottom: 3px
 
 	.slider-full
-		border: 1px solid red
+		// border: 1px solid red
 		// width: 100vw
+		position: relative
 		max-width: 1920px
 		min-height: 757px
 		background-repeat: no-repeat
@@ -162,51 +221,83 @@ h2, .h2
 		// padding: 0 15px
 		margin: 0px auto 50px auto
 		.wrapper
-			border: 1px solid red
+			// border: 1px solid red
 			.slider-block
 				+row-flex()
 				.slider
 					+size(6)
-					border: 1px solid green
-					min-height: 500px
+					// border: 1px solid green
+					min-height: 100vh
+					position: relative
+					height: 100%
 
+					// .slider-wrap
+					// 	border: 1px solid green
+					// 	position: relative
+					// 	height: 100%
 					.quotes
-						position: relative
-						margin: 50px auto 0px 
-						max-width: 500px
+							z-index: 99
+							width: 100%
+							// border: 1px solid red
+							position: absolute
+							top: 176px
+							// margin: 50px auto 0px 
+							// max-width: 500px
 
-						.quote-dots
-							margin: 0 auto
-							text-align: center
+							.quote-dots
+								display: flex
+								// margin: 0 auto
+								// text-align: center
 
-							.dot-fill
-								background-color: #000
+								.dot-fill
+									background-color: #CFF1FF !important;
 
-							.nav-dot
-								display: inline-block
-								height: 10px
-								width: 10px
-								border-radius: 50px
-								border: 1px solid #000
-								margin-right: 10px
-								cursor: pointer
-								&:last-of-type
-									margin: 0
-							
-						.quote-contain
-							.show
-								opacity: 1 !important
-								visibility: visible !important
+								.nav-dot
+									height: 16px	
+									width: 16px									
+									display: inline-block
+									border-radius: 50px
+									background-color: rgba(158,170,194,0.5)
+									margin-right: 10px
+									cursor: pointer
+									&:last-of-type
+										margin: 0
+								
+							.quote-contain
+								.show
+									opacity: 1 !important
+									visibility: visible !important
 
-							.quote-rotate
-								position: absolute
-								top: 20px
-								opacity: 0
-								overflow: visible
-								visibility: hidden
-								transition: opacity, 0.3s, ease
-								padding-bottom: 10px
-													 							
+								.quote-rotate
+									position: absolute
+									top: 26px
+									left: -2px
+									opacity: 0
+									overflow: visible
+									visibility: hidden
+									transition: opacity, 0.3s, ease
+									font-family: $default-font
+									font-weight: normal
+									font-size: 48px
+									color: #1100C2
+									line-height: 56px
+									// border: 1px solid #000
+					
+					a
+						position: absolute
+						top: 448px
+						z-index: 99
+
+					.syntel-bg
+						position: absolute
+						top: 358px
+						// border: 1px solid red
+						color: #F4F5F8
+						font-family: $default-font
+						font-weight: normal
+						font-size: 120px
+						line-height: 141px
+
 
 
 			

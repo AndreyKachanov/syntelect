@@ -30,12 +30,49 @@ var spinner = {
         spinner.auto(currentIndex);
         window.clearInterval(interval);
         interval = window.setInterval(spinner.auto, 6500);
+        // jQuery('#change-bg').css('background-image', 'url(//localhost:3000/wp-content/uploads/2017/12/bg_foto_splash2.png)');
       });
     }
   }
-  
+
+	// var stickyHeader = function(){
+	 
+	//   //THE POSITION OF TOP OF PAGE IN BROWSER WINDOW
+	//   var windowTopPosition = jQuery(window).scrollTop();
+	  
+	//   //THE POSITION OF ARTICLE TOP
+	//   var triggerContainer = jQuery('.slider-full').offset().top;
+
+	//   //THE THING THATS STICKS
+	//   var stickyContainer = jQuery('#menu-full');
+	  
+	//   if (windowTopPosition > triggerContainer) {    
+	//     stickyContainer.addClass('sticky');
+	//     stickyContainer.slideDown('fast');
+	    
+	//   }else{
+	//     stickyContainer.removeClass('sticky');
+	//     stickyContainer.css("display","");
+	//   }
+	// };  
+
 jQuery(function() {
-  spinner.initial();
-  spinner.dotnav();
-  interval = window.setInterval(spinner.auto, 3000);	
+ 	spinner.initial();
+ 	spinner.dotnav();
+ 	interval = window.setInterval(spinner.auto, 5000);
+
+	jQuery("#menu-full").before(jQuery("#menu-full").clone().addClass("fixed"));
+	jQuery(window).scroll(function(){
+		if(jQuery(window).scrollTop() >= 110){
+			jQuery('#change-bg').css("top", "110px");
+			jQuery('.fixed').addClass('slideDown');
+		}
+		else{
+			jQuery('.fixed').removeClass('slideDown');
+			jQuery('#change-bg').css("top", "0px");			
+		}
+	
+	});
+
+	// jQuery(window).scroll(stickyHeader);		
 });

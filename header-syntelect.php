@@ -12,43 +12,45 @@
 	<div id="my-page">
 		<div id="my-header">
 			<header class="site-header">
-				<div class="wrapper">
-					<div class="menu-block">
- 						<h1 class="logo">
-						    <a href="/"
-						    	<?php if (get_field('logo')['image']) echo "style='background: url(" . get_field('logo')['image'] . ") no-repeat; width: " . getimagesize(get_field('logo')['image'])[0] .  "px; height: " . getimagesize(get_field('logo')['image'])[1] . "px;'"?> 
-						    >
-						    	<?=(get_field('logo')['title'] ?? '')?>
-						    </a>
-						</h1>						
- 						<div class="menu">
-							<? if ($menu_items = get_field('items')): ?>
-								<nav>
-									<ul>
-										<li class="home">
-											<a class="fa fa-home active" href="/"></a>
-										</li>
-										<? foreach($menu_items as $item): ?>
-											<li class="item">
-												<a href="#<?=$item['block_name']?>">
-													<?=$item['item_name']?>
-												</a>
-											</li>
-										<? endforeach; ?>
-									</ul>	
-								</nav>
-							<? endif; ?>							
-						</div> 
- 						<div class="btn-block">
-							<a href="#contacts" class="btn btn-light">
-								<?=(get_field('contact_us_now') ?? '')?>									
-							</a>							
+				<div class="menu-full" id="menu-full">
+					<div class="wrapper">
+						<div class="menu-block" id="menu">
+							<!-- <div class="menu-wrap"> -->
+		 						<h1 class="logo">
+								    <a href="/"
+								    	<?php if (get_field('logo')['image']) echo "style='background: url(" . get_field('logo')['image'] . ") no-repeat; width: " . getimagesize(get_field('logo')['image'])[0] .  "px; height: " . getimagesize(get_field('logo')['image'])[1] . "px;'"?> 
+								    >
+								    	<?=(get_field('logo')['title'] ?? '')?>
+								    </a>
+								</h1>						
+		 						<div class="menu">
+									<? if ($menu_items = get_field('items')): ?>
+										<nav>
+											<ul>
+												<li class="home">
+													<a class="fa fa-home active" href="/"></a>
+												</li>
+												<? foreach($menu_items as $item): ?>
+													<li class="item">
+														<a href="#<?=$item['block_name']?>">
+															<?=$item['item_name']?>
+														</a>
+													</li>
+												<? endforeach; ?>
+											</ul>	
+										</nav>
+									<? endif; ?>							
+								</div> 
+		 						<div class="btn-block">
+									<a href="#contacts" class="btn btn-light">
+										<?=(get_field('contact_us_now') ?? '')?>									
+									</a>							
+								</div>
+							<!-- </div>									 -->
 						</div>
-														
-					</div>					
+					</div>
 				</div>
-
-				<div class="slider-full" 
+				<div id="change-bg" class="slider-full" 
 					<?php if (get_field('slider_repeater')[0]['slider_group']['image']) echo "style='background-image: url(" . get_field('slider_repeater')[0]['slider_group']['image'] . ");'"; 
 					?> 
 				>
@@ -56,17 +58,21 @@
 						<div class="slider-block">
 							<div class="slider">
 								<? if ($sliders = get_field('slider_repeater')): ?>
-								    <div class="quotes">
-									    <div class="quote-dots"></div>
-										    <div class="quote-contain">																
-										 		<? foreach($sliders as $slide): ?>
-										 			<div class="quote-rotate">
-										 				<?=($slide['slider_group']['text'] ?? '')?>
-										 			</div>
-										 		<? endforeach; ?>
-							 				</div>
-							 		</div>			
+									    <div class="quotes">
+										    <div class="quote-dots"></div>
+											    <div class="quote-contain">																
+											 		<? foreach($sliders as $slide): ?>
+											 			<div class="quote-rotate">
+											 				<?=($slide['slider_group']['text'] ?? '')?>
+											 			</div>
+											 		<? endforeach; ?>
+								 				</div>
+								 		</div>
 							 	<? endif; ?>													
+										<a href="#contacts" class="btn btn-bg">
+											<?=(get_field('contact_us_now') ?? '')?>									
+										</a>
+										<div class="syntel-bg">syntelect</div>								 		
 							</div>
 						</div>
 					</div>
