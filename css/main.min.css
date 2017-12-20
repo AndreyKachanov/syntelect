@@ -2245,6 +2245,107 @@
   overflow: visible;
   clip: auto; }
 
+/*
+ * jquery-filestyle
+ * doc: http://markusslima.github.io/jquery-filestyle/
+ * github: https://github.com/markusslima/jquery-filestyle
+ *
+ * Copyright (c) 2017 Markus Vinicius da Silva Lima
+ * Version 2.1.0
+ * Licensed under the MIT license.
+ */
+.jfilestyle {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 0;
+  position: relative;
+  border-collapse: separate; }
+
+div.jfilestyle input, div.jfilestyle label {
+  padding: 10px 15px;
+  line-height: normal;
+  font-size: 14px;
+  vertical-align: middle;
+  font-family: sans-serif; }
+
+div.jfilestyle input {
+  border: 1px solid silver;
+  background: #d9d9d9;
+  margin: 0 -5px 0 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  color: #8d8d8d;
+  cursor: default; }
+
+div.jfilestyle label {
+  display: inline-block;
+  border: 1px solid silver;
+  background: #fff;
+  color: #0662ba;
+  text-align: center;
+  margin: 0;
+  width: auto;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  font-weight: 400; }
+
+div.jfilestyle.jfilestyle-corner input:last-child, div.jfilestyle.jfilestyle-corner label:last-child {
+  margin-left: -1px; }
+
+div.jfilestyle label[disabled] {
+  pointer-events: none;
+  opacity: .6;
+  filter: alpha(opacity=65);
+  cursor: not-allowed; }
+
+div.jfilestyle label:hover {
+  cursor: pointer;
+  opacity: .9; }
+
+div.jfilestyle .count-jfilestyle {
+  background: #303030;
+  color: #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  padding: 1px 5px;
+  font-size: 12px;
+  vertical-align: middle; }
+
+div.jfilestyle.jfilestyle-theme-blue label {
+  border-color: #438eff;
+  background: #438eff;
+  color: #fff; }
+
+div.jfilestyle.jfilestyle-theme-green label {
+  border-color: #18a063;
+  background: #18a063;
+  color: #fff; }
+
+div.jfilestyle.jfilestyle-theme-yellow label {
+  border-color: #e8c821;
+  background: #e8c821;
+  color: #fff; }
+
+div.jfilestyle.jfilestyle-theme-black label {
+  border-color: #424242;
+  background: #424242;
+  color: #fff; }
+
+div.jfilestyle.jfilestyle-theme-red label {
+  border-color: #f33f3f;
+  background: #f33f3f;
+  color: #fff; }
+
+div.jfilestyle.jfilestyle-theme-purple label {
+  border-color: #873aff;
+  background: #873aff;
+  color: #fff; }
+
+div.jfilestyle.jfilestyle-theme-asphalt label {
+  border-color: #435673;
+  background: #435673;
+  color: #fff; }
+
 body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0; }
@@ -2368,8 +2469,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 h2, .h2 {
   font-size: 36px;
-  line-height: 27px;
-  margin: 0px 0px 17px 0px; }
+  line-height: 27px; }
 
 h3, .h3 {
   font-family: "Raleway", sans-serif;
@@ -2387,6 +2487,8 @@ p {
   margin-bottom: 18px; }
 
 .btn {
+  min-width: 194.3px;
+  min-height: 45px;
   display: inline-block;
   cursor: pointer;
   -webkit-border-radius: 25px;
@@ -2394,17 +2496,16 @@ p {
   text-align: center;
   font-family: "Opensans", sans-serif;
   font-size: 15px;
-  line-height: 20px;
-  padding: 10.5px 23.5px 10.5px 23.5px;
+  line-height: 41px;
   text-decoration: none; }
   .btn:visited {
     color: #1100C2; }
   .btn-bg {
+    line-height: 43px;
     background-color: #1100C2;
     -webkit-box-shadow: 0 2px 10px 0 #4D5AFF;
             box-shadow: 0 2px 10px 0 #4D5AFF;
     color: #fff !important;
-    padding: 12.5px 25.5px;
     -webkit-transition: color .2s, background-color .4s, -webkit-box-shadow .2s ease-in-out;
     transition: color .2s, background-color .4s, -webkit-box-shadow .2s ease-in-out;
     -o-transition: color .2s, background-color .4s, box-shadow .2s ease-in-out;
@@ -2423,16 +2524,15 @@ p {
       line-height: 18px;
       margin-right: 10px; }
     .btn-bg:hover {
-      padding: 10.5px 23.5px;
       -webkit-transition: color .2s, background-color .4s, -webkit-box-shadow .2s ease-in-out;
       transition: color .2s, background-color .4s, -webkit-box-shadow .2s ease-in-out;
       -o-transition: color .2s, background-color .4s, box-shadow .2s ease-in-out;
       transition: color .2s, background-color .4s, box-shadow .2s ease-in-out;
       transition: color .2s, background-color .4s, box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
       color: #1100C2 !important;
-      border-color: #fff;
       background-color: #fff !important;
       border: 2px solid #1100C2;
+      line-height: 38px;
       -webkit-box-shadow: none !important;
               box-shadow: none !important; }
       .btn-bg:hover::before {
@@ -2717,3 +2817,159 @@ p {
       opacity: .8; }
       .about .wrapper .about-content .content p {
         margin-bottom: 18px; }
+
+.why {
+  border: 1px solid red;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px;
+  height: 768px; }
+  .why:before {
+    content: '';
+    position: absolute; }
+  .why .wrapper .why-content {
+    border: 1px solid green; }
+    .why .wrapper .why-content .h2 {
+      font-family: "Raleway", sans-serif;
+      color: #1100C2;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 32px; }
+    .why .wrapper .why-content .h3 {
+      text-align: center; }
+
+.contacts {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px; }
+  .contacts:before {
+    content: '';
+    position: absolute; }
+  .contacts .wrapper .h2 {
+    font-family: "Raleway", sans-serif;
+    color: #1100C2;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 32px;
+    margin-bottom: 35px; }
+  .contacts .wrapper .h3 {
+    margin: 0 auto;
+    max-width: 62%;
+    text-align: center; }
+  .contacts .wrapper .contacts-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    margin-top: 95px;
+    margin-left: -30px;
+    margin-right: -30px; }
+    .contacts .wrapper .contacts-content input[type="text"], .contacts .wrapper .contacts-content input[type="email"], .contacts .wrapper .contacts-content input[type="file"], .contacts .wrapper .contacts-content textarea {
+      font-family: "Opensans", sans-serif;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #9EAAC2;
+      width: 100%;
+      padding: 10px;
+      -webkit-border-radius: 0;
+              border-radius: 0;
+      border: 1px solid #9EAAC2; }
+      .contacts .wrapper .contacts-content input[type="text"]:focus, .contacts .wrapper .contacts-content input[type="text"]:active, .contacts .wrapper .contacts-content input[type="email"]:focus, .contacts .wrapper .contacts-content input[type="email"]:active, .contacts .wrapper .contacts-content input[type="file"]:focus, .contacts .wrapper .contacts-content input[type="file"]:active, .contacts .wrapper .contacts-content textarea:focus, .contacts .wrapper .contacts-content textarea:active {
+        padding: 9px;
+        outline: none;
+        border: 2px solid #1100C2; }
+      .contacts .wrapper .contacts-content input[type="text"]::-webkit-input-placeholder, .contacts .wrapper .contacts-content input[type="email"]::-webkit-input-placeholder, .contacts .wrapper .contacts-content input[type="file"]::-webkit-input-placeholder, .contacts .wrapper .contacts-content textarea::-webkit-input-placeholder {
+        font-family: "Opensans", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #9EAAC2; }
+      .contacts .wrapper .contacts-content input[type="text"]::-moz-placeholder, .contacts .wrapper .contacts-content input[type="email"]::-moz-placeholder, .contacts .wrapper .contacts-content input[type="file"]::-moz-placeholder, .contacts .wrapper .contacts-content textarea::-moz-placeholder {
+        font-family: "Opensans", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #9EAAC2; }
+      .contacts .wrapper .contacts-content input[type="text"]:-ms-input-placeholder, .contacts .wrapper .contacts-content input[type="email"]:-ms-input-placeholder, .contacts .wrapper .contacts-content input[type="file"]:-ms-input-placeholder, .contacts .wrapper .contacts-content textarea:-ms-input-placeholder {
+        font-family: "Opensans", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #9EAAC2; }
+      .contacts .wrapper .contacts-content input[type="text"]:-moz-placeholder, .contacts .wrapper .contacts-content input[type="email"]:-moz-placeholder, .contacts .wrapper .contacts-content input[type="file"]:-moz-placeholder, .contacts .wrapper .contacts-content textarea:-moz-placeholder {
+        font-family: "Opensans", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #9EAAC2; }
+    .contacts .wrapper .contacts-content input[type="text"], .contacts .wrapper .contacts-content input[type="email"] {
+      margin-bottom: 20px; }
+    .contacts .wrapper .contacts-content .jfilestyle {
+      width: 100%; }
+      .contacts .wrapper .contacts-content .jfilestyle span.focus-jfilestyle {
+        display: block;
+        position: relative;
+        top: -42px;
+        right: -268px;
+        height: 43px;
+        width: 88px;
+        height: 40px; }
+        .contacts .wrapper .contacts-content .jfilestyle span.focus-jfilestyle label {
+          width: 100%;
+          display: block;
+          height: 100%;
+          font-family: "Opensans", sans-serif;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          color: #fff;
+          background-color: #6D94C0;
+          outline: none;
+          border: none; }
+      .contacts .wrapper .contacts-content .jfilestyle input[type="text"] {
+        background-color: #fff;
+        margin-bottom: 0 !important; }
+    .contacts .wrapper .contacts-content .form-title {
+      width: -webkit-calc(33.33333% - 30px);
+      width: calc(33.33333% - 30px); }
+      .contacts .wrapper .contacts-content .form-title .title {
+        color: #1100C2;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px; }
+      .contacts .wrapper .contacts-content .form-title .text {
+        opacity: 0.8;
+        color: #65738E;
+        font-family: "Opensans", sans-serif;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 8px; }
+      .contacts .wrapper .contacts-content .form-title .btn-block-footer {
+        margin-top: 47px; }
+        .contacts .wrapper .contacts-content .form-title .btn-block-footer button {
+          line-height: 20px;
+          padding: 0;
+          outline: none;
+          border: none; }
+          .contacts .wrapper .contacts-content .form-title .btn-block-footer button:hover {
+            border: 2px solid #1100C2; }
+    .contacts .wrapper .contacts-content .form-first {
+      width: -webkit-calc(33.33333% - 30px);
+      width: calc(33.33333% - 30px); }
+    .contacts .wrapper .contacts-content .form-second {
+      width: -webkit-calc(33.33333% - 30px);
+      width: calc(33.33333% - 30px); }
+      .contacts .wrapper .contacts-content .form-second textarea {
+        min-height: 110px;
+        min-width: 100%; }

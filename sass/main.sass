@@ -67,7 +67,7 @@ h1, .h1, h2, .h2, h3, .h3
 h2, .h2
 	font-size: 36px
 	line-height: 27px
-	margin: 0px 0px 17px 0px
+	// margin: 0px 0px 17px 0px
 
 h3, .h3	
 	font-family: $default-font
@@ -84,25 +84,29 @@ p
 	color: #65738E
 	margin-bottom: 18px		
 	
-.btn  
+.btn
+
+	min-width: 194.3px
+	min-height: 45px  
 	display: inline-block
 	cursor: pointer
 	border-radius: 25px
 	text-align: center
 	font-family: "Opensans", sans-serif
 	font-size: 15px
-	line-height: 20px
-	padding: 10.5px 23.5px 10.5px 23.5px
+	line-height: 41px
+	// padding: 10.5px 23.5px 10.5px 23.5px
 	text-decoration: none
 
 	&:visited
 		color:#1100C2
 
 	&-bg
+		line-height: 43px
 		background-color: #1100C2	
 		box-shadow: 0 2px 10px 0 #4D5AFF
 		color: #fff !important
-		padding: 12.5px 25.5px
+		// padding: 12.5px 25.5px
 		// transition: background-color .9s ease-in-out
 		transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
 		&::before
@@ -116,14 +120,14 @@ p
 			line-height: 18px
 			margin-right: 10px
 		&:hover
-			padding: 10.5px 23.5px
+			// padding: 10.5px 23.5px
 			// transition: background-color .9s ease-in-out
 			transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
 
 			color: #1100C2 !important
-			border-color: #fff
 			background-color: #fff !important
 			border: 2px solid #1100C2
+			line-height: 38px
 			box-shadow: none !important
 			&::before
 				// transition: background-color .9s ease-in-out
@@ -387,7 +391,7 @@ p
 
 	.wrapper
 		.about-content
-			
+
 
 			// border: 1px solid green
 			+row-flex()
@@ -411,4 +415,195 @@ p
 				color: #65738E
 				opacity: .8
 				p
-					margin-bottom: 18px	
+					margin-bottom: 18px
+
+.why
+	border: 1px solid red
+	position: relative
+	margin: 0 auto
+	max-width: 1920px
+	height: 768px
+	// background: url('../img/foto_splash_text.png') no-repeat 0px 0px
+	// background-size: 645px 768px
+	&:before
+		content: ''
+		// width: 614px
+		// height: 850px
+		// top: -190px
+		position: absolute
+		// z-index: -1
+		// background: url('../img/dot_circle.svg') no-repeat 0px 0px
+		// background-size: 614px 850px		
+
+
+	.wrapper
+		.why-content
+			border: 1px solid green
+
+			.h2
+				font-family: $default-font
+				color: #1100C2
+				font-weight: bold
+				font-size: 36px
+				line-height: 32px
+
+			.h3
+				text-align: center
+
+.contacts
+	// border: 1px solid red
+	position: relative
+	margin: 0 auto
+	max-width: 1920px
+	// background: url('../img/foto_splash_text.png') no-repeat 0px 0px
+	// background-size: 645px 768px
+	&:before
+		content: ''
+		// width: 614px
+		// height: 850px
+		// top: -190px
+		position: absolute
+		// z-index: -1
+		// background: url('../img/dot_circle.svg') no-repeat 0px 0px
+		// background-size: 614px 850px		
+
+ 
+	.wrapper
+		.h2
+			font-family: $default-font
+			color: #1100C2
+			font-weight: bold
+			font-size: 36px
+			line-height: 32px
+			margin-bottom: 35px
+
+		.h3
+			margin: 0 auto
+			max-width: 62%
+			text-align: center
+		
+		.contacts-content
+			// border: 1px solid green
+			+row-flex()
+			justify-content: space-around
+			margin-top: 95px
+			margin-left: -30px
+			margin-right: -30px
+
+			input[type="text"], input[type="email"], input[type="file"], textarea
+				font-family: "Opensans", sans-serif
+				font-weight: normal
+				font-size: 16px
+				line-height: 22px
+				color: #9EAAC2
+				width: 100%
+				padding: 10px
+				border-radius: 0	
+				border: 1px solid #9EAAC2
+				&:focus, &:active
+					padding: 9px
+					outline: none
+					border: 2px solid #1100C2
+				&::-webkit-input-placeholder
+					font-family: "Opensans", sans-serif
+					font-weight: normal
+					font-size: 16px
+					line-height: 22px
+					color: #9EAAC2 
+				&::-moz-placeholder
+					font-family: "Opensans", sans-serif
+					font-weight: normal
+					font-size: 16px
+					line-height: 22px
+					color: #9EAAC2
+				&:-ms-input-placeholder
+					font-family: "Opensans", sans-serif
+					font-weight: normal
+					font-size: 16px
+					line-height: 22px
+					color: #9EAAC2
+				&:-moz-placeholder
+					font-family: "Opensans", sans-serif
+					font-weight: normal
+					font-size: 16px
+					line-height: 22px
+					color: #9EAAC2		
+					
+
+			input[type="text"], input[type="email"]
+				margin-bottom: 20px
+			
+			.jfilestyle
+				width: 100%
+				span.focus-jfilestyle
+					display: block
+					position: relative
+					top: -42px
+					right: -268px
+					height: 43px
+					width: 88px
+					height: 40px
+					label
+						width: 100%
+						display: block
+						height: 100%
+						font-family: "Opensans", sans-serif
+						font-weight: 600
+						font-size: 14px
+						line-height: 19px
+						color: #fff
+						background-color: #6D94C0
+						outline: none
+						border: none
+
+				input[type="text"]
+					background-color: #fff
+					margin-bottom: 0 !important
+
+						
+
+			// >*
+			// 	border: 1px solid red
+
+			.form-title
+				+size(4)
+				.title
+					color: #1100C2
+					font-family: $default-font
+					font-weight: bold
+					font-size: 20px
+					line-height: 24px
+				.text
+					opacity: 0.8
+					color: #65738E
+					font-family: "Opensans", sans-serif
+					font-weight: normal
+					font-size: 15px
+					line-height: 20px
+					margin-top: 8px
+				.btn-block-footer
+					margin-top: 47px
+					button
+						// min-width: 194.3px
+						// min-height: 45px
+						line-height: 20px
+						padding: 0
+						outline: none
+						border: none
+						&:hover
+							border: 2px solid #1100C2
+
+
+
+			.form-first
+				+size(4)
+			.form-second
+				+size(4)
+
+				textarea
+					min-height: 110px
+					min-width: 100%		
+
+
+
+

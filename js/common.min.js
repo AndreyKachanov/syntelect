@@ -125,16 +125,22 @@ jQuery(function() {
 
     // end read more        
 
-jQuery("#showmore-button-readmore").click(function(){
-  if(jQuery("#readmore").css('opacity') == 1) {
-    jQuery("#readmore").animate({opacity:0.8}, 600);
-    jQuery(this).removeClass("readmore-css-hover");
+  jQuery("#showmore-button-readmore").click(function() {
+    if(jQuery("#readmore").css('opacity') == 1) {
+      jQuery("#readmore").animate({opacity:0.8}, 600);
+      jQuery(this).removeClass("readmore-css-hover");
 
-  } else{
-    jQuery("#readmore").animate({opacity:1}, 600);
-    jQuery(this).addClass("readmore-css-hover");
-  }
-});
+    } else{
+      jQuery("#readmore").animate({opacity:1}, 600);
+      jQuery(this).addClass("readmore-css-hover");
+    }
+  });
+
+  jQuery('#input-file').jfilestyle({
+    text : 'add file',
+    placeholder: 'File not selected',
+    inputSize: '100%'
+  });
 
     // var hasBeenClicked = false;
     // jQuery('#showmore-button-readmore').on("click", function() {

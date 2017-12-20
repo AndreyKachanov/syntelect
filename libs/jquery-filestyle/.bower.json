@@ -1,0 +1,15 @@
+{
+  "name": "jquery-filestyle",
+  "homepage": "https://github.com/markusslima/jquery-filestyle",
+  "version": "2.1.0",
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.0",
+    "commit": "703a0388b4079e405f090dfc3fc779d8cf4f76ee"
+  },
+  "_source": "https://github.com/markusslima/jquery-filestyle.git",
+  "_target": "^2.1.0",
+  "_originalSource": "https://github.com/markusslima/jquery-filestyle.git",
+  "_direct": true
+}
