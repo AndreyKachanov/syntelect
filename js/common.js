@@ -53,12 +53,42 @@ jQuery(function() {
 	jQuery("#menu-full").before(jQuery("#menu-full").clone().addClass("fixed"));
 	jQuery(window).scroll(function(){
 		if(jQuery(window).scrollTop() >= 110){
-			jQuery('#change-bg').css("top", "110px");
 			jQuery('.fixed').addClass('slideDown');
+
+      jQuery('#change-bg').css({
+        top       : "110px",
+        transition : 'all 0.7s ease-in-out'
+      });
+
+      jQuery("#change-bg").prev("div").css({
+        top       : "220px",
+        transition : 'all 0.7s ease-in-out'
+      });
+
+      jQuery("#about").css({
+        'margin-top'       : '50px',
+        transition : 'all 0.7s ease-in-out'
+      });      
+
+			
 		}
 		else{
 			jQuery('.fixed').removeClass('slideDown');
-			jQuery('#change-bg').css("top", "0px");			
+
+			jQuery('#change-bg').css({
+        top       : "0px",
+        transition : 'all 0.3s ease-in-out'
+      });
+
+      jQuery("#change-bg").prev("div").css({
+        top       : "110px",
+        transition : 'all 0.3s ease-in-out'
+      });
+
+      jQuery("#about").css({
+        'margin-top'       : '0px',
+        transition : 'all 0.7s ease-in-out'
+      });             			
 		}
 	});
     // end fixed menu
@@ -82,8 +112,54 @@ jQuery(function() {
       $el.bgswitcher("select", jQuery(this).attr("data-img")); 
     });
 
-    // end switch bg    
+    // end switch bg
 
+    // Read more
+    jQuery('#readmore').showMore({
+      minheight: 435,
+      buttontxtmore: glob_read_more,
+      buttontxtless: glob_show_less,
+      buttoncss: 'readmore-css',
+      animationspeed: 500            
+    });
+
+    // end read more        
+
+jQuery("#showmore-button-readmore").click(function(){
+  if(jQuery("#readmore").css('opacity') == 1) {
+    jQuery("#readmore").animate({opacity:0.8}, 600);
+    jQuery(this).removeClass("readmore-css-hover");
+
+  } else{
+    jQuery("#readmore").animate({opacity:1}, 600);
+    jQuery(this).addClass("readmore-css-hover");
+  }
+});
+
+    // var hasBeenClicked = false;
+    // jQuery('#showmore-button-readmore').on("click", function() {
+    //     hasBeenClicked = true;
+    //     return false;
+    // });
+
+    // if (hasBeenClicked) {
+    //     console.log(1);
+    //     jQuery('#readmore').css("opacity", "1");
+    // } else {
+    //     console.log(0);
+    //     jQuery('#readmore').css("opacity", "0.8");
+    // }    
+
+    // jQuery('#showmore-button-readmore').on("click", function() {
+    //   jQuery(this).data('clicked', true);
+    //   // jQuery('#readmore').css("opacity", "1");
+    // });
+
+    // if(jQuery('#showmore-button-readmore').data('clicked')) {
+    //     jQuery('#readmore').css("opacity", "1");
+    // } else {
+    //     jQuery('#readmore').css("opacity", "0.8");
+    // }    
 });
 
 // console.log(glob_slides_img);

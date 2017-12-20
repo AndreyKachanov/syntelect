@@ -184,9 +184,6 @@ function get_img_path() {
 	foreach ($sliders as $slide) 
 		$img_path[] = ($slide['slider_group']['image'] ?? '');
 
-	// var_dump($img_path);
-	// die();
-
 	if (!$img_path)
 		return false;
 

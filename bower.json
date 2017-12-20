@@ -17,6 +17,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "components-font-awesome": "^4.7.0",
-    "jquery-bgswitcher": "https://github.com/rewish/jquery-bgswitcher.git#^0.4.3"
+    "jquery-bgswitcher": "https://github.com/rewish/jquery-bgswitcher.git#^0.4.3",
+    "show-more-plugin": "https://github.com/dtasic/show-more-plugin.git#^1.0.1"
   }
 }

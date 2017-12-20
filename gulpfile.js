@@ -30,6 +30,7 @@ gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		// 'libs/jquery/dist/jquery.min.js',
 		'libs/jquery-bgswitcher/jquery.bgswitcher.js',
+		'libs/show-more-plugin/jquery.show-more.js',
 		'js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

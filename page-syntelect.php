@@ -3,34 +3,22 @@
  * Template name: Syntelect
 */
 get_header('syntelect'); ?>
-			<div style="border: 1px solid red;" class="container">
-			<p class="test">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Безорфографичный, переулка ручеек рыбными! Напоивший меня приставка он его эта.</p>
-			<?php
-			while ( have_posts() ) : the_post();
 
-				the_title();
-				the_content();
-
-
-			endwhile; // End of the loop.
-			?>
-			<p style="font-weight: bold;"><?=get_field('text')?></p>
-			<hr>
-			<?php
-				// if (get_field('top_slider')) {
-
-				// 	$slides = get_field("top_slider");
+		<div id="my-content">
+			<section id="about" class="about">
+				<div class="wrapper">
+					<div class="about-content">
+						<h2 class="h2"><?=(get_field('about_group')['title'] ?? '')?></h2>
+						<h3 class="h3"><?=(get_field('about_group')['sub_title'] ?? '')?></h3>
+						<div id="readmore" class="content"><?=(get_field('about_group')['text'] ?? '')?></div>
+					</div>
+				</div>
+			</section>
+			<div id="why">why</div>
+			<div id="services">services</div>
+			<div id="process">process</div>
 					
-				// 	foreach ($slides as $slide) {
-				// 		echo "<p>";
-				// 		echo $slide['url'];
-				// 		echo $slide['caption'];
-				// 		echo "</p>";
-				// 	}
-				// }
-
-			?>
-			</div>
+		</div>
 
 
 <?php
