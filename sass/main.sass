@@ -189,14 +189,13 @@ p
 				background-color: #FFF
 				// box-shadow: 0px 5px 20px 0 rgba(75,101,129,0.4)
 				// border: 1px solid #000
-				>*
-					// border: 1px solid #000
+				// >*
+				// 	 border: 1px solid #000
 
 				.logo
 					+size(2)
 					margin-left: 3px
 					margin-top: -7px 
-					// border: 1px solid red 
 					a
 						display: block
 						text-indent: -9999px
@@ -204,74 +203,74 @@ p
 					+size(5)
 					margin-left: -104px
 					margin-top: 12px
-					nav 
-						ul
-							display: flex
-							flex-wrap: nowrap
+					// nav 
+					// 	ul
+					// 		display: flex
+					// 		flex-wrap: nowrap
 
-							li:nth-of-type(2)
-								a::before
-									display: none
+					// 		li:nth-of-type(2)
+					// 			a::before
+					// 				display: none
 
-							li.home //кнопка Home
-								position: relative
-								top: -4px
-								right: 18px
-								a
-									font-size: 20px
-									line-height: 17px
-									color: #1100C2							
-									text-decoration: none
-									&:hover
-										color: #21184C
+					// 		li.home //кнопка Home
+					// 			position: relative
+					// 			top: -4px
+					// 			right: 18px
+					// 			a
+					// 				font-size: 20px
+					// 				line-height: 17px
+					// 				color: #1100C2							
+					// 				text-decoration: none
+					// 				&:hover
+					// 					color: #21184C
 
 
 							
-							li.item //li.item - пункты меню
-								position: relative
-								&::after
-									content: ''
-									opacity: 0
-									transition: all .6s ease-in-out
+					// 		li.item //li.item - пункты меню
+					// 			position: relative
+					// 			&::after
+					// 				content: ''
+					// 				opacity: 0
+					// 				transition: all .6s ease-in-out
 
-								&:hover
-									&::after
-										content: ''
-										position: absolute
-										bottom: 0
-										right: 6%
-										width: 85%
-										height: 2px
-										background-color: #1000C2
-										opacity: 1
-										transition: all .6s ease-in-out
-									a
-										color: #21184C
-										&::before
-											background-color: #1000C2				
-								a									
-									display: block
-									position: relative
-									font-size: 14px
-									line-height: 17px
-									letter-spacing: 0.6px
-									text-transform: uppercase
-									color: #08005A
-									font-family: $default-font
-									font-weight: normal
-									text-decoration: none
-									padding-right: 10px
-									padding-left: 10px
-									padding-bottom: 8px
-									white-space: nowrap
-									&::before
-										content: ''
-										position: absolute
-										left: 0px
-										top: 5%
-										height: 50%
-										width: 1px
-										background-color: #A9ADB9
+					// 			&:hover
+					// 				&::after
+					// 					content: ''
+					// 					position: absolute
+					// 					bottom: 0
+					// 					right: 6%
+					// 					width: 85%
+					// 					height: 2px
+					// 					background-color: #1000C2
+					// 					opacity: 1
+					// 					transition: all .6s ease-in-out
+					// 				a
+					// 					color: #21184C
+					// 					&::before
+					// 						background-color: #1000C2				
+					// 			a									
+					// 				display: block
+					// 				position: relative
+					// 				font-size: 14px
+					// 				line-height: 17px
+					// 				letter-spacing: 0.6px
+					// 				text-transform: uppercase
+					// 				color: #08005A
+					// 				font-family: $default-font
+					// 				font-weight: normal
+					// 				text-decoration: none
+					// 				padding-right: 10px
+					// 				padding-left: 10px
+					// 				padding-bottom: 8px
+					// 				white-space: nowrap
+					// 				&::before
+					// 					content: ''
+					// 					position: absolute
+					// 					left: 0px
+					// 					top: 5%
+					// 					height: 50%
+					// 					width: 1px
+					// 					background-color: #A9ADB9
 		 
 
 				.btn-block
@@ -451,6 +450,34 @@ p
 
 			.h3
 				text-align: center
+.process
+	border: 1px solid red
+	position: relative
+	margin: 0 auto
+	max-width: 1920px
+	.wrapper
+
+		.h2
+			font-family: $default-font
+			color: #1100C2
+			font-weight: bold
+			font-size: 36px
+			line-height: 32px
+			margin-bottom: 35px
+
+		.h3
+			margin: 0 auto
+			max-width: 62%
+			text-align: center
+
+		.proc-block
+			+row-flex()
+			.left
+				+size(6)
+			.right
+				+size(6)	
+
+
 
 .contacts
 	// border: 1px solid red
@@ -488,7 +515,7 @@ p
 		.contacts-content
 			// border: 1px solid green
 			+row-flex()
-			justify-content: space-around
+			justify-content: space-between
 			margin-top: 95px
 			margin-left: -30px
 			margin-right: -30px
@@ -714,5 +741,111 @@ p
 	max-width: 1920px
 	min-height: 200px
 	margin: 0 auto
+
+.bottom-menu
+	padding-top: 32px
+	min-height: 80px
+	// border: 1px solid green
+	.wrapper
+
+		.menu-block-bottom
+			+row-flex()
+			justify-content: space-between
+
+			>*
+				// border: 1px solid #000
+			
+			.copy
+				+size(3)
+				color: #65738E
+				font-family: "Opensans", sans-serif
+				font-size: 14px
+				line-height: 19px
+
+			.menu
+				+size(7)
+
+
+
+.logo
+	+size(2)
+	margin-left: 3px
+	margin-top: -7px 
+	a
+		display: block
+		text-indent: -9999px
+
+
+
+.menu
+	nav 
+		ul
+			display: flex
+			flex-wrap: nowrap
+
+			li:nth-of-type(2)
+				a::before
+					display: none
+
+			li.home //кнопка Home
+				position: relative
+				top: -4px
+				right: 18px
+				a
+					font-size: 20px
+					line-height: 17px
+					color: #1100C2							
+					text-decoration: none
+					&:hover
+						color: #21184C
+
+
+			
+			li.item //li.item - пункты меню
+				position: relative
+				&::after
+					content: ''
+					opacity: 0
+					transition: all .6s ease-in-out
+
+				&:hover
+					&::after
+						content: ''
+						position: absolute
+						bottom: 0
+						right: 6%
+						width: 85%
+						height: 2px
+						background-color: #1000C2
+						opacity: 1
+						transition: all .6s ease-in-out
+					a
+						color: #21184C
+						&::before
+							background-color: #1000C2				
+				a									
+					display: block
+					position: relative
+					font-size: 14px
+					line-height: 17px
+					letter-spacing: 0.6px
+					text-transform: uppercase
+					color: #08005A
+					font-family: $default-font
+					font-weight: normal
+					text-decoration: none
+					padding-right: 10px
+					padding-left: 10px
+					padding-bottom: 8px
+					white-space: nowrap
+					&::before
+						content: ''
+						position: absolute
+						left: 0px
+						top: 5%
+						height: 50%
+						width: 1px
+						background-color: #A9ADB9		
+
 
 @import "media" // Всегда в конце

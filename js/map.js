@@ -1,6 +1,7 @@
 var geocoder;
       var map;
       var mapOptions = {
+            mapTypeControl: false,
 			zoom: 11,
         	zoomControl: true,
         	scaleControl: true,

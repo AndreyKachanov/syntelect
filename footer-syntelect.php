@@ -55,14 +55,23 @@ Linkou. Taiwan, 24441')?>
 			<div class="map" id="map"></div>
 			<div class="bottom-menu">
 					<div class="wrapper">
-						<div class="menu-block" id="menu">
-		 						<h1 class="logo">
+						<div class="menu-block-bottom">
+		 						<div class="logo">
 								    <a href="/"
 								    	<?php if (get_field('logo')['image']) echo "style='background: url(" . get_field('logo')['image'] . ") no-repeat; width: " . getimagesize(get_field('logo')['image'])[0] .  "px; height: " . getimagesize(get_field('logo')['image'])[1] . "px;'"?> 
 								    >
 								    	<?=(get_field('logo')['title'] ?? '')?>
 								    </a>
-								</h1>						
+								</div>
+								<div class="copy">
+									<?php 
+										if (!empty(get_field('copyright')))
+											 echo get_field('copyright');
+										else
+											echo "Copyright " .  date('Y') . " all rights reserved";	
+									?>
+
+								</div>						
 		 						<div class="menu">
 									<? if ($menu_items = get_field('items')): ?>
 										<nav>
@@ -81,11 +90,6 @@ Linkou. Taiwan, 24441')?>
 										</nav>
 									<? endif; ?>							
 								</div> 
-		 						<div class="btn-block">
-									<a href="#contacts" class="btn btn-light">
-										<?=(get_field('contact_us_now') ?? '')?>									
-									</a>							
-								</div>
 						</div>
 					</div>				
 			</div>			
