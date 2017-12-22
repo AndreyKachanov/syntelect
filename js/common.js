@@ -125,6 +125,7 @@ jQuery(function() {
 
     // end read more        
 
+    // effects for readmore buttons
   jQuery("#showmore-button-readmore").click(function() {
     if(jQuery("#readmore").css('opacity') == 1) {
       jQuery("#readmore").animate({opacity:0.8}, 600);
@@ -135,38 +136,16 @@ jQuery(function() {
       jQuery(this).addClass("readmore-css-hover");
     }
   });
+    // end effects
 
+    // styling input type file
   jQuery('#input-file').jfilestyle({
     text : 'add file',
-    placeholder: 'File not selected',
+    placeholder: glob_file_select,
     inputSize: '100%'
   });
+  // end styling
 
-    // var hasBeenClicked = false;
-    // jQuery('#showmore-button-readmore').on("click", function() {
-    //     hasBeenClicked = true;
-    //     return false;
-    // });
 
-    // if (hasBeenClicked) {
-    //     console.log(1);
-    //     jQuery('#readmore').css("opacity", "1");
-    // } else {
-    //     console.log(0);
-    //     jQuery('#readmore').css("opacity", "0.8");
-    // }    
-
-    // jQuery('#showmore-button-readmore').on("click", function() {
-    //   jQuery(this).data('clicked', true);
-    //   // jQuery('#readmore').css("opacity", "1");
-    // });
-
-    // if(jQuery('#showmore-button-readmore').data('clicked')) {
-    //     jQuery('#readmore').css("opacity", "1");
-    // } else {
-    //     jQuery('#readmore').css("opacity", "0.8");
-    // }    
+  
 });
-
-// console.log(glob_slides_img);
-// console.log(glob_effect);

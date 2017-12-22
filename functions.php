@@ -168,6 +168,13 @@ function syntelect_js() {
 	wp_enqueue_script( 'syntelect_js', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'));
 }
 
+// Add js map
+add_action( 'wp_enqueue_scripts', 'map' );
+function map() {
+	wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', 0);
+}
+
+
 // add_action( 'wp_default_scripts', function( $scripts ) {
 //     if ( ! empty( $scripts->registered['jquery'] ) ) {
 //         $scripts->registered['jquery']->deps = array_diff( $scripts->registered['jquery']->deps, array( 'jquery-migrate' ) );

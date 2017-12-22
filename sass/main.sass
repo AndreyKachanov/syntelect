@@ -53,21 +53,22 @@
 		cursor: pointer 
 		color: #1100C2		
 
-
 	
 body
+	overflow-x: hidden
 	min-width: 320px
 	background-color: #fff
+
+#my-page
+	// overflow-x: hidden
 
 h1, .h1, h2, .h2, h3, .h3
 	text-align: center
 	color: $accent
-	text-align: center
 
 h2, .h2
 	font-size: 36px
 	line-height: 27px
-	// margin: 0px 0px 17px 0px
 
 h3, .h3	
 	font-family: $default-font
@@ -279,16 +280,12 @@ p
 					margin-bottom: 3px
 
 	.slider-full
-		// border: 1px solid red
-		// width: 100vw
 		position: relative
 		max-width: 1920px
 		max-height: 757px
-		// background: url('../img/bg_foto_splash.png') no-repeat top right	
 		background-repeat: no-repeat
 		background-position: top right
-		background-size: 913px 757px
-		// height: 100vh
+		background-size: contain
 		margin: 0px auto 50px auto
 		.wrapper
 			// border: 1px solid red
@@ -370,30 +367,35 @@ p
 
 
 .about
-	position: relative
-	// z-index: 999999999
 	// border: 1px solid red
+	position: relative
 	margin: 0 auto
 	max-width: 1920px
 	min-height: 768px
-	background: url('../img/foto_splash_text.png') no-repeat 0px 0px
+	background-image: url('../img/foto_splash_text.png') 
+	background-repeat: no-repeat
 	background-size: 645px 768px
+	// background-size: cover
+
 	&:before
+		// border: 1px solid black
+		display: block
 		content: ''
 		width: 614px
 		height: 850px
 		top: -190px
 		position: absolute
 		z-index: -1
-		background: url('../img/dot_circle.svg') no-repeat 0px 0px
-		background-size: 614px 850px		
+		background-image: url('../img/dot_circle.svg')
+		background-repeat: no-repeat
+		background-position: center center
+		// background-size: 614px 850px
+		background-size: contain	
 
 
 	.wrapper
 		.about-content
 
-
-			// border: 1px solid green
 			+row-flex()
 			+size(8)
 			+shift-left(3)
@@ -457,15 +459,16 @@ p
 	max-width: 1920px
 	// background: url('../img/foto_splash_text.png') no-repeat 0px 0px
 	// background-size: 645px 768px
-	&:before
-		content: ''
-		// width: 614px
-		// height: 850px
-		// top: -190px
-		position: absolute
-		// z-index: -1
-		// background: url('../img/dot_circle.svg') no-repeat 0px 0px
-		// background-size: 614px 850px		
+	// &::after
+	// 	content: ''
+	// 	height: 274px
+	// 	width: 1920px
+	// 	max-width: 1920px
+	// 	margin: 0 auto
+	// 	position: absolute
+		// background: url('../img/dots_wave.png') no-repeat
+		// background-size: 1920px 721px
+		// border: 1px solid red
 
  
 	.wrapper
@@ -529,12 +532,16 @@ p
 					line-height: 22px
 					color: #9EAAC2		
 					
+			input[type="file"]
+				width: 0px
 
 			input[type="text"], input[type="email"]
 				margin-bottom: 20px
 			
 			.jfilestyle
 				width: 100%
+				margin-bottom: 0
+				height: 44px
 				span.focus-jfilestyle
 					display: block
 					position: relative
@@ -602,8 +609,110 @@ p
 
 				textarea
 					min-height: 110px
-					min-width: 100%		
+					min-width: 100%
+					overflow: hidden		
 
 
+.wave-dots
+	// width: 1920px
+	// min-height: 274px
+	height: 274px
+	max-width: 1920px
+	// border: 1px solid red
+	margin: 0 auto
+	background-image: url('../img/dots_wave.png')
+	background-position: center top
+	background-repeat: no-repeat
+	background-size: cover
+	border-bottom: 5px solid #CED4E0
+	// background-attachment: fixed
 
+.address
+	background-color: #F4F5F8
+	// border: 1px solid red
+	position: relative
+	padding: 50px 0
+	margin: 0px auto
+	max-width: 1920px
+	.wrapper
+		.address-block
+			+row-flex()
 
+			color: #08005A
+			font-family: $default-font
+			font-size: 18px
+			font-weight: 500
+			line-height: 21px		
+			justify-content: space-between
+			
+			>*
+				+size(4)
+				// border: 1px solid red
+				
+
+			.addr
+				position: relative
+				text-align: left
+				padding-left: 30px
+				&::before
+					color: #1100C2
+					content: "\f041"
+					font-family: "FontAwesome"
+					position: absolute
+					left: 0px
+					top: 11px
+					font-size: 20px
+					line-height: 17px
+
+			.email				
+				position: relative
+				text-align: center
+				a
+					margin-left: 9px
+					text-decoration: none
+					color: #08005A
+				&::before
+					color: #1100C2
+					content: "\f0e0"
+					font-family: "FontAwesome"
+					font-size: 17px
+					line-height: 14px					
+					// position: absolute
+					// left: 12px
+
+			.phone
+				.fax
+					margin-top: 10px
+					span
+						
+						font-size: 16px
+						color: #08005A
+						font-family: "Opensans", sans-serif
+						font-weight: normal
+						line-height: 14px
+
+				position: relative
+				text-align: right
+				a
+					font-size: 20px
+					color: #08005A
+					font-family: "Opensans", sans-serif
+					font-weight: normal
+					line-height: 16px
+					text-decoration: none
+
+				&::before
+					margin-right: 9px
+					color: #1100C2
+					content: "\f095"
+					font-family: "FontAwesome"
+					font-size: 20px
+					line-height: 17px					
+
+.map
+	// border: 1px solid red
+	max-width: 1920px
+	min-height: 200px
+	margin: 0 auto
+
+@import "media" // Всегда в конце

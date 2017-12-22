@@ -2459,13 +2459,13 @@ img {
     color: #1100C2; }
 
 body {
+  overflow-x: hidden;
   min-width: 320px;
   background-color: #fff; }
 
 h1, .h1, h2, .h2, h3, .h3 {
   text-align: center;
-  color: #1219c2;
-  text-align: center; }
+  color: #1219c2; }
 
 h2, .h2 {
   font-size: 36px;
@@ -2694,8 +2694,8 @@ p {
   max-height: 757px;
   background-repeat: no-repeat;
   background-position: top right;
-  -webkit-background-size: 913px 757px;
-          background-size: 913px 757px;
+  -webkit-background-size: contain;
+          background-size: contain;
   margin: 0px auto 50px auto; }
   .site-header .slider-full .wrapper .slider-block {
     display: -webkit-box;
@@ -2772,19 +2772,23 @@ p {
   margin: 0 auto;
   max-width: 1920px;
   min-height: 768px;
-  background: url("../img/foto_splash_text.png") no-repeat 0px 0px;
+  background-image: url("../img/foto_splash_text.png");
+  background-repeat: no-repeat;
   -webkit-background-size: 645px 768px;
           background-size: 645px 768px; }
   .about:before {
+    display: block;
     content: '';
     width: 614px;
     height: 850px;
     top: -190px;
     position: absolute;
     z-index: -1;
-    background: url("../img/dot_circle.svg") no-repeat 0px 0px;
-    -webkit-background-size: 614px 850px;
-            background-size: 614px 850px; }
+    background-image: url("../img/dot_circle.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: contain;
+            background-size: contain; }
   .about .wrapper .about-content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2842,9 +2846,6 @@ p {
   position: relative;
   margin: 0 auto;
   max-width: 1920px; }
-  .contacts:before {
-    content: '';
-    position: absolute; }
   .contacts .wrapper .h2 {
     font-family: "Raleway", sans-serif;
     color: #1100C2;
@@ -2911,10 +2912,14 @@ p {
         font-size: 16px;
         line-height: 22px;
         color: #9EAAC2; }
+    .contacts .wrapper .contacts-content input[type="file"] {
+      width: 0px; }
     .contacts .wrapper .contacts-content input[type="text"], .contacts .wrapper .contacts-content input[type="email"] {
       margin-bottom: 20px; }
     .contacts .wrapper .contacts-content .jfilestyle {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 0;
+      height: 44px; }
       .contacts .wrapper .contacts-content .jfilestyle span.focus-jfilestyle {
         display: block;
         position: relative;
@@ -2972,4 +2977,155 @@ p {
       width: calc(33.33333% - 30px); }
       .contacts .wrapper .contacts-content .form-second textarea {
         min-height: 110px;
-        min-width: 100%; }
+        min-width: 100%;
+        overflow: hidden; }
+
+.wave-dots {
+  height: 274px;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-image: url("../img/dots_wave.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  border-bottom: 5px solid #CED4E0; }
+
+.address {
+  background-color: #F4F5F8;
+  position: relative;
+  padding: 50px 0;
+  margin: 0px auto;
+  max-width: 1920px; }
+  .address .wrapper .address-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    color: #08005A;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .address .wrapper .address-block > * {
+      width: -webkit-calc(33.33333% - 30px);
+      width: calc(33.33333% - 30px); }
+    .address .wrapper .address-block .addr {
+      position: relative;
+      text-align: left;
+      padding-left: 30px; }
+      .address .wrapper .address-block .addr::before {
+        color: #1100C2;
+        content: "\f041";
+        font-family: "FontAwesome";
+        position: absolute;
+        left: 0px;
+        top: 11px;
+        font-size: 20px;
+        line-height: 17px; }
+    .address .wrapper .address-block .email {
+      position: relative;
+      text-align: center; }
+      .address .wrapper .address-block .email a {
+        margin-left: 9px;
+        text-decoration: none;
+        color: #08005A; }
+      .address .wrapper .address-block .email::before {
+        color: #1100C2;
+        content: "\f0e0";
+        font-family: "FontAwesome";
+        font-size: 17px;
+        line-height: 14px; }
+    .address .wrapper .address-block .phone {
+      position: relative;
+      text-align: right; }
+      .address .wrapper .address-block .phone .fax {
+        margin-top: 10px; }
+        .address .wrapper .address-block .phone .fax span {
+          font-size: 16px;
+          color: #08005A;
+          font-family: "Opensans", sans-serif;
+          font-weight: normal;
+          line-height: 14px; }
+      .address .wrapper .address-block .phone a {
+        font-size: 20px;
+        color: #08005A;
+        font-family: "Opensans", sans-serif;
+        font-weight: normal;
+        line-height: 16px;
+        text-decoration: none; }
+      .address .wrapper .address-block .phone::before {
+        margin-right: 9px;
+        color: #1100C2;
+        content: "\f095";
+        font-family: "FontAwesome";
+        font-size: 20px;
+        line-height: 17px; }
+
+.map {
+  max-width: 1920px;
+  min-height: 200px;
+  margin: 0 auto; }
+
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/ }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/ }
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }
