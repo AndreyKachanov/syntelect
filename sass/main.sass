@@ -451,11 +451,15 @@ p
 			.h3
 				text-align: center
 .process
-	border: 1px solid red
+	// border: 1px solid #000
 	position: relative
-	margin: 0 auto
+	margin: 162px auto 0 auto
 	max-width: 1920px
 	.wrapper
+		// border: 1px solid #000
+
+		padding-left: 0
+		padding-right: 0
 
 		.h2
 			font-family: $default-font
@@ -463,19 +467,73 @@ p
 			font-weight: bold
 			font-size: 36px
 			line-height: 32px
-			margin-bottom: 35px
+			margin-bottom: 27px
+
 
 		.h3
-			margin: 0 auto
+			letter-spacing: normal
+			margin: 0 auto 80px auto
 			max-width: 62%
 			text-align: center
 
 		.proc-block
-			+row-flex()
-			.left
-				+size(6)
-			.right
-				+size(6)	
+			// border: 1px solid green
+
+			.proc-item
+				+row-flex()
+				&:nth-child(even)
+					.wrap-proc-img
+						flex-direction: row-reverse
+						.proc-img
+							margin-right: 10px
+							margin-top: -145px
+
+					.proc-text-wrap
+						order: 1
+
+				&:nth-child(odd)
+					.proc-text-wrap
+						text-align: right
+						margin-bottom: 145px			
+
+
+				.wrap-proc-img
+					// border: 1px solid #000
+					display: flex
+					+col()
+					+size(6)						
+					.proc-img
+						margin-top: 9px
+						margin-left: 17px
+						// border: 1px solid red
+						width: 340px
+						height: 340px										
+
+				.proc-text-wrap
+					// border: 1px solid #000
+					padding: 15px
+					+col()
+					+size(6)	
+
+					.proc-heading
+						color: #1100C2
+						font-family: $default-font
+						font-size: 20px
+						font-weight: bold
+						line-height: 24px
+						margin-bottom: 10px
+
+					.proc-text
+						opacity: 0.8
+						color: #65738E
+						font-family: $default-font
+						font-size: 14px
+						font-style: italic
+						line-height: 19px
+
+
+
+
 
 
 
@@ -525,7 +583,7 @@ p
 				font-weight: normal
 				font-size: 16px
 				line-height: 22px
-				color: #9EAAC2
+				color: #1100C2
 				width: 100%
 				padding: 10px
 				border-radius: 0	

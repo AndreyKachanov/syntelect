@@ -23,33 +23,57 @@ get_header('syntelect'); ?>
 				</div>
 			</section>
 
-			<div id="services">services</div>
+			<section id="services" class="services">
+				<div class="wrapper">
+						<h2 class="h2"><?=(get_field('services_group')['title'] ?? 'Services')?></h2>
+						<h3 class="h3"><?=(get_field('services_group')['sub_title'] ?? '')?></h3>
+
+						<? if ($services = get_field('services_group')['services_repeater']): ?>
+						<div class="serv-block">
+							<? foreach($services as $service): ?>
+
+							<? endforeach; ?>								
+						</div>
+						<? endif; ?>	
+				</div>
+			</section>
 
 			<section id="process" class="process">
 				<div class="wrapper">
 						<h2 class="h2"><?=(get_field('process_group')['title'] ?? 'Our Process')?></h2>
-						 <h3 class="h3"><?=(get_field('process_group')['sub_title'] ?? '')?></h3>
+						<h3 class="h3"><?=(get_field('process_group')['sub_title'] ?? '')?></h3>
+					
+					<? if ($processes = get_field('process_group')['process_repeater']): ?>
+					
 					<div class="proc-block">
-						<? if ($processes = get_field('process_group')['process_repeater']): ?>
-						<? foreach($processes as $process): ?>
-							<div>
-								<?=($process['process_sub_group']['title'] ?? '')?>
-								<?=($process['process_sub_group']['text'] ?? '')?>
-								<?=($process['process_sub_group']['image'] ?? '')?>
-							</div>
-						<? endforeach; ?>
-						<?php
-							// $services = get_field('process_group')['process_repeater'];
-							// echo "<pre>";
-							// print_r($services); 
-							// echo "</pre>"; 
-							// die();
 
-						?>
-						<div class="left"></div>
-						<div class="right"></div>
-						<? endif; ?>
-					</div>	
+						<? $i=0; foreach($processes as $process): ?>
+							
+							<div class="proc-item">
+
+								<? if ($i % 2 == 0): ?>
+								<? else: ?>	
+								<? endif; ?>
+
+								<div class="proc-text-wrap">
+									<div class="proc-heading">
+										<?=($process['process_sub_group']['title'] ?? '')?>
+									</div>
+									<div class="proc-text">
+										<?=($process['process_sub_group']['text'] ?? '')?>
+									</div>									
+								</div>
+								<div class="wrap-proc-img">									
+									<div class="proc-img" style="background: url('<?=($process['process_sub_group']['image'] ?? '')?>') no-repeat  center, url('<?=get_template_directory_uri()?>/img/ico_splash.svg') no-repeat center center, url('<?=get_template_directory_uri()?>/img/ico_splash.svg') no-repeat center center; background-size: contain, contain;">
+									</div>
+<!-- 									<div class="proc-img" style="background:  url('<?=($process['process_sub_group']['image'] ?? '')?>') no-repeat  center, url('<?=get_template_directory_uri()?>/img/ico_splash.svg') no-repeat center center; background-size: contain, contain;">
+									</div>	 -->													
+								</div>
+							</div>
+
+						<? endforeach; ?>						
+					</div>
+					<? endif; ?>	
 				</div>
 			</section>
 					
