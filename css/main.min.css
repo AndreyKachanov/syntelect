@@ -2943,7 +2943,6 @@ p {
         margin-bottom: 18px; }
 
 .why {
-  border: 1px solid red;
   position: relative;
   margin: 60px auto 0 auto;
   max-width: 1920px;
@@ -3135,30 +3134,39 @@ p {
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon {
             top: 81px;
             left: 96px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon:hover ~ .container {
+              border-bottom: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon:hover ~ .container .triangle {
+                border-right: 2px solid #08005A; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon:hover ~ .container .point {
+              background-color: #1100C2; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title {
             position: relative;
             top: 287px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title:hover ~ .container {
-              border-top: 2px solid #08005A; }
+              border-bottom: 2px solid #08005A; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title:hover ~ .container .triangle {
-                border-left: 2px solid #08005A; }
+                border-right: 2px solid #08005A; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title:hover ~ .container .point {
               background-color: #1100C2; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .reason {
             position: relative;
             top: 287px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container {
-            border: 1px solid red; }
+            top: 4px;
+            border-bottom: 2px dashed #6D94C0; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container .triangle {
-              border: 1px solid #000;
-              position: absolute;
-              top: 0px;
-              left: 0px;
+              top: 6px;
+              left: -80px;
               width: 137px;
               height: 169px;
-              -webkit-transform: rotate(39deg);
-                  -ms-transform: rotate(39deg);
-                      transform: rotate(39deg); }
+              -webkit-transform: rotate(33deg);
+                  -ms-transform: rotate(33deg);
+                      transform: rotate(33deg);
+              border-right: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container .point {
+              bottom: -7px;
+              right: 0px; }
 
 .wave-top {
   height: 162px;
