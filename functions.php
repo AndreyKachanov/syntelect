@@ -174,6 +174,12 @@ function map() {
 	wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js');
 }
 
+// // Add script send form
+// add_action( 'wp_enqueue_scripts', 'send_contact_form' );
+// function send_contact_form() {
+// 	wp_enqueue_script( 'send_contact_form', get_template_directory_uri() . '/js/send_form.js', array('jquery'));
+// }
+
 
 
 function get_img_path() {
@@ -198,3 +204,28 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+
+
+
+// Ajax send contact form
+
+add_action( 'wp_ajax_send_form', 'say_send_form' );
+add_action( 'wp_ajax_nopriv_send_form', 'say_send_form' );
+
+function say_send_form() {
+
+	var_dump($_FILES);
+	wp_die();
+}
+
+// Подключение JS отправки формы
+add_action( 'wp_enqueue_scripts', 'my_assets' );
+function my_assets() {
+	wp_enqueue_script( 'send_contact_form', get_template_directory_uri() . '/js/send_contact_form.js', array('jquery'));
+	wp_localize_script( 'send_contact_form', 'myPlugin', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' )
+	) );
+}
+
+// end sen contact form

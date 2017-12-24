@@ -4,7 +4,8 @@
 				<div class="wrapper">
 						<h2 class="h2"><?=(get_field('contacts_group')['title'] ?? 'Contacts')?></h2>
 						<h3 class="h3"><?=(get_field('contacts_group')['sub_title'] ?? '')?></h3>
-						<form method="POST">
+						<p id="panel-heading">Панель ошибок</p>
+						<form method="POST" id="contact_form" enctype="multipart/form-data">
 							<div class="contacts-content">
 								<div class="form-title">
 									<div class="title">
@@ -14,17 +15,17 @@
 										<?=(get_field('contacts_group')['contact_form_group']['text'] ?? 'If you have any further questions, please don’t hesitate to contact us.')?>
 									</div>
 			 						<div class="btn-block-footer">
-			 							<button type="submit" class="btn btn-bg"><?=(get_field('send') ?? 'Send')?></button>						
+			 							<button id="submit" type="submit" class="btn btn-bg"><?=(get_field('send') ?? 'Send')?></button>						
 									</div>																					
 								</div>
 								<div class="form-first">
-									<input type="text" name="name" placeholder="<?=(get_field('contacts_group')['form_fields_group']['your_name'] ?? 'Your name')?>" required>
-									<input type="email" name="email" placeholder="<?=(get_field('contacts_group')['form_fields_group']['your_email'] ?? 'Your email')?>" required>
-									<input id="input-file" name="file" type="file" placeholder="<?=(get_field('contacts_group')['form_fields_group']['no_file_selected'] ?? 'No file selected')?>" required>
+									<input type="text" name="name"  id="name" placeholder="<?=(get_field('contacts_group')['form_fields_group']['your_name'] ?? 'Your name')?>" required>
+									<input type="email" name="email" id="email" placeholder="<?=(get_field('contacts_group')['form_fields_group']['your_email'] ?? 'Your email')?>" required>
+									<input id="input-file" name="file" type="file" placeholder="<?=(get_field('contacts_group')['form_fields_group']['no_file_selected'] ?? 'No file selected')?>" >
 								</div>
 								<div class="form-second">
-									<input type="text" name="subject" placeholder="<?=(get_field('contacts_group')['form_fields_group']['subject'] ?? 'Subject')?>" required>
-									<textarea name="message" placeholder="<?=(get_field('contacts_group')['form_fields_group']['text_area'] ?? 'Text area')?>" required></textarea>
+									<input type="text" name="subject" id="subject" placeholder="<?=(get_field('contacts_group')['form_fields_group']['subject'] ?? 'Subject')?>" >
+									<textarea name="message" id="message" placeholder="<?=(get_field('contacts_group')['form_fields_group']['text_area'] ?? 'Text area')?>" required></textarea>
 								</div>								
 							</div>
 						</form>

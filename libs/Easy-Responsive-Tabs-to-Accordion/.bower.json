@@ -1,0 +1,15 @@
+{
+  "name": "Easy-Responsive-Tabs-to-Accordion",
+  "homepage": "https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion",
+  "version": "1.2.2",
+  "_release": "1.2.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.2",
+    "commit": "66891a7d67af03877c48ba39bfedd1b052143c61"
+  },
+  "_source": "https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion.git",
+  "_target": "^1.2.2",
+  "_originalSource": "https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion.git",
+  "_direct": true
+}

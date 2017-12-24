@@ -123,6 +123,15 @@ jQuery(function() {
       animationspeed: 500            
     });
 
+    jQuery('#readmore-proc').showMore({
+      minheight: 1720,
+      buttontxtmore: glob_read_more_procc,
+      buttontxtless: glob_show_less,
+      buttoncss: 'btn btn-light btn-readmore-procc',
+      animationspeed: 500            
+    });
+
+
     // end read more        
 
     // effects for readmore buttons
@@ -146,6 +155,21 @@ jQuery(function() {
   });
   // end styling
 
+  // Tabs to Accordion
+  jQuery("#tabsToAccordion").easyResponsiveTabs({
+      type: 'vertical', //Типы: default, vertical, accordion
+      width: 'auto', //auto или любое значение ширины
+      fit: true,   // 100% пространства занимает в контейнере
+      activate: function() {} // Функция обратного вызова, используется, когда происходит переключение вкладок
+  });
 
+  // End Tabs to Accordion 
+
+  jQuery("#why_icon").click(function() {
+     jQuery("#why_text").css({
+        'display'       : 'block',
+        transition : 'all 0.7s ease-in-out'
+      });
+  });
   
 });

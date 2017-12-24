@@ -4,6 +4,36 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<? if ($why = get_field('why_group')['why_repeater']): ?>
+		<style>
+		<? $i=1; foreach ($why as $item): ?>
+		
+		.hvastalka .item:nth-of-type(<?=$i?>) .icon {		
+			background-image: url("<?=$item['why_sub_group']['image']?>");
+			transition: all 0.3s ease-in-out;
+		}
+
+
+		.hvastalka .item:nth-of-type(<?=$i?>) .icon:hover {		
+			background-image: url("<?=$item['why_sub_group']['image_active']?>");
+			background-color: #CFF1FF !important;	
+			box-shadow: 5px 5px 20px 0 rgba(75,101,129,0.4) !important;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;			
+		}
+
+		.hvastalka .item:nth-of-type(<?=$i?>) .title:hover ~ .icon {
+			background-image: url("<?=$item['why_sub_group']['image_active']?>");
+			background-color: #CFF1FF !important;	
+			box-shadow: 5px 5px 20px 0 rgba(75,101,129,0.4) !important;
+			transition: all 0.3s ease-in-out;
+		}
+
+
+
+		<? $i++; endforeach; ?>
+		</style>
+	<? endif; ?>
 	
 	<script>
 		<? if (!get_img_path()): ?>
@@ -17,9 +47,8 @@
 		glob_read_more = '<?=(get_field('read_more_group')['read_more'] ?? 'Read more')?>'; 
 		glob_show_less = '<?=(get_field('read_more_group')['show_less'] ?? 'Show less')?>';
 		glob_file_select = '<?=(get_field('contacts_group')['form_fields_group']['no_file_selected'] ?? 'File not selected')?>';
-
-
 		glob_address = '<?=(get_field('contacts_group')['address'] ?? '120 Nan Shi St. New Taipei City. Linkou. Taiwan, 24441')?>';
+		glob_read_more_procc = '<?=(get_field('learn_more_about_process') ?? 'Learn More About Process')?>';
 
 
 	</script>

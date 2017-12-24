@@ -19,6 +19,7 @@
     "components-font-awesome": "^4.7.0",
     "jquery-bgswitcher": "https://github.com/rewish/jquery-bgswitcher.git#^0.4.3",
     "show-more-plugin": "https://github.com/dtasic/show-more-plugin.git#^1.0.1",
-    "jquery-filestyle": "https://github.com/markusslima/jquery-filestyle.git#^2.1.0"
+    "jquery-filestyle": "https://github.com/markusslima/jquery-filestyle.git#^2.1.0",
+    "Easy-Responsive-Tabs-to-Accordion": "https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion.git#^1.2.2"
   }
 }
