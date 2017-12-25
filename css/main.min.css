@@ -2986,10 +2986,35 @@ p {
               background-size: cover;
       position: relative; }
       .why .wrapper .why-content .hvastalka .center {
-        border: 1px solid red;
-        max-height: 272px;
-        position: absolute; }
+        position: relative;
+        max-height: 147px;
+        width: 360px;
+        height: 281px;
+        max-width: 360px;
+        max-height: 281px;
+        overflow: hidden;
+        left: 8px; }
+        .why .wrapper .why-content .hvastalka .center .title {
+          color: #08005A;
+          font-family: "Raleway", sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 29px;
+          text-align: center; }
+        .why .wrapper .why-content .hvastalka .center .text {
+          position: relative;
+          top: 36px;
+          max-height: 210px;
+          overflow: hidden;
+          opacity: 0.8;
+          color: #08005A;
+          font-family: "Raleway", sans-serif;
+          font-size: 14px;
+          font-style: italic;
+          line-height: 19px;
+          text-align: center; }
         .why .wrapper .why-content .hvastalka .center .title-default {
+          padding-top: 58px;
           color: #08005A;
           font-family: "Raleway", sans-serif;
           font-size: 36px;
@@ -3049,16 +3074,7 @@ p {
             .why .wrapper .why-content .hvastalka .item .title:hover ~ .container .point {
               background-color: #1100C2; }
         .why .wrapper .why-content .hvastalka .item .text {
-          display: none;
-          position: absolute;
-          width: 360px;
-          opacity: 0.8;
-          color: #08005A;
-          font-family: "Raleway", sans-serif;
-          font-size: 14px;
-          font-style: italic;
-          line-height: 19px;
-          text-align: center; }
+          display: none; }
         .why .wrapper .why-content .hvastalka .item .icon {
           z-index: 999999;
           position: absolute;

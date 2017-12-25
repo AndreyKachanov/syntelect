@@ -165,39 +165,6 @@ jQuery(function() {
 
   // End Tabs to Accordion 
 
-  // jQuery("#why_icon").click(function() {
-  //    jQuery("#why_text").css({
-  //       'display'       : 'block',
-  //       transition : 'all 0.7s ease-in-out'
-  //     });
-  // });
-
-
-
-  
-
-  // jQuery("#hvastalka .title").add("#hvastalka .icon").click(function() {
-    
-  //   var any=replace(/[^\d\.]/g, '');
-  //   jQuery('[data-item-icon]').removeClass('iconHoveClass1' + any);  
-
-
-    
-  //   var click_item = jQuery(this).attr("data-item");
-
-  //   var text = jQuery('[data-item-text="' + click_item + '"]').text();
-  //   var title = jQuery('[data-item-title="' + click_item + '"]').text();
-
-  //   jQuery('[data-item-icon="' + click_item + '"]').addClass("iconHoveClass" + click_item); 
-  //   var temp = click_item;
-
-  //   jQuery("#default-text").html(text);
-  //   jQuery("#default-title").html(title).slideDown('slow');
-
-
-  // });
-
-  
   // функция удаления классов заканчивающихся любым символом
   jQuery.fn.removeClassWild = function(mask) {
           return this.removeClass(function(index, cls) {
@@ -238,6 +205,30 @@ jQuery(function() {
     jQuery('#hvastalka .container[data-item=' + item +']').addClass('borderSolidContainer_' + item);
     jQuery('#hvastalka .container[data-item=' + item +']').children(".triangle").addClass('borderSolidTriangle_' + item);
    
-  });         
+  });
+
+
+  // По клику на иконку или заголовок заменяем в блоку .center содержимое
+  jQuery("#hvastalka .title").add("#hvastalka .icon").click(function() {
+    // обнуляем фон кругляшки
+    jQuery('#hvastalka .point').css('background-color', "#08005A");
+
+    var click_item = jQuery(this).attr("data-item");
+    // задаем нужный фон кругляшке
+    jQuery('#hvastalka .point[data-item=' + click_item +']').css('background-color', "#1100C2");
+
+    var text = jQuery('[data-item-text="' + click_item + '"]').text();
+    var title = jQuery('[data-item-title="' + click_item + '"]').text();
+
+    jQuery("#default-text").html('');
+    jQuery("#default-title").html('');
+
+    jQuery('[data-item-title="' + click_item + '"]').clone().appendTo("#default-title").hide(100).show('slow');    
+    jQuery('[data-item-text="' + click_item + '"]').clone().appendTo("#default-text").hide(100).show('slow');
+
+    jQuery("#default-title").removeClass('title-default');
+    jQuery("#default-text").removeClass('text-default');
+    
+  });           
 
 });

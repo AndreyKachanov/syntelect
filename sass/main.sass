@@ -416,12 +416,41 @@ p
 				position: relative
 
 				.center
-					border: 1px solid red
-					max-height: 272px
-					position: absolute
+					// border: 1px solid red
+					position: relative
+					max-height: 147px
+					width: 360px
+					height: 281px
+					max-width: 360px
+					max-height: 281px
+					overflow: hidden
+					left: 8px
+
+					.title
+						color: #08005A
+						font-family: $default-font
+						font-size: 24px
+						font-weight: bold
+						line-height: 29px
+						text-align: center
+
+					.text
+						position: relative
+						top: 36px
+						max-height: 210px
+						overflow: hidden
+						// border: 1px solid #000
+						opacity: 0.8
+						color: #08005A
+						font-family: $default-font
+						font-size: 14px
+						font-style: italic
+						line-height: 19px
+						text-align: center						
 
 					.title-default
 						// border: 1px solid red
+						padding-top: 58px
 						color: #08005A
 						font-family: $default-font
 						font-size: 36px
@@ -481,19 +510,6 @@ p
 
 					.text
 						display: none
-						// border: 1px solid red
-						// top: 0
-						// left: 0
-						position: absolute
-						width: 360px
-						opacity: 0.8
-						color: #08005A
-						font-family: $default-font
-						font-size: 14px
-						font-style: italic
-						line-height: 19px
-						text-align: center
-
 					.icon
 						z-index: 999999
 						position: absolute

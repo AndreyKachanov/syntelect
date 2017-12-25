@@ -28,10 +28,10 @@ get_header('syntelect'); ?>
 											<?=($item['why_sub_group']['title'] ?? '')?>
 										</div>
 										<div class="icon" data-item="<?=$i?>" data-item-icon="<?=$i?>" title="<?=($item['why_sub_group']['title'] ?? '')?>"></div>
-										<div class="text text<?=$i?>" data-item-text="<?=$i?>"><?=($item['why_sub_group']['text'] ?? '')?></div>
+										<div class="text" data-item-text="<?=$i?>"><?=($item['why_sub_group']['text'] ?? '')?></div>
 										<div class="container" data-item="<?=$i?>">
 											<div class="triangle" data-item="<?=$i?>"></div>
-											<div class="point"></div>
+											<div class="point" data-item="<?=$i?>"></div>
 										</div>
 									</div>
 								<? $i++; endforeach; ?>
