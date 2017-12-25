@@ -214,9 +214,89 @@ add_action( 'wp_ajax_send_form', 'say_send_form' );
 add_action( 'wp_ajax_nopriv_send_form', 'say_send_form' );
 
 function say_send_form() {
+	
+	// var_dump($_FILES);
+	// die();
 
-	var_dump($_FILES);
-	wp_die();
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+		if (isset($_FILES['file'])) {
+			$file = $_FILES['file'];
+			$msg = '';
+
+			$white_list = ['jpg', 'png', 'jpeg', 'gif', 'doc', 'docx', 'txt', 'mp4'];
+			$tmp = explode('.', $file['name']);
+			$ext = strtolower($tmp[count($tmp) - 1]);
+
+			if ($file['size'] > 10 * 2 * 1024 * 1024) {
+				// echo $msg = 'Файл превышает 20 МБ';
+				header('Content-type: application/json');
+				echo json_encode(['type' => 'bad_size']);
+				wp_die();				
+			}
+			elseif (!in_array(strtolower($ext), $white_list)){
+				header('Content-type: application/json');
+				echo json_encode(['type' => 'bad_ext']);
+				wp_die();
+			} 
+			// else {
+			// 	идем дальше
+			// }
+		}
+
+		if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message'])) {
+			// file_put_contents("text.txt", "не пустые");
+			header('Content-type: application/json');						
+			echo json_encode(['type' => 'empty_fields']);			
+			wp_die();
+		} else {
+			global $phpmailer;
+			if ( !is_object( $phpmailer ) || !is_a( $phpmailer, 'PHPMailer' ) ) { // проверяем, существует ли объект $phpmailer и принадлежит ли он классу PHPMailer
+				// если нет, то подключаем необходимые файлы с классами и создаём новый объект
+				require_once ABSPATH . WPINC . '/class-phpmailer.php';
+				require_once ABSPATH . WPINC . '/class-smtp.php';
+				$phpmailer = new PHPMailer( true );
+			}
+
+			$name = substr(htmlspecialchars(trim($_POST['name'])), 0, 1000);
+			$email = substr(htmlspecialchars(trim($_POST['email'])), 0, 1000);
+			$subject = substr(htmlspecialchars(trim($_POST['subject'])), 0, 1000);
+			$message = substr(htmlspecialchars(trim($_POST['message'])), 0, 1000000);
+
+			$phpmailer->ClearAttachments(); // если в объекте уже содержатся вложения, очищаем их
+			$phpmailer->ClearCustomHeaders(); // то же самое касается заголовков письма
+			$phpmailer->ClearReplyTos();
+
+			$phpmailer->From = 'info@syntelect.com.tw'; // от кого, Email
+			$phpmailer->FromName = $name; // от кого, Имя
+			$phpmailer->Subject = $subject; // тема
+			$phpmailer->SingleTo = true;
+			$phpmailer->ContentType = 'text/html'; // тип содержимого письма
+			$phpmailer->IsHTML(true);
+			$phpmailer->CharSet = 'utf-8'; // кодировка письма
+			$phpmailer->ClearAllRecipients(); // очищаем всех получателей
+			$phpmailer->AddAddress('andreii.kachanov@gmail.com'); // добавляем новый адрес получателя
+			$phpmailer->AddAddress('andrey170749@yandex.ru');
+			$phpmailer->Body = "<p>Message from contact form syntelect.com.tw</p>
+								<p>Name - $name</p>
+								<p>Email - $email</p>
+								<p>Message - $message</p>";
+			
+			if (isset($_FILES['file']))
+				$phpmailer->AddAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+
+
+			if ($phpmailer->Send()) {
+				header('Content-type: application/json');						
+				echo json_encode(['type' => 'good']);
+				wp_die();		
+			} else {
+				header('Content-type: application/json');						
+				echo json_encode(['type' => 'bad_send']);
+				wp_die();		
+			}
+		} 	
+	}
 }
 
 // Подключение JS отправки формы
