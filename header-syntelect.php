@@ -61,7 +61,7 @@
 <body <?php body_class(); ?>>
 
 	<div id="my-page">
-		<div id="my-header">
+<!-- 		<div id="my-header">
 			<header class="site-header">
 				<div class="menu-full" id="menu-full">
 					<div class="wrapper">
@@ -125,4 +125,4 @@
 					</div>
 				</div>
 			</header>			
-		</div>
+		</div> -->

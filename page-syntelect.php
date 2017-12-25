@@ -4,7 +4,7 @@
 */
 get_header('syntelect'); ?>
 		<div id="my-content">
-			<section id="about" class="about">
+<!-- 			<section id="about" class="about">
 				<div class="wrapper">
 					<div class="about-content">
 						<h2 class="h2"><?=(get_field('about_group')['title'] ?? 'About Us')?></h2>
@@ -12,7 +12,7 @@ get_header('syntelect'); ?>
 						<div id="readmore" class="content"><?=(get_field('about_group')['text'] ?? '')?></div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<section id="why" class="why">
 				<div class="wrapper">
 						<h2 class="h2"><?=(get_field('why_group')['title'] ?? 'Why Choose Us')?></h2>

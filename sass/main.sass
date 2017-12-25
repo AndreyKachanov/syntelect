@@ -449,11 +449,10 @@ p
 						line-height: 19px
 						text-align: center
 					
-					.title
+					.title 
 						display: flex
 						align-items: center
 						justify-content: center
-						// position: relative
 						z-index: 999999999
 						color: #1100C2
 						font-family: $default-font
@@ -467,9 +466,11 @@ p
 						height: 48px
 						max-height: 48px
 						overflow: hidden
-						// border: 1px solid red
 						&:hover
 							cursor: pointer
+
+							~ .container .point
+								background-color: $pizduha-color-hover							
 
 					.text
 						display: none
@@ -495,8 +496,11 @@ p
 						background-repeat: no-repeat
 						background-position: center center
 						transition: all 0.3s ease-in-out
+						&:hover
+							~ .container .point
+								background-color: $pizduha-color-hover						
 					.container
-						width: 84%
+						width: 84% 
 						z-index: 0
 						margin: 0 auto
 						position: relative
@@ -510,95 +514,391 @@ p
 							width: 12px
 							height: 12px
 							border-radius: 50%
-							background-color: #08005A									
+							background-color: $pizduha-color									
 
 					&:nth-of-type(1)// основной первый блок
-						top: -79px
-						left: 276px
+						top: -92px
+						left: 267px
 						.icon
-							top: 182px
-							left: 96px
+							top: 193px
+							left: 104px
 							&:hover
 								~ .container
-									border-top: 2px solid #08005A
+									border-top: 2px solid $solid-border-color
 									.triangle
-										border-left: 2px solid #08005A
-								~ .container .point
-									background-color: #1100C2	
+										border-left: 2px solid $solid-border-color
+	
 						.reason
-							position: relative
-							top: 3px
+							text-align: center
+							position: relative 
+							top: 15px
+							left: 5px
 						.title
+							text-align: center
+							position: relative
+							top: 5px
+							left: 4px
 							&:hover
 								~ .container
-									border-top: 2px solid #08005A
+									border-top: 2px solid $solid-border-color
 									.triangle
-										border-left: 2px solid #08005A
-								~ .container .point
-									background-color: #1100C2
+										border-left: 2px solid $solid-border-color
+
 						.text
 							top: 441px
 							left: -80px				
 
-
-
 						.container
 					    	top: 13px
-					    	border-top: 2px dashed #6D94C0
+					    	border-top: 2px dashed $dash-border-color
 				    		.point
 				    			top: -7px
-
 					    	.triangle
-					    		top: 23px
-					    		right: -67px
+					    		top: 22px
+					    		right: -72px
 					    		width: 137px
 					    		height: 169px
-					    		transform: rotate(39deg)
-					    		border-left: 2px dashed #6D94C0
+					    		transform: rotate(37deg)
+					    		border-left: 2px dashed $dash-border-color
 					    		border-bottom: none	
-								
+									
 					&:nth-of-type(2)
+						// border: 1px solid red
+						top: 0px
+						right: 0px
+						.icon
+							bottom: 21px
+							left: 21px
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-left: 2px solid $solid-border-color
+		
+						.title
+							text-align: left
+							justify-content: flex-start
+							position: relative
+							right: -187px
+							top: 66px	
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-left: 2px solid $solid-border-color
+
+						.reason
+							text-align: left
+							position: relative
+							top: 73px
+							right: -187px			
+
+						.container
+							right: -166px
+							top: 74px
+							border-top: 2px dashed $dash-border-color
+							// border: 1px solid red
+							.triangle
+								top: 15px
+								left: -108px
+								width: 137px
+								height: 169px
+								transform: rotate(60deg)
+								border-left: 2px dashed $dash-border-color
+								// border: 1px solid red
+							.point
+								top: -7px
+								right: -6px
+
+					&:nth-of-type(3)
+						// border: 1px solid red
+						top: 172px
+						right: -70px
+						.icon
+							bottom: 21px
+							left: 21px
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-top: 2px solid $solid-border-color
+		
+						.title
+							text-align: left
+							justify-content: flex-start
+							position: relative
+							right: -157px
+							top: 175px	
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-top: 2px solid $solid-border-color
+
+						.reason
+							text-align: left
+							position: relative
+							top: 184px
+							right: -155px			
+
+						.container
+							width: 216px
+							right: -133px
+							bottom: -183px
+							border-top: 2px dashed $dash-border-color
+							// border: 1px solid red
+							.triangle
+								top: -21px
+								left: -120px
+								width: 97px
+								height: 169px
+								transform: rotate(18deg)
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+							.point
+								top: -7px
+								right: -6px
+
+					&:nth-of-type(4)
+						// border: 1px solid red
+						top: 340px
+						right: 1px
+						.icon
+							bottom: 21px
+							left: 21px
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-top: 2px solid $solid-border-color
+		
+						.title
+							text-align: left
+							justify-content: flex-start
+							position: relative
+							right: -189px
+							top: 212px	
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-top: 2px solid $solid-border-color
+
+						.reason
+							text-align: left
+							position: relative
+							top: 211px
+							right: -190px			
+
+						.container
+							width: 222px
+							right: -162px
+							bottom: -234px
+							border-top: 2px dashed $dash-border-color
+							// border: 1px solid red
+							.triangle
+								top: -43px
+								left: -160px
+								width: 132px
+								height: 155px
+								transform: rotate(29deg)
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+							.point
+								top: -8px
+								right: -8px
+
+					&:nth-of-type(5)
+						// border: 1px solid red
 						bottom: 0px
 						left: 276px
 						.icon
 							top: 81px
-							left: 96px
+							left: 99px
 							&:hover
 								~ .container
-									border-bottom: 2px solid #08005A
+									border-bottom: 2px solid $solid-border-color
 									.triangle
-										border-right: 2px solid #08005A
-								~ .container .point
-									background-color: #1100C2		
+										border-right: 2px solid $solid-border-color
+		
 						.title
+							text-align: center
 							position: relative
-							top: 287px	
+							top: 287px
+							left: -4px	
 							&:hover
 								~ .container
-									border-bottom: 2px solid #08005A
+									border-bottom: 2px solid $solid-border-color
 									.triangle
-										border-right: 2px solid #08005A
-								~ .container .point
-									background-color: #1100C2
+										border-right: 2px solid $solid-border-color
 						.reason
+							text-align: center
 							position: relative
-							top: 287px			
-
-
+							top: 287px
+							left: -5px			
 
 						.container
+							width: 220px
+							// border: 1px solid red
 							top: 4px
-							border-bottom: 2px dashed #6D94C0
+							border-bottom: 2px dashed $dash-border-color
 							.triangle
+								// border: 1px solid red
 								top: 6px
-								left: -80px
+								left: -69px
 								width: 137px
 								height: 169px
-								transform: rotate(33deg)
-								border-right: 2px dashed #6D94C0
+								transform: rotate(38deg)
+								border-right: 2px dashed $dash-border-color
 							.point
 								bottom: -7px
-								right: 0px	
+								right: 0px
+
+					&:nth-of-type(6)
+						// border: 1px solid red
+						top: 340px
+						left: 1px
+						.icon
+							bottom: 21px
+							right: 2px
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-left: 2px solid $solid-border-color
+		
+						.title
+							text-align: left
+							justify-content: flex-end
+							position: relative
+							left: -165px
+							top: 225px	
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-left: 2px solid $solid-border-color
+
+						.reason
+							text-align: right
+							position: relative
+							top: 234px
+							left: -164px			
+
+						.container
+							width: 222px
+							left: -142px
+							bottom: -234px
+							border-top: 2px dashed $dash-border-color
+							// border: 1px solid red
+							.triangle
+								top: -62px
+								right: -165px
+								width: 132px
+								height: 155px
+								transform: rotate(59deg)
+								border-left: 2px dashed $dash-border-color
+								// border: 1px solid red
+							.point
+								top: -8px
+								left: -8px
+
+					&:nth-of-type(7)
+						// border: 1px solid red
+						top: 172px
+						left: -70px
+						.icon
+							bottom: 21px
+							right: -2px
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-top: 2px solid $solid-border-color
+		
+						.title
+							text-align: right
+							justify-content: flex-end
+							position: relative
+							left: -122px
+							top: 162px	
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-top: 2px solid $solid-border-color
+
+						.reason
+							text-align: right
+							position: relative
+							top: 161px
+							left: -123px			
+
+						.container
+							width: 216px
+							left: -111px
+							bottom: -183px
+							border-top: 2px dashed $dash-border-color
+							// border: 1px solid red
+							.triangle
+								top: -21px
+								right: -120px
+								width: 97px
+								height: 169px
+								transform: rotate(-18deg)
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+							.point
+								top: -7px
+								left: -6px
+
+					&:nth-of-type(8)
+						// border: 1px solid red
+						top: 0px
+						left: 0px
+						.icon
+							bottom: 21px
+							right: 0px
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-right: 2px solid $solid-border-color
+		
+						.title
+							text-align: right
+							justify-content: flex-end
+							position: relative
+							left: -161px
+							top: 55px	
+							&:hover
+								~ .container
+									border-top: 2px solid $solid-border-color
+									.triangle
+										border-right: 2px solid $solid-border-color
+
+						.reason
+							text-align: right
+							position: relative
+							top: 54px
+							left: -164px			
+
+						.container
+							left: -143px
+							top: 74px
+							border-top: 2px dashed $dash-border-color
+							// border: 1px solid red
+							.triangle
+								top: 15px
+								right: -108px
+								width: 137px
+								height: 169px
+								transform: rotate(-60deg)
+								border-right: 2px dashed $dash-border-color
+								// border: 1px solid red
+							.point
+								top: -7px
+								left: -6px																																																									
 .wave-top
 	// border: 1px solid #000
 	height: 162px

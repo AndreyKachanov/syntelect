@@ -3040,6 +3040,8 @@ p {
           overflow: hidden; }
           .why .wrapper .why-content .hvastalka .item .title:hover {
             cursor: pointer; }
+            .why .wrapper .why-content .hvastalka .item .title:hover ~ .container .point {
+              background-color: #1100C2; }
         .why .wrapper .why-content .hvastalka .item .text {
           display: none;
           position: absolute;
@@ -3068,6 +3070,8 @@ p {
           -webkit-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out; }
+          .why .wrapper .why-content .hvastalka .item .icon:hover ~ .container .point {
+            background-color: #1100C2; }
         .why .wrapper .why-content .hvastalka .item .container {
           width: 84%;
           z-index: 0;
@@ -3090,26 +3094,29 @@ p {
                     border-radius: 50%;
             background-color: #08005A; }
         .why .wrapper .why-content .hvastalka .item:nth-of-type(1) {
-          top: -79px;
-          left: 276px; }
+          top: -92px;
+          left: 267px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .icon {
-            top: 182px;
-            left: 96px; }
+            top: 193px;
+            left: 104px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .icon:hover ~ .container {
               border-top: 2px solid #08005A; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .icon:hover ~ .container .triangle {
                 border-left: 2px solid #08005A; }
-            .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .icon:hover ~ .container .point {
-              background-color: #1100C2; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .reason {
+            text-align: center;
             position: relative;
-            top: 3px; }
-          .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title:hover ~ .container {
-            border-top: 2px solid #08005A; }
-            .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title:hover ~ .container .triangle {
-              border-left: 2px solid #08005A; }
-          .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title:hover ~ .container .point {
-            background-color: #1100C2; }
+            top: 15px;
+            left: 5px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title {
+            text-align: center;
+            position: relative;
+            top: 5px;
+            left: 4px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title:hover ~ .container .triangle {
+                border-left: 2px solid #08005A; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .text {
             top: 441px;
             left: -80px; }
@@ -3119,54 +3126,323 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .container .point {
               top: -7px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .container .triangle {
-              top: 23px;
-              right: -67px;
+              top: 22px;
+              right: -72px;
               width: 137px;
               height: 169px;
-              -webkit-transform: rotate(39deg);
-                  -ms-transform: rotate(39deg);
-                      transform: rotate(39deg);
+              -webkit-transform: rotate(37deg);
+                  -ms-transform: rotate(37deg);
+                      transform: rotate(37deg);
               border-left: 2px dashed #6D94C0;
               border-bottom: none; }
         .why .wrapper .why-content .hvastalka .item:nth-of-type(2) {
-          bottom: 0px;
-          left: 276px; }
+          top: 0px;
+          right: 0px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon {
-            top: 81px;
-            left: 96px; }
+            bottom: 21px;
+            left: 21px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon:hover ~ .container {
-              border-bottom: 2px solid #08005A; }
+              border-top: 2px solid #08005A; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon:hover ~ .container .triangle {
-                border-right: 2px solid #08005A; }
-            .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon:hover ~ .container .point {
-              background-color: #1100C2; }
+                border-left: 2px solid #08005A; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title {
+            text-align: left;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
             position: relative;
-            top: 287px; }
+            right: -187px;
+            top: 66px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title:hover ~ .container {
-              border-bottom: 2px solid #08005A; }
+              border-top: 2px solid #08005A; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title:hover ~ .container .triangle {
-                border-right: 2px solid #08005A; }
-            .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title:hover ~ .container .point {
-              background-color: #1100C2; }
+                border-left: 2px solid #08005A; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .reason {
+            text-align: left;
             position: relative;
-            top: 287px; }
+            top: 73px;
+            right: -187px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container {
-            top: 4px;
-            border-bottom: 2px dashed #6D94C0; }
+            right: -166px;
+            top: 74px;
+            border-top: 2px dashed #6D94C0; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container .triangle {
-              top: 6px;
-              left: -80px;
+              top: 15px;
+              left: -108px;
               width: 137px;
               height: 169px;
-              -webkit-transform: rotate(33deg);
-                  -ms-transform: rotate(33deg);
-                      transform: rotate(33deg);
-              border-right: 2px dashed #6D94C0; }
+              -webkit-transform: rotate(60deg);
+                  -ms-transform: rotate(60deg);
+                      transform: rotate(60deg);
+              border-left: 2px dashed #6D94C0; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container .point {
+              top: -7px;
+              right: -6px; }
+        .why .wrapper .why-content .hvastalka .item:nth-of-type(3) {
+          top: 172px;
+          right: -70px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .icon {
+            bottom: 21px;
+            left: 21px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .icon:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .icon:hover ~ .container .triangle {
+                border-top: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .title {
+            text-align: left;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            position: relative;
+            right: -157px;
+            top: 175px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .title:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .title:hover ~ .container .triangle {
+                border-top: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .reason {
+            text-align: left;
+            position: relative;
+            top: 184px;
+            right: -155px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .container {
+            width: 216px;
+            right: -133px;
+            bottom: -183px;
+            border-top: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .container .triangle {
+              top: -21px;
+              left: -120px;
+              width: 97px;
+              height: 169px;
+              -webkit-transform: rotate(18deg);
+                  -ms-transform: rotate(18deg);
+                      transform: rotate(18deg);
+              border-top: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .container .point {
+              top: -7px;
+              right: -6px; }
+        .why .wrapper .why-content .hvastalka .item:nth-of-type(4) {
+          top: 340px;
+          right: 1px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .icon {
+            bottom: 21px;
+            left: 21px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .icon:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .icon:hover ~ .container .triangle {
+                border-top: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .title {
+            text-align: left;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            position: relative;
+            right: -189px;
+            top: 212px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .title:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .title:hover ~ .container .triangle {
+                border-top: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .reason {
+            text-align: left;
+            position: relative;
+            top: 211px;
+            right: -190px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .container {
+            width: 222px;
+            right: -162px;
+            bottom: -234px;
+            border-top: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .container .triangle {
+              top: -43px;
+              left: -160px;
+              width: 132px;
+              height: 155px;
+              -webkit-transform: rotate(29deg);
+                  -ms-transform: rotate(29deg);
+                      transform: rotate(29deg);
+              border-top: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .container .point {
+              top: -8px;
+              right: -8px; }
+        .why .wrapper .why-content .hvastalka .item:nth-of-type(5) {
+          bottom: 0px;
+          left: 276px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .icon {
+            top: 81px;
+            left: 99px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .icon:hover ~ .container {
+              border-bottom: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .icon:hover ~ .container .triangle {
+                border-right: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .title {
+            text-align: center;
+            position: relative;
+            top: 287px;
+            left: -4px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .title:hover ~ .container {
+              border-bottom: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .title:hover ~ .container .triangle {
+                border-right: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .reason {
+            text-align: center;
+            position: relative;
+            top: 287px;
+            left: -5px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .container {
+            width: 220px;
+            top: 4px;
+            border-bottom: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .container .triangle {
+              top: 6px;
+              left: -69px;
+              width: 137px;
+              height: 169px;
+              -webkit-transform: rotate(38deg);
+                  -ms-transform: rotate(38deg);
+                      transform: rotate(38deg);
+              border-right: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .container .point {
               bottom: -7px;
               right: 0px; }
+        .why .wrapper .why-content .hvastalka .item:nth-of-type(6) {
+          top: 340px;
+          left: 1px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .icon {
+            bottom: 21px;
+            right: 2px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .icon:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .icon:hover ~ .container .triangle {
+                border-left: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .title {
+            text-align: left;
+            -webkit-box-pack: end;
+            -webkit-justify-content: flex-end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
+            position: relative;
+            left: -165px;
+            top: 225px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .title:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .title:hover ~ .container .triangle {
+                border-left: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .reason {
+            text-align: right;
+            position: relative;
+            top: 234px;
+            left: -164px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .container {
+            width: 222px;
+            left: -142px;
+            bottom: -234px;
+            border-top: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .container .triangle {
+              top: -62px;
+              right: -165px;
+              width: 132px;
+              height: 155px;
+              -webkit-transform: rotate(59deg);
+                  -ms-transform: rotate(59deg);
+                      transform: rotate(59deg);
+              border-left: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .container .point {
+              top: -8px;
+              left: -8px; }
+        .why .wrapper .why-content .hvastalka .item:nth-of-type(7) {
+          top: 172px;
+          left: -70px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .icon {
+            bottom: 21px;
+            right: -2px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .icon:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .icon:hover ~ .container .triangle {
+                border-top: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .title {
+            text-align: right;
+            -webkit-box-pack: end;
+            -webkit-justify-content: flex-end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
+            position: relative;
+            left: -122px;
+            top: 162px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .title:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .title:hover ~ .container .triangle {
+                border-top: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .reason {
+            text-align: right;
+            position: relative;
+            top: 161px;
+            left: -123px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .container {
+            width: 216px;
+            left: -111px;
+            bottom: -183px;
+            border-top: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .container .triangle {
+              top: -21px;
+              right: -120px;
+              width: 97px;
+              height: 169px;
+              -webkit-transform: rotate(-18deg);
+                  -ms-transform: rotate(-18deg);
+                      transform: rotate(-18deg);
+              border-top: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .container .point {
+              top: -7px;
+              left: -6px; }
+        .why .wrapper .why-content .hvastalka .item:nth-of-type(8) {
+          top: 0px;
+          left: 0px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .icon {
+            bottom: 21px;
+            right: 0px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .icon:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .icon:hover ~ .container .triangle {
+                border-right: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .title {
+            text-align: right;
+            -webkit-box-pack: end;
+            -webkit-justify-content: flex-end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
+            position: relative;
+            left: -161px;
+            top: 55px; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .title:hover ~ .container {
+              border-top: 2px solid #08005A; }
+              .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .title:hover ~ .container .triangle {
+                border-right: 2px solid #08005A; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .reason {
+            text-align: right;
+            position: relative;
+            top: 54px;
+            left: -164px; }
+          .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .container {
+            left: -143px;
+            top: 74px;
+            border-top: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .container .triangle {
+              top: 15px;
+              right: -108px;
+              width: 137px;
+              height: 169px;
+              -webkit-transform: rotate(-60deg);
+                  -ms-transform: rotate(-60deg);
+                      transform: rotate(-60deg);
+              border-right: 2px dashed #6D94C0; }
+            .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .container .point {
+              top: -7px;
+              left: -6px; }
 
 .wave-top {
   height: 162px;
