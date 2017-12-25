@@ -2986,9 +2986,9 @@ p {
               background-size: cover;
       position: relative; }
       .why .wrapper .why-content .hvastalka .center {
-        position: absolute;
-        max-width: 416px;
-        max-height: 500px; }
+        border: 1px solid red;
+        max-height: 272px;
+        position: absolute; }
         .why .wrapper .why-content .hvastalka .center .title-default {
           color: #08005A;
           font-family: "Raleway", sans-serif;
@@ -2996,13 +2996,19 @@ p {
           font-weight: bold;
           line-height: 27px;
           text-align: center;
-          margin-bottom: 22px; }
+          margin: 0 auto 4px auto;
+          max-width: 225px;
+          max-height: 87px;
+          overflow: hidden; }
         .why .wrapper .why-content .hvastalka .center .text-default {
           color: #08005A;
           font-family: "Raleway", sans-serif;
           font-size: 24px;
           line-height: 27px;
-          text-align: center; }
+          text-align: center;
+          max-width: 360px;
+          max-height: 171px;
+          overflow: hidden; }
       .why .wrapper .why-content .hvastalka .item {
         position: absolute; }
         .why .wrapper .why-content .hvastalka .item .reason {
@@ -3118,8 +3124,9 @@ p {
               .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title:hover ~ .container .triangle {
                 border-left: 2px solid #08005A; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .text {
+            border: 1px solid red;
             top: 441px;
-            left: -80px; }
+            left: -44px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .container {
             top: 13px;
             border-top: 2px dashed #6D94C0; }

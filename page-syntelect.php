@@ -4,7 +4,7 @@
 */
 get_header('syntelect'); ?>
 		<div id="my-content">
-<!-- 			<section id="about" class="about">
+			<section id="about" class="about">
 				<div class="wrapper">
 					<div class="about-content">
 						<h2 class="h2"><?=(get_field('about_group')['title'] ?? 'About Us')?></h2>
@@ -12,33 +12,33 @@ get_header('syntelect'); ?>
 						<div id="readmore" class="content"><?=(get_field('about_group')['text'] ?? '')?></div>
 					</div>
 				</div>
-			</section> -->
+			</section>
 			<section id="why" class="why">
 				<div class="wrapper">
 						<h2 class="h2"><?=(get_field('why_group')['title'] ?? 'Why Choose Us')?></h2>
 						<h3 class="h3"><?=(get_field('why_group')['sub_title'] ?? '')?></h3>
 						<? if ($why = get_field('why_group')['why_repeater']): ?>
 						<div class="why-content">
-							<div class="hvastalka">
+							<div class="hvastalka" id="hvastalka">
 
-								<? foreach ($why as $item): ?>
+								<? $i=1; foreach ($why as $item): ?>
 									<div class="item">
 										<div class="reason"><?=($item['why_sub_group']['reason_number'] ?? '')?></div>
-										<div class="title" title="<?=($item['why_sub_group']['title'] ?? '')?>">
+										<div class="title" data-item="<?=$i?>" data-item-title="<?=$i?>" title="<?=($item['why_sub_group']['title'] ?? '')?>">
 											<?=($item['why_sub_group']['title'] ?? '')?>
 										</div>
-										<div class="icon" id="why_icon" title="<?=($item['why_sub_group']['title'] ?? '')?>"></div>
-										<div class="text" id="why_text"><?=($item['why_sub_group']['text'] ?? '')?></div>
-										<div class="container">
-											<div class="triangle"></div>
+										<div class="icon" data-item="<?=$i?>" data-item-icon="<?=$i?>" title="<?=($item['why_sub_group']['title'] ?? '')?>"></div>
+										<div class="text text<?=$i?>" data-item-text="<?=$i?>"><?=($item['why_sub_group']['text'] ?? '')?></div>
+										<div class="container" data-item="<?=$i?>">
+											<div class="triangle" data-item="<?=$i?>"></div>
 											<div class="point"></div>
 										</div>
 									</div>
-								<? endforeach; ?>
+								<? $i++; endforeach; ?>
 
 								<div class="center">									
-									<div class="title-default"><?=(get_field('why_group')['title_center'] ?? '')?></div>
-									<div class="text-default"><?=(get_field('why_group')['text_center'] ?? '')?></div>
+									<div id="default-title" class="title-default"><?=(get_field('why_group')['title_center'] ?? '')?></div>
+									<div id="default-text" class="text-default"><?=(get_field('why_group')['text_center'] ?? '')?></div>
 								</div>								
 
 							</div>

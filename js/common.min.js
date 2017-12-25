@@ -165,11 +165,79 @@ jQuery(function() {
 
   // End Tabs to Accordion 
 
-  jQuery("#why_icon").click(function() {
-     jQuery("#why_text").css({
-        'display'       : 'block',
-        transition : 'all 0.7s ease-in-out'
-      });
-  });
+  // jQuery("#why_icon").click(function() {
+  //    jQuery("#why_text").css({
+  //       'display'       : 'block',
+  //       transition : 'all 0.7s ease-in-out'
+  //     });
+  // });
+
+
+
   
+
+  // jQuery("#hvastalka .title").add("#hvastalka .icon").click(function() {
+    
+  //   var any=replace(/[^\d\.]/g, '');
+  //   jQuery('[data-item-icon]').removeClass('iconHoveClass1' + any);  
+
+
+    
+  //   var click_item = jQuery(this).attr("data-item");
+
+  //   var text = jQuery('[data-item-text="' + click_item + '"]').text();
+  //   var title = jQuery('[data-item-title="' + click_item + '"]').text();
+
+  //   jQuery('[data-item-icon="' + click_item + '"]').addClass("iconHoveClass" + click_item); 
+  //   var temp = click_item;
+
+  //   jQuery("#default-text").html(text);
+  //   jQuery("#default-title").html(title).slideDown('slow');
+
+
+  // });
+
+  
+  // функция удаления классов заканчивающихся любым символом
+  jQuery.fn.removeClassWild = function(mask) {
+          return this.removeClass(function(index, cls) {
+              var re = mask.replace(/\*/g, '\\S+');
+              return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
+          });
+  };
+
+  // нажатие на иконку
+  jQuery("#hvastalka .icon").click(function() {
+    // удаление классов iconHoveClass_*
+    jQuery("#hvastalka .icon").removeClassWild("iconHoveClass_*");
+    // удаление линий треугольника
+    jQuery("#hvastalka .container").removeClassWild("borderSolidContainer_*");
+    jQuery("#hvastalka .triangle").removeClassWild("borderSolidTriangle_*");
+    // id нажатого итема
+    var item = jQuery(this).attr("data-item");
+    // добавление класса иконке
+    jQuery(this).addClass("iconHoveClass_" + item);
+    // добавление классов треугольнику...
+    jQuery(this).siblings('.container').addClass('borderSolidContainer_' + item).children(".triangle").addClass('borderSolidTriangle_' + item);
+
+  });
+
+
+  // нажатие на заголовок
+  jQuery("#hvastalka .title").click(function() {
+    // удаление классов iconHoveClass_*
+    jQuery("#hvastalka .icon").removeClassWild("iconHoveClass_*");
+    // удаление классов треугольника...
+    jQuery("#hvastalka .container").removeClassWild("borderSolidContainer_*");
+    jQuery("#hvastalka .triangle").removeClassWild("borderSolidTriangle_*");
+    // текущий итем
+    var item = jQuery(this).attr("data-item");
+    // добавление класса текущей иконке(определяем по data-item)
+    jQuery('#hvastalka .icon[data-item=' + item +']').addClass("iconHoveClass_" + item);
+    // аналогично добавляем классы треугольнику
+    jQuery('#hvastalka .container[data-item=' + item +']').addClass('borderSolidContainer_' + item);
+    jQuery('#hvastalka .container[data-item=' + item +']').children(".triangle").addClass('borderSolidTriangle_' + item);
+   
+  });         
+
 });

@@ -416,26 +416,33 @@ p
 				position: relative
 
 				.center
-					// border: 1px solid red
+					border: 1px solid red
+					max-height: 272px
 					position: absolute
-					max-width: 416px
-					max-height: 500px
 
 					.title-default
+						// border: 1px solid red
 						color: #08005A
 						font-family: $default-font
 						font-size: 36px
 						font-weight: bold
 						line-height: 27px
 						text-align: center
-						margin-bottom: 22px
+						margin: 0 auto 4px auto
+						max-width: 225px						
+						max-height: 87px
+						overflow: hidden
 
 					.text-default
+						// border: 1px solid red
 						color: #08005A
 						font-family: $default-font
 						font-size: 24px
 						line-height: 27px
-						text-align: center									
+						text-align: center
+						max-width: 360px									
+						max-height: 171px
+						overflow: hidden
 				
 				
 				.item
@@ -474,6 +481,9 @@ p
 
 					.text
 						display: none
+						// border: 1px solid red
+						// top: 0
+						// left: 0
 						position: absolute
 						width: 360px
 						opacity: 0.8
@@ -497,6 +507,7 @@ p
 						background-position: center center
 						transition: all 0.3s ease-in-out
 						&:hover
+							// cursor: pointer
 							~ .container .point
 								background-color: $pizduha-color-hover						
 					.container
@@ -545,8 +556,10 @@ p
 										border-left: 2px solid $solid-border-color
 
 						.text
+							border: 1px solid red
+							// display: block
 							top: 441px
-							left: -80px				
+							left: -44px				
 
 						.container
 					    	top: 13px

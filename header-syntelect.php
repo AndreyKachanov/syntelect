@@ -29,9 +29,50 @@
 			transition: all 0.3s ease-in-out;
 		}
 
+		.iconHoveClass_<?=$i?> {
+			background-image: url("<?=$item['why_sub_group']['image_active']?>") !important;
+			background-color: #CFF1FF !important;	
+			box-shadow: 5px 5px 20px 0 rgba(75,101,129,0.4) !important;
+			cursor: pointer !important;
+			transition: all 0.3s ease-in-out !important;
+		}
+
+/*
+		.borderSolidContainer_<=$i?> {
+
+		}
+
+		.borderSolidTriangle_<=$i?> {
+
+		}*/
 
 
 		<? $i++; endforeach; ?>
+
+		.borderSolidContainer_1 { border-top: 2px solid #08005A !important; }
+		.borderSolidTriangle_1 { border-left: 2px solid #08005A !important; }
+
+		.borderSolidContainer_2 { border-top: 2px solid #08005A !important; }
+		.borderSolidTriangle_2 {  border-left: 2px solid #08005A !important; }
+
+		.borderSolidContainer_3 {  border-top : 2px solid #08005A !important; }
+		.borderSolidTriangle_3 {  border-top : 2px solid #08005A !important; }
+
+		.borderSolidContainer_4 {  border-top : 2px solid #08005A !important; }
+		.borderSolidTriangle_4 {  border-top : 2px solid #08005A !important; }
+
+		.borderSolidContainer_5 {  border-bottom : 2px solid #08005A !important; }
+		.borderSolidTriangle_5 {  border-right : 2px solid #08005A !important; }
+
+		.borderSolidContainer_6 {  border-top : 2px solid #08005A !important; }
+		.borderSolidTriangle_6 {  border-left : 2px solid #08005A !important; }
+
+		.borderSolidContainer_7 {  border-top : 2px solid #08005A !important; }
+		.borderSolidTriangle_7 {  border-top : 2px solid #08005A !important; }
+
+		.borderSolidContainer_8 {  border-top : 2px solid #08005A !important; }
+		.borderSolidTriangle_8 {  border-right : 2px solid #08005A !important; }												
+
 		</style>
 	<? endif; ?>
 	
@@ -61,7 +102,7 @@
 <body <?php body_class(); ?>>
 
 	<div id="my-page">
-<!-- 		<div id="my-header">
+		<div id="my-header">
 			<header class="site-header">
 				<div class="menu-full" id="menu-full">
 					<div class="wrapper">
@@ -125,4 +166,4 @@
 					</div>
 				</div>
 			</header>			
-		</div> -->
+		</div>
