@@ -2585,14 +2585,21 @@ input[type="text"]:disabled:active {
           box-shadow: 0 0 0 1px red !important; }
 
 .succ-send {
-  background-color: #8cb350;
-  color: #fff;
-  padding: 5px 15px; }
+  background-color: #8cb350; }
 
 .succ-error {
-  background-color: #b72929;
-  color: #fff;
-  padding: 5px 15px; }
+  background-color: #b72929; }
+
+#panel-heading {
+  position: relative;
+  top: 35px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  padding: 10px 15px;
+  color: #fff; }
 
 .readmore-css {
   display: inline-block;

@@ -4,9 +4,10 @@
 				<div class="wrapper">
 						<h2 class="h2"><?=(get_field('contacts_group')['title'] ?? 'Contacts')?></h2>
 						<h3 class="h3"><?=(get_field('contacts_group')['sub_title'] ?? '')?></h3>
-						<p id="panel-heading">Панель ошибок</p>
+						<div id="panel-heading"></div>
 						<form method="post" id="contact_form" enctype="multipart/form-data" novalidate>
 							<div class="contacts-content">
+								
 								<div class="form-title">
 									<div class="title">
 										<?=(get_field('contacts_group')['contact_form_group']['title'] ?? 'Сontact form')?>
