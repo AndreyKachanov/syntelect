@@ -5,7 +5,7 @@
 						<h2 class="h2"><?=(get_field('contacts_group')['title'] ?? 'Contacts')?></h2>
 						<h3 class="h3"><?=(get_field('contacts_group')['sub_title'] ?? '')?></h3>
 						<p id="panel-heading">Панель ошибок</p>
-						<form method="POST" id="contact_form" enctype="multipart/form-data">
+						<form method="post" id="contact_form" enctype="multipart/form-data" novalidate>
 							<div class="contacts-content">
 								<div class="form-title">
 									<div class="title">
@@ -19,13 +19,13 @@
 									</div>																					
 								</div>
 								<div class="form-first">
-									<input type="text" name="name"  id="name" placeholder="<?=(get_field('contacts_group')['form_fields_group']['your_name'] ?? 'Your name')?>" required>
-									<input type="email" name="email" id="email" placeholder="<?=(get_field('contacts_group')['form_fields_group']['your_email'] ?? 'Your email')?>" required>
+									<input type="text" name="name"  id="name" placeholder="<?=(get_field('contacts_group')['form_fields_group']['your_name'] ?? 'Your name')?>" >
+									<input type="email" name="email" id="email" placeholder="<?=(get_field('contacts_group')['form_fields_group']['your_email'] ?? 'Your email')?>" >
 									<input id="input-file" name="file" type="file" placeholder="<?=(get_field('contacts_group')['form_fields_group']['no_file_selected'] ?? 'No file selected')?>" >
 								</div>
 								<div class="form-second">
 									<input type="text" name="subject" id="subject" placeholder="<?=(get_field('contacts_group')['form_fields_group']['subject'] ?? 'Subject')?>" >
-									<textarea name="message" id="message" placeholder="<?=(get_field('contacts_group')['form_fields_group']['text_area'] ?? 'Text area')?>" required></textarea>
+									<textarea name="message" id="message" placeholder="<?=(get_field('contacts_group')['form_fields_group']['text_area'] ?? 'Text area')?>" ></textarea>
 								</div>								
 							</div>
 						</form>

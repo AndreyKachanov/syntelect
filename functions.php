@@ -229,7 +229,7 @@ function say_send_form() {
 			$ext = strtolower($tmp[count($tmp) - 1]);
 
 			if ($file['size'] > 10 * 2 * 1024 * 1024) {
-				// echo $msg = 'Файл превышает 20 МБ';
+				 // 'Файл превышает 20 МБ';
 				header('Content-type: application/json');
 				echo json_encode(['type' => 'bad_size']);
 				wp_die();				
