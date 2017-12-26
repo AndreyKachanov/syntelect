@@ -9,7 +9,7 @@ jQuery(function() {
 		form.find('#name, #email, #subject, #message').each(function() {
 			if( !jQuery(this).val().trim() ) { //если в поле пусто
 				error = true;
-				jQuery("#panel-heading").addClass('succ-error').html('Заполните все поля!');
+				jQuery("#panel-heading").addClass('succ-error').html('Fill in all the fields!').hide().fadeIn(100);
 				jQuery(this).addClass("form-error");				
 
 			} else {
@@ -28,25 +28,25 @@ jQuery(function() {
 			var name = jQuery("#name").val();
 			if(name.length < 3 || name.length > 50 ) {
 				jQuery("#name").addClass("form-error");
-				jQuery("#panel-heading").addClass('succ-error').html('Имя должно быть от 3 до 50 символов!');
+				jQuery("#panel-heading").addClass('succ-error').html('The name must be between 3 and 50 characters!').hide().fadeIn(100);
 			} else {
 
 				var email = jQuery("#email").val();
 				if (!isValidEmail(email)) {
 					jQuery("#email").addClass("form-error");
-					jQuery("#panel-heading").addClass('succ-error').html('Введите корректный Email!');
+					jQuery("#panel-heading").addClass('succ-error').html('Please enter a valid Email!').hide().fadeIn(100);;
 					
 				} else {
 					var subject = jQuery("#subject").val();
 					if (subject.length < 3 || subject.length > 50 ) {
 						jQuery("#subject").addClass("form-error");
-						jQuery("#panel-heading").addClass('succ-error').html('Тема сообщения должна быть от 3 до 50 символов!');	
+						jQuery("#panel-heading").addClass('succ-error').html('The subject of the message should be from 3 to 50 characters!').hide().fadeIn(100);;	
 					} else {
 
 						var message = jQuery("#message").val();
 						if (message.length > 1000000) {
 							jQuery("#mesage").addClass("form-error");
-							jQuery("#panel-heading").addClass('succ-error').html('Длина сообщения не должна превышать 1000000 символов!');
+							jQuery("#panel-heading").addClass('succ-error').html('The length of the message should not exceed 1000000 characters!').hide().fadeIn(100);;
 						} else {
 							var file_selected = false;
 							var error_file = false;
@@ -58,7 +58,7 @@ jQuery(function() {
 						    	// проверка расширения файла
 						    	if (isValidFileExt(file)) {
 				 					jQuery(".jfilestyle").children("input[type='text']").addClass("form-error");
-									jQuery("#panel-heading").addClass('succ-error').html('Не верный формат файла');
+									jQuery("#panel-heading").addClass('succ-error').html('Not a valid file format!').hide().fadeIn(100);;
 									error_file = true;
 									// console.log("Не верный формат файла");
 						    	} else {
@@ -66,7 +66,7 @@ jQuery(function() {
 						    		// console.log("good ext");	
 							    	if (jQuery("#input-file")[0].files[0].size > 20971520) { //проверка размера файла (не больше 20 мб)
 						        		jQuery(".jfilestyle").children("input[type='text']").addClass("form-error");
-										jQuery("#panel-heading").addClass('succ-error').html('Размер файла не должен превышать 20 Mb!');
+										jQuery("#panel-heading").addClass('succ-error').html('The file size should not exceed 20 Mb!').hide().fadeIn(100);;
 										error_file = true;
 										// console.log("Размер файла не должен превышать 20 Mb!");
 							    	} else {
@@ -106,17 +106,17 @@ jQuery(function() {
 							        success: function(jsondata) {
 							        	if (jsondata.type == 'bad_size') {
 							        		jQuery(".jfilestyle").children("input[type='text']").addClass("form-error");
-											jQuery("#panel-heading").addClass('succ-error').html('Размер файла не должен превышать 20 Mb!');
+											jQuery("#panel-heading").addClass('succ-error').html('Размер файла не должен превышать 20 Mb!').hide().fadeIn(100);;
 							        	} else if (jsondata.type == 'bad_ext') {
 							        		jQuery(".jfilestyle").children("input[type='text']").addClass("form-error");
-											jQuery("#panel-heading").addClass('succ-error').html('Не верный формат файла');
+											jQuery("#panel-heading").addClass('succ-error').html('Не верный формат файла').hide().fadeIn(100);;
 							        	} 
 							        	else if (jsondata.type == 'bad') { // eсли oбрaбoтчик вeрнул oшибку
-							     			jQuery("#panel-heading").addClass('succ-error').html('Сообщение не отправлено, попробуйте отправить позже!');
+							     			jQuery("#panel-heading").addClass('succ-error').html('Message not sent, try to send later!').hide().fadeIn(100);;
 							       		} 
 							       		else if (jsondata.type == 'good') { // eсли всe прoшлo oк
 											jQuery("#panel-heading").removeClass('succ-error');
-											jQuery("#panel-heading").addClass('succ-send').html('Сообщение удачно отправлено!');
+											jQuery("#panel-heading").addClass('succ-send').html('The message was successfully sent!').hide().fadeIn(100);;
 											jQuery('#contact_form').trigger( 'reset' );
 							       		}
 							        },
@@ -158,7 +158,7 @@ jQuery(function() {
 		}
 
 		function isValidFileExt(filename) {
-			var pattern = new RegExp(/^(.*\.(?!(htm|html|class|js|png)$))?[^.]*$/);
+			var pattern = new RegExp(/^(.*\.(?!(jpg|jpeg|gif|doc|docx|txt|xls|xlsx|pdf|png)$))?[^.]*$/);
 			return pattern.test(filename);
 		}	
 

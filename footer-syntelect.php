@@ -36,19 +36,20 @@
 			<div class="address">
 				<div class="wrapper">
 					<div class="address-block">
-						<div class="addr" id="addr">
+						<div class="addr" id="addr" title="<?=(get_field('contacts_group')['address'] ?? '120 Nan Shi St. New Taipei City. 
+Linkou. Taiwan, 24441')?>">
 							<?=(get_field('contacts_group')['address'] ?? '120 Nan Shi St. New Taipei City. 
 Linkou. Taiwan, 24441')?>
 						</div>
 						<div class="email">
-							<a href="mailto:<?=(get_field('contacts_group')['email'] ?? '')?>"><?=(get_field('contacts_group')['email'] ?? '')?></a>		
+							<a title="<?=(get_field('contacts_group')['email'] ?? '')?>" href="mailto:<?=(get_field('contacts_group')['email'] ?? '')?>"><?=(get_field('contacts_group')['email'] ?? '')?></a>		
 						</div>
 						<div class="phone">
 							<?=(get_field('contacts_group')['call_us_group']['title'] ?? '')?>
-							<a href="tel:<?=(get_field('contacts_group')['call_us_group']['phone'] ?? '')?>"> <?=(get_field('contacts_group')['call_us_group']['phone'] ?? '')?></a>
+							<a title="<?=(get_field('contacts_group')['call_us_group']['phone'] ?? '')?>" href="tel:<?=(get_field('contacts_group')['call_us_group']['phone'] ?? '')?>"> <?=(get_field('contacts_group')['call_us_group']['phone'] ?? '')?></a>
 							<div class='fax'>
 								<?=(get_field('contacts_group')['call_us_group']['fax_title'] ?? '')?> 
-								<span><?=(get_field('contacts_group')['call_us_group']['fax_phone'] ?? '')?></span>
+								<span title="<?=(get_field('contacts_group')['call_us_group']['fax_phone'] ?? '')?>"><?=(get_field('contacts_group')['call_us_group']['fax_phone'] ?? '')?></span>
 							</div>
 						</div>	
 					</div>
@@ -100,6 +101,6 @@ Linkou. Taiwan, 24441')?>
 <?php wp_footer(); ?>
 
 
-
+<div title="Наверх" class="top"><i class="fa fa-angle-double-up"></i></div>
 </body>
 </html>

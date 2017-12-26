@@ -22,12 +22,13 @@ get_header('syntelect'); ?>
 							<div class="hvastalka" id="hvastalka">
 
 								<? $i=1; foreach ($why as $item): ?>
+								<?php $item_name = str_replace("<br>", '', $item['why_sub_group']['title']); ?>
 									<div class="item">
 										<div class="reason"><?=($item['why_sub_group']['reason_number'] ?? '')?></div>
-										<div class="title" data-item="<?=$i?>" data-item-title="<?=$i?>" title="<?=($item['why_sub_group']['title'] ?? '')?>">
+										<div class="title" data-item="<?=$i?>" data-item-title="<?=$i?>" title="<?=($item_name ?? '')?>">
 											<?=($item['why_sub_group']['title'] ?? '')?>
 										</div>
-										<div class="icon" data-item="<?=$i?>" data-item-icon="<?=$i?>" title="<?=($item['why_sub_group']['title'] ?? '')?>"></div>
+										<div class="icon" data-item="<?=$i?>" data-item-icon="<?=$i?>" title="<?=($item_name ?? '')?>"></div>
 										<div class="text" data-item-text="<?=$i?>"><?=($item['why_sub_group']['text'] ?? '')?></div>
 										<div class="container" data-item="<?=$i?>">
 											<div class="triangle" data-item="<?=$i?>"></div>

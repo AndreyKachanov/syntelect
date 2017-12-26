@@ -26,9 +26,10 @@ input[type="text"]:disabled:active
 
 
 // форма обратной связи - ошибки
-.form-error 
-	border-color: red !important
+.form-error
+	border: 1px solid red !important
 	box-shadow: 0 0 0 1px red !important
+	padding: 10px !important
 
 .succ-send 
 	background-color: #8cb350
@@ -37,9 +38,11 @@ input[type="text"]:disabled:active
 	
 
 #panel-heading
-	position: relative
-	top: 35px
-	font-family: $default-font
+	border-radius: 3px
+	// display: none
+	position: absolute
+	top: 146px
+	font-family: "Opensans", sans-serif
 	font-weight: bold
 	font-size: 18px
 	line-height: 20px
@@ -337,7 +340,7 @@ p
 	margin: 0 auto
 	max-width: 1920px
 	min-height: 768px
-	background-image: url('../img/foto_splash_text.png') 
+	background-image: url('../img/foto_splash_text.svg') 
 	background-repeat: no-repeat
 	background-size: 645px 768px
 	// background-size: cover
@@ -348,7 +351,7 @@ p
 		content: ''
 		width: 614px
 		height: 850px
-		top: -190px
+		top: -202px
 		position: absolute
 		z-index: -1
 		background-image: url('../img/dot_circle.svg')
@@ -369,7 +372,7 @@ p
 				font-family: $default-font
 				font-weight: normal
 				color: #08005A
-				margin-top: 97px
+				margin-top: 67px
 				margin-bottom: 23px
 			.h3
 				text-align: left
@@ -390,7 +393,7 @@ p
 	margin: 60px auto 0 auto
 	max-width: 1920px
 	background: url('../img/dots_wave.svg') no-repeat center top
-	background-size: cover
+	background-size: contain
 	z-index: 9999999
 
 	.wrapper
@@ -445,7 +448,7 @@ p
 
 					.text
 						position: relative
-						top: 36px
+						top: 31px
 						max-height: 210px
 						overflow: hidden
 						// border: 1px solid #000
@@ -855,6 +858,9 @@ p
 										border-top: 2px solid $solid-border-color
 		
 						.title
+							// height: 60px
+							// max-height: 60px					
+							// border: 1px solid red
 							text-align: right
 							justify-content: flex-end
 							position: relative
@@ -952,23 +958,11 @@ p
 	background: url('../img/wave_down.svg') no-repeat center center
 	background-size: cover		
 .services
-	// &::before
-	// 	content: ''
-	// 	display: block
-	// 	height: 162px
-	// 	width: 1920px
-	// 	border: 1px solid #000
-	// 	position: absolute
-	// 	top: -162px
-	// 	background: url('../img/wave_up.svg') no-repeat center top
-	// 	background-size: cover
-
 	position: relative
-	// margin: 162px auto 0 auto
-	margin: 0 auto
+	margin: 0px auto 0 auto
 	max-width: 1920px
 	background-color: #F4F5F8
-	padding-top: 100px
+	padding-top: 170px
 	padding-bottom: 146px
 	.wrapper
 		// border: 1px solid green
@@ -982,8 +976,6 @@ p
 			font-size: 36px
 			line-height: 32px
 			margin-bottom: 27px
-
-
 		.h3
 			letter-spacing: normal
 			margin: 0 auto 80px auto
@@ -991,6 +983,7 @@ p
 			text-align: center
 
 		.serv-block
+			padding-top: 18px
 			// border: 1px solid #000
 			// +row-flex()
 			&::after
@@ -1000,6 +993,7 @@ p
 
 			ul.resp-tabs-list
 				li
+					max-height: 52px
 					color: #08005A
 					font-family: $default-font
 					font-weight: 500
@@ -1024,6 +1018,7 @@ p
 						border-bottom: 1px solid rgba(45,87,149,0.6)
 				
 				.resp-tab-active
+
 					color: #1100C2
 					right: -5px
 					width: calc(100% - 5px)
@@ -1051,7 +1046,7 @@ p
 				// +size(4)
 
 			.resp-tabs-container
-				padding: 43px 30px 50px 30px
+				padding: 27px 30px 50px 42px
 				width: 68%
 				background-color: #FFFFFF
 				box-shadow: 0 10px 25px 0 rgba(37,56,106,0.3)
@@ -1077,18 +1072,19 @@ p
 					font-size: 22px
 					line-height: 26px
 				p
-					opacity: 0.8
-					color: #65738E
+					// opacity: 0.8
+					color: #838ea2
 					font-family: "Opensans"
 					font-size: 15px
 					line-height: 20px
+
 				img
 					margin-top: 5px
 					margin-bottom: 5px
 				ul
 					li
 						// opacity: 0.75
-						color: #65728C
+						color: #838ea2
 						font-family: "Opensans"
 						font-weight: normal
 						font-size: 14px
@@ -1106,11 +1102,6 @@ p
 							line-height: 20px
 							position: absolute
 							left: 0px
-
-
-
-
-
 
 .process
 	// border: 1px solid #000
@@ -1194,6 +1185,7 @@ p
 						line-height: 19px
 
 .contacts
+	// border: 1px solid red
 	position: relative
 	margin: 150px auto 0 auto
 	max-width: 1920px
@@ -1205,7 +1197,7 @@ p
 			font-weight: bold
 			font-size: 36px
 			line-height: 32px
-			margin-bottom: 35px
+			margin-bottom: 25px
 
 		.h3
 			margin: 0 auto
@@ -1231,7 +1223,7 @@ p
 				border-radius: 0	
 				border: 1px solid #9EAAC2
 				&:focus, &:active
-					padding: 9px
+					padding: 9px 
 					outline: none
 					border: 2px solid #1100C2
 				&::-webkit-input-placeholder
@@ -1272,12 +1264,12 @@ p
 				height: 44px
 				span.focus-jfilestyle
 					display: block
-					position: relative
-					top: -42px
-					right: -268px
+					position: absolute
+					top: 1px
+					right: 0px
 					height: 43px
 					width: 88px
-					height: 40px
+					height: 43px
 					label
 						width: 100%
 						display: block
@@ -1301,6 +1293,8 @@ p
 			// 	border: 1px solid red
 
 			.form-title
+				padding-left: 15px
+				// border: 1px solid red
 				+size(4)
 				.title
 					color: #1100C2
@@ -1309,6 +1303,7 @@ p
 					font-size: 20px
 					line-height: 24px
 				.text
+					margin-top: 15px !important
 					opacity: 0.8
 					color: #65738E
 					font-family: "Opensans", sans-serif
@@ -1331,9 +1326,13 @@ p
 
 
 			.form-first
+				margin-left: 17px
 				+size(4)
 			.form-second
+				margin-right: 16px
+				// border: 1px solid red
 				+size(4)
+
 
 				textarea
 					min-height: 110px
@@ -1344,11 +1343,12 @@ p
 .wave-dots
 	// width: 1920px
 	// min-height: 274px
-	height: 274px
+	height: 282px
 	max-width: 1920px
 	// border: 1px solid red
 	margin: 0 auto
-	background-image: url('../img/dots_wave.png')
+	// background-image: url('../img/dots_wave.png')
+	background-image: url('../img/dots_wave.svg')
 	background-position: center top
 	background-repeat: no-repeat
 	background-size: cover
@@ -1359,7 +1359,7 @@ p
 	background-color: #F4F5F8
 	// border: 1px solid red
 	position: relative
-	padding: 50px 0
+	padding: 45px 0
 	margin: 0px auto
 	max-width: 1920px
 	.wrapper
@@ -1381,7 +1381,8 @@ p
 			.addr
 				position: relative
 				text-align: left
-				padding-left: 30px
+				padding-left: 32px
+				padding-top: 4px
 				&::before
 					color: #1100C2
 					content: "\f041"
@@ -1395,6 +1396,8 @@ p
 			.email				
 				position: relative
 				text-align: center
+				padding-top: 5px
+				padding-left: 2px
 				a
 					margin-left: 9px
 					text-decoration: none
@@ -1409,6 +1412,9 @@ p
 					// left: 12px
 
 			.phone
+				padding-top: 6px
+				padding-right: 14px
+
 				.fax
 					margin-top: 10px
 					span
@@ -1422,7 +1428,7 @@ p
 				position: relative
 				text-align: right
 				a
-					font-size: 20px
+					font-size: 22px
 					color: #08005A
 					font-family: "Opensans", sans-serif
 					font-weight: normal
@@ -1438,7 +1444,7 @@ p
 					line-height: 17px					
 
 .map
-	// border: 1px solid red
+	border: 1px solid #d7d8dc
 	max-width: 1920px
 	min-height: 200px
 	margin: 0 auto
@@ -1455,7 +1461,8 @@ p
 
 			>*
 				// border: 1px solid #000
-			
+			.logo
+				// border: 1px solid #000
 			.copy
 				+size(3)
 				color: #65738E
@@ -1464,6 +1471,8 @@ p
 				line-height: 19px
 
 			.menu
+				padding-left: 65px
+				// border: 1px solid #000
 				+size(7)
 
 
@@ -1548,5 +1557,29 @@ p
 						width: 1px
 						background-color: #A9ADB9		
 
+.top
+	position: fixed
+	bottom: 13px
+	right: -100px
+	background-color: #1100C2
+	z-index: 99999999999999999999999999
+	border-radius: 10em
+	color: #666
+	font-size: 26px
+	width: 50px
+	height: 50px
+	text-align: center
+	line-height: 50px
+	cursor: pointer
+	transition: all 0.3s ease
+	opacity: .7
+	i
+		line-height: 0
+	&:hover
+		color: #fff
+		background-color: #1100C2
+		opacity: 1
+	&.active
+		right: 25px
 
 @import "media" // Всегда в конце  

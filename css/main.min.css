@@ -2580,9 +2580,10 @@ input[type="text"]:disabled:active {
   border: 2px solid #1100C2 !important; }
 
 .form-error {
-  border-color: red !important;
+  border: 1px solid red !important;
   -webkit-box-shadow: 0 0 0 1px red !important;
-          box-shadow: 0 0 0 1px red !important; }
+          box-shadow: 0 0 0 1px red !important;
+  padding: 10px !important; }
 
 .succ-send {
   background-color: #8cb350; }
@@ -2591,9 +2592,11 @@ input[type="text"]:disabled:active {
   background-color: #b72929; }
 
 #panel-heading {
-  position: relative;
-  top: 35px;
-  font-family: "Raleway", sans-serif;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  position: absolute;
+  top: 146px;
+  font-family: "Opensans", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -2899,7 +2902,7 @@ p {
   margin: 0 auto;
   max-width: 1920px;
   min-height: 768px;
-  background-image: url("../img/foto_splash_text.png");
+  background-image: url("../img/foto_splash_text.svg");
   background-repeat: no-repeat;
   -webkit-background-size: 645px 768px;
           background-size: 645px 768px; }
@@ -2908,7 +2911,7 @@ p {
     content: '';
     width: 614px;
     height: 850px;
-    top: -190px;
+    top: -202px;
     position: absolute;
     z-index: -1;
     background-image: url("../img/dot_circle.svg");
@@ -2934,7 +2937,7 @@ p {
       font-family: "Raleway", sans-serif;
       font-weight: normal;
       color: #08005A;
-      margin-top: 97px;
+      margin-top: 67px;
       margin-bottom: 23px; }
     .about .wrapper .about-content .h3 {
       text-align: left;
@@ -2954,8 +2957,8 @@ p {
   margin: 60px auto 0 auto;
   max-width: 1920px;
   background: url("../img/dots_wave.svg") no-repeat center top;
-  -webkit-background-size: cover;
-          background-size: cover;
+  -webkit-background-size: contain;
+          background-size: contain;
   z-index: 9999999; }
   .why .wrapper .h2 {
     font-family: "Raleway", sans-serif;
@@ -3010,7 +3013,7 @@ p {
           text-align: center; }
         .why .wrapper .why-content .hvastalka .center .text {
           position: relative;
-          top: 36px;
+          top: 31px;
           max-height: 210px;
           overflow: hidden;
           opacity: 0.8;
@@ -3492,10 +3495,10 @@ p {
 
 .services {
   position: relative;
-  margin: 0 auto;
+  margin: 0px auto 0 auto;
   max-width: 1920px;
   background-color: #F4F5F8;
-  padding-top: 100px;
+  padding-top: 170px;
   padding-bottom: 146px; }
   .services .wrapper {
     padding-left: 0;
@@ -3512,104 +3515,106 @@ p {
       margin: 0 auto 80px auto;
       max-width: 62%;
       text-align: center; }
-    .services .wrapper .serv-block::after {
-      display: block;
-      content: '';
-      clear: both; }
-    .services .wrapper .serv-block ul.resp-tabs-list {
-      width: 32%; }
-      .services .wrapper .serv-block ul.resp-tabs-list li {
-        color: #08005A;
-        font-family: "Raleway", sans-serif;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        border-top: 1px solid rgba(45, 87, 149, 0.6);
-        border-left: 5px solid rgba(45, 87, 149, 0.6);
-        opacity: 0.49; }
-        .services .wrapper .serv-block ul.resp-tabs-list li::before {
-          content: "\f105";
-          font-family: "FontAwesome";
-          height: 20px;
-          width: 8px;
+    .services .wrapper .serv-block {
+      padding-top: 18px; }
+      .services .wrapper .serv-block::after {
+        display: block;
+        content: '';
+        clear: both; }
+      .services .wrapper .serv-block ul.resp-tabs-list {
+        width: 32%; }
+        .services .wrapper .serv-block ul.resp-tabs-list li {
+          max-height: 52px;
+          color: #08005A;
+          font-family: "Raleway", sans-serif;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          border-top: 1px solid rgba(45, 87, 149, 0.6);
+          border-left: 5px solid rgba(45, 87, 149, 0.6);
+          opacity: 0.49; }
+          .services .wrapper .serv-block ul.resp-tabs-list li::before {
+            content: "\f105";
+            font-family: "FontAwesome";
+            height: 20px;
+            width: 8px;
+            color: #1100C2;
+            font-size: 20px;
+            line-height: 20px;
+            margin-right: 18px; }
+          .services .wrapper .serv-block ul.resp-tabs-list li:last-child {
+            border-bottom: 1px solid rgba(45, 87, 149, 0.6); }
+        .services .wrapper .serv-block ul.resp-tabs-list .resp-tab-active {
           color: #1100C2;
-          font-size: 20px;
-          line-height: 20px;
-          margin-right: 18px; }
-        .services .wrapper .serv-block ul.resp-tabs-list li:last-child {
+          right: -5px;
+          width: -webkit-calc(100% - 5px);
+          width: calc(100% - 5px);
+          position: relative;
+          background-color: #FFF;
+          opacity: 1;
+          border-left: none;
           border-bottom: 1px solid rgba(45, 87, 149, 0.6); }
-      .services .wrapper .serv-block ul.resp-tabs-list .resp-tab-active {
-        color: #1100C2;
-        right: -5px;
-        width: -webkit-calc(100% - 5px);
-        width: calc(100% - 5px);
-        position: relative;
-        background-color: #FFF;
-        opacity: 1;
-        border-left: none;
-        border-bottom: 1px solid rgba(45, 87, 149, 0.6); }
-        .services .wrapper .serv-block ul.resp-tabs-list .resp-tab-active::after {
-          display: block;
-          position: absolute;
-          right: -15px;
-          top: -1px;
-          content: '';
-          width: 15px;
-          height: -webkit-calc(100% + 2px);
-          height: calc(100% + 2px);
-          background-color: #1100C2; }
-    .services .wrapper .serv-block .resp-tabs-container {
-      padding: 43px 30px 50px 30px;
-      width: 68%;
-      background-color: #FFFFFF;
-      -webkit-box-shadow: 0 10px 25px 0 rgba(37, 56, 106, 0.3);
-              box-shadow: 0 10px 25px 0 rgba(37, 56, 106, 0.3);
-      -webkit-border-radius: 0;
-              border-radius: 0;
-      border: 0; }
-      .services .wrapper .serv-block .resp-tabs-container h1 {
-        text-align: left;
-        color: #08005A;
-        font-family: "Raleway", sans-serif;
-        font-weight: normal;
-        font-size: 36px;
-        line-height: 42px; }
-      .services .wrapper .serv-block .resp-tabs-container h2 {
-        margin-top: 23px;
-        margin-bottom: 19px;
-        text-align: left;
-        color: #65738E;
-        font-family: "Raleway", sans-serif;
-        font-size: 22px;
-        line-height: 26px; }
-      .services .wrapper .serv-block .resp-tabs-container p {
-        opacity: 0.8;
-        color: #65738E;
-        font-family: "Opensans";
-        font-size: 15px;
-        line-height: 20px; }
-      .services .wrapper .serv-block .resp-tabs-container img {
-        margin-top: 5px;
-        margin-bottom: 5px; }
-      .services .wrapper .serv-block .resp-tabs-container ul li {
-        color: #65728C;
-        font-family: "Opensans";
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 19px;
-        margin-bottom: 14px;
-        position: relative;
-        padding-left: 40px; }
-        .services .wrapper .serv-block .resp-tabs-container ul li::before {
-          display: block;
-          content: "\f00c";
-          color: #1100C2;
-          font-family: "FontAwesome";
+          .services .wrapper .serv-block ul.resp-tabs-list .resp-tab-active::after {
+            display: block;
+            position: absolute;
+            right: -15px;
+            top: -1px;
+            content: '';
+            width: 15px;
+            height: -webkit-calc(100% + 2px);
+            height: calc(100% + 2px);
+            background-color: #1100C2; }
+      .services .wrapper .serv-block .resp-tabs-container {
+        padding: 27px 30px 50px 42px;
+        width: 68%;
+        background-color: #FFFFFF;
+        -webkit-box-shadow: 0 10px 25px 0 rgba(37, 56, 106, 0.3);
+                box-shadow: 0 10px 25px 0 rgba(37, 56, 106, 0.3);
+        -webkit-border-radius: 0;
+                border-radius: 0;
+        border: 0; }
+        .services .wrapper .serv-block .resp-tabs-container h1 {
+          text-align: left;
+          color: #08005A;
+          font-family: "Raleway", sans-serif;
           font-weight: normal;
-          font-size: 20px;
-          line-height: 20px;
-          position: absolute;
-          left: 0px; }
+          font-size: 36px;
+          line-height: 42px; }
+        .services .wrapper .serv-block .resp-tabs-container h2 {
+          margin-top: 23px;
+          margin-bottom: 19px;
+          text-align: left;
+          color: #65738E;
+          font-family: "Raleway", sans-serif;
+          font-size: 22px;
+          line-height: 26px; }
+        .services .wrapper .serv-block .resp-tabs-container p {
+          color: #838ea2;
+          font-family: "Opensans";
+          font-size: 15px;
+          line-height: 20px; }
+        .services .wrapper .serv-block .resp-tabs-container img {
+          margin-top: 5px;
+          margin-bottom: 5px; }
+        .services .wrapper .serv-block .resp-tabs-container ul li {
+          color: #838ea2;
+          font-family: "Opensans";
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 19px;
+          margin-bottom: 14px;
+          position: relative;
+          padding-left: 40px; }
+          .services .wrapper .serv-block .resp-tabs-container ul li::before {
+            display: block;
+            content: "\f00c";
+            color: #1100C2;
+            font-family: "FontAwesome";
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 20px;
+            position: absolute;
+            left: 0px; }
 
 .process {
   position: relative;
@@ -3710,7 +3715,7 @@ p {
     font-weight: bold;
     font-size: 36px;
     line-height: 32px;
-    margin-bottom: 35px; }
+    margin-bottom: 25px; }
   .contacts .wrapper .h3 {
     margin: 0 auto;
     max-width: 62%;
@@ -3781,12 +3786,12 @@ p {
       height: 44px; }
       .contacts .wrapper .contacts-content .jfilestyle span.focus-jfilestyle {
         display: block;
-        position: relative;
-        top: -42px;
-        right: -268px;
+        position: absolute;
+        top: 1px;
+        right: 0px;
         height: 43px;
         width: 88px;
-        height: 40px; }
+        height: 43px; }
         .contacts .wrapper .contacts-content .jfilestyle span.focus-jfilestyle label {
           width: 100%;
           display: block;
@@ -3803,6 +3808,7 @@ p {
         background-color: #fff;
         margin-bottom: 0 !important; }
     .contacts .wrapper .contacts-content .form-title {
+      padding-left: 15px;
       width: -webkit-calc(33.33333% - 30px);
       width: calc(33.33333% - 30px); }
       .contacts .wrapper .contacts-content .form-title .title {
@@ -3812,6 +3818,7 @@ p {
         font-size: 20px;
         line-height: 24px; }
       .contacts .wrapper .contacts-content .form-title .text {
+        margin-top: 15px !important;
         opacity: 0.8;
         color: #65738E;
         font-family: "Opensans", sans-serif;
@@ -3829,9 +3836,11 @@ p {
           .contacts .wrapper .contacts-content .form-title .btn-block-footer button:hover {
             border: 2px solid #1100C2; }
     .contacts .wrapper .contacts-content .form-first {
+      margin-left: 17px;
       width: -webkit-calc(33.33333% - 30px);
       width: calc(33.33333% - 30px); }
     .contacts .wrapper .contacts-content .form-second {
+      margin-right: 16px;
       width: -webkit-calc(33.33333% - 30px);
       width: calc(33.33333% - 30px); }
       .contacts .wrapper .contacts-content .form-second textarea {
@@ -3840,10 +3849,10 @@ p {
         overflow: hidden; }
 
 .wave-dots {
-  height: 274px;
+  height: 282px;
   max-width: 1920px;
   margin: 0 auto;
-  background-image: url("../img/dots_wave.png");
+  background-image: url("../img/dots_wave.svg");
   background-position: center top;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -3853,7 +3862,7 @@ p {
 .address {
   background-color: #F4F5F8;
   position: relative;
-  padding: 50px 0;
+  padding: 45px 0;
   margin: 0px auto;
   max-width: 1920px; }
   .address .wrapper .address-block {
@@ -3881,7 +3890,8 @@ p {
     .address .wrapper .address-block .addr {
       position: relative;
       text-align: left;
-      padding-left: 30px; }
+      padding-left: 32px;
+      padding-top: 4px; }
       .address .wrapper .address-block .addr::before {
         color: #1100C2;
         content: "\f041";
@@ -3893,7 +3903,9 @@ p {
         line-height: 17px; }
     .address .wrapper .address-block .email {
       position: relative;
-      text-align: center; }
+      text-align: center;
+      padding-top: 5px;
+      padding-left: 2px; }
       .address .wrapper .address-block .email a {
         margin-left: 9px;
         text-decoration: none;
@@ -3905,6 +3917,8 @@ p {
         font-size: 17px;
         line-height: 14px; }
     .address .wrapper .address-block .phone {
+      padding-top: 6px;
+      padding-right: 14px;
       position: relative;
       text-align: right; }
       .address .wrapper .address-block .phone .fax {
@@ -3916,7 +3930,7 @@ p {
           font-weight: normal;
           line-height: 14px; }
       .address .wrapper .address-block .phone a {
-        font-size: 20px;
+        font-size: 22px;
         color: #08005A;
         font-family: "Opensans", sans-serif;
         font-weight: normal;
@@ -3931,6 +3945,7 @@ p {
         line-height: 17px; }
 
 .map {
+  border: 1px solid #d7d8dc;
   max-width: 1920px;
   min-height: 200px;
   margin: 0 auto; }
@@ -3960,6 +3975,7 @@ p {
       font-size: 14px;
       line-height: 19px; }
     .bottom-menu .wrapper .menu-block-bottom .menu {
+      padding-left: 65px;
       width: -webkit-calc(58.33333% - 30px);
       width: calc(58.33333% - 30px); }
 
@@ -4040,6 +4056,34 @@ p {
         height: 50%;
         width: 1px;
         background-color: #A9ADB9; }
+
+.top {
+  position: fixed;
+  bottom: 13px;
+  right: -100px;
+  background-color: #1100C2;
+  z-index: 99999999999999999999999999;
+  -webkit-border-radius: 10em;
+          border-radius: 10em;
+  color: #666;
+  font-size: 26px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: .7; }
+  .top i {
+    line-height: 0; }
+  .top:hover {
+    color: #fff;
+    background-color: #1100C2;
+    opacity: 1; }
+  .top.active {
+    right: 25px; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */

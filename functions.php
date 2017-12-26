@@ -224,7 +224,7 @@ function say_send_form() {
 			$file = $_FILES['file'];
 			$msg = '';
 
-			$white_list = ['jpg', 'png', 'jpeg', 'gif', 'doc', 'docx', 'txt', 'mp4'];
+			$white_list = ['jpg', 'jpeg', 'gif', 'doc', 'docx', 'txt', 'xls', 'xlsx', 'pdf', 'png'];
 			$tmp = explode('.', $file['name']);
 			$ext = strtolower($tmp[count($tmp) - 1]);
 
@@ -307,5 +307,23 @@ function my_assets() {
 		'ajaxurl' => admin_url( 'admin-ajax.php' )
 	) );
 }
-
 // end sen contact form
+
+// disable text editor
+function reset_editor()
+{
+     global $_wp_post_type_features;
+
+     $post_type="page";
+     $feature = "editor";
+     if ( !isset($_wp_post_type_features[$post_type]) )
+     {
+
+     }
+     elseif ( isset($_wp_post_type_features[$post_type][$feature]) )
+     unset($_wp_post_type_features[$post_type][$feature]);
+}
+
+add_action("init","reset_editor");
+// ------------------------
+
