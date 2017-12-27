@@ -231,6 +231,7 @@ jQuery(function() {
     
   });
 
+  // add Button the top
   jQuery(window).scroll(function() {
     if (jQuery(this).scrollTop() > jQuery(this).height() ) {
       jQuery('.top').addClass('active');
@@ -241,6 +242,7 @@ jQuery(function() {
 
   jQuery('.top').click(function() {
     jQuery('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
-  });               
+  });
+  // end Button the top               
 
 });

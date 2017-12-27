@@ -87,18 +87,19 @@ gulp.task('grid', function() {
 	    },
 	    breakPoints: {
 	        lg: {
-	            width: '1100px', /* -> @media (max-width: 1100px) */
+	            width: '1140px', /* -> @media (max-width: 1140px) */
 	        },
 	        md: {
-	            width: '960px'
+	            width: '942px', /* -> @media (max-width: 942px) */ 
 	        },
 	        sm: {
-	            width: '780px',
+	            width: '714px', /* -> @media (max-width: 714px) */
 	            fields: '15px' /* set fields only if you want to change container.fields */
-	        },
-	        xs: {
-	            width: '560px'
 	        }
+
+	        // xs: {
+	        //     width: '560px'
+	        // }
 	        /* 
 	        We can create any quantity of break points.
 	 

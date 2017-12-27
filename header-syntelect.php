@@ -91,6 +91,10 @@
 		glob_address = '<?=(get_field('contacts_group')['address'] ?? '120 Nan Shi St. New Taipei City. Linkou. Taiwan, 24441')?>';
 		glob_read_more_procc = '<?=(get_field('learn_more_about_process') ?? 'Learn More About Process')?>';
 
+		// широта и долгота для карты(из админки)
+		glob_lat = '<?=(get_coordinate()['lat'] ?? '25.074448')?>';
+		glob_lng = '<?=(get_coordinate()['lng'] ?? '121.363022')?>';
+
 
 	</script>
 

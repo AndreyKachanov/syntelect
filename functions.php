@@ -327,3 +327,54 @@ function reset_editor()
 add_action("init","reset_editor");
 // ------------------------
 
+function get_new_coordinate($address) {
+	$prepAddr = str_replace( 
+							array('#', '!', '@', '$', '%', '^', '*', '=', '`', '~', '&', '?', '+'), 
+								   '', (str_replace(' ','+',$address))
+						    );
+	$user_api_key = 'AIzaSyAZoV8o7zh0ostbnkJekaf72VZs-RF1z6c'; //GOOGLE API KEY
+	$geocode = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address=' . $prepAddr . '&key=' . $user_api_key);
+    $output = json_decode($geocode);
+
+	if ($output->status != 'OK') {
+		$latitude = 25.074448;
+		$longitude = 121.363037;	
+	} else {
+	    $latitude = $output->results[0]->geometry->location->lat;
+	    $longitude = $output->results[0]->geometry->location->lng;
+			
+	}
+	// file_put_contents("test.txt", $longitude . PHP_EOL, FILE_APPEND);
+	return ['latitude' => $latitude, 'longitude' => $longitude];    						    	
+}
+
+
+// функция определят, был ли изменен адрес в админке, и докодирует адрес
+// на новые координаты
+
+function get_coordinate() {
+	global $wpdb;
+	$table_marker = $wpdb->get_blog_prefix() . 'map_marker';
+
+	$res =  $wpdb->get_results("SELECT * FROM {$table_marker} WHERE id='1'", ARRAY_A);
+	
+	$address_in_db = $res[0]['address'];
+	$address_in_field = get_field('contacts_group')['address'];
+
+	if ($address_in_db == $address_in_field) {
+		return ['lat' => $res[0]['latitude'], 'lng' => $res[0]['longitude']];	
+	} else {
+		$new_coordinate = get_new_coordinate($address_in_field);
+		$result = $wpdb->update($table_marker,
+			['latitude' => $new_coordinate['latitude'], 'longitude' => $new_coordinate['longitude'], 'address' => $address_in_field],
+			['id' => 1],
+			['%f', '%f', '%s']
+		);
+
+		if ($result === false)
+			return false;		
+		else
+			return ['lat' => $new_coordinate['latitude'], 'lng' => $new_coordinate['longitude']];
+	}
+	    						    	
+}

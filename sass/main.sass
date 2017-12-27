@@ -24,6 +24,15 @@ input[type="text"]:disabled:active
 	outline: none !important
 	border: 2px solid #1100C2 !important
 
+#infowindowMap
+	p
+		margin: 2px auto
+		font-family: "Opensans", sans-serif
+		font-weight: normal
+		font-size: 14px
+		line-height: 16px
+		color: #1100C2
+	
 
 // форма обратной связи - ошибки
 .form-error
@@ -128,7 +137,6 @@ p
 	font-family: "Opensans", sans-serif
 	font-size: 15px
 	line-height: 41px
-	// padding: 10.5px 23.5px 10.5px 23.5px
 	text-decoration: none
 
 	&:visited
@@ -139,13 +147,9 @@ p
 		background-color: #1100C2	
 		box-shadow: 0 2px 10px 0 #4D5AFF
 		color: #fff !important
-		// padding: 12.5px 25.5px
-		// transition: background-color .9s ease-in-out
 		transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
 		&::before
-			// transition: background-color .9s ease-in-out
 			transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
-
 			content: "\f003"
 			color: #fff
 			font-family: "FontAwesome"
@@ -153,21 +157,15 @@ p
 			line-height: 18px
 			margin-right: 10px
 		&:hover
-			// padding: 10.5px 23.5px
-			// transition: background-color .9s ease-in-out
 			transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
-
 			color: #1100C2 !important
 			background-color: #fff !important
 			border: 2px solid #1100C2
 			line-height: 38px
 			box-shadow: none !important
 			&::before
-				// transition: background-color .9s ease-in-out
 				transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
-
 				color: #1100C2 !important
-
 
 	&-light  
 		transition: all .2s ease-in-out
@@ -200,50 +198,58 @@ p
 	display: inline-block
 	&::before
 		content: "\f085"
-       
+ 
+.logo
+	+size(2)
+	margin-left: 3px
+	margin-top: -7px 
+	a
+		display: block
+		text-indent: -9999px
+
+
 .site-header
 	.menu-full
 		margin: 0 auto
 		z-index: 99999999999999999999
-		// position: fixed
 		max-width: 1920px
-		// width: 100vw
-		// min-height: 110px
 		max-height: 757px
 		background-color: #fff
-		// box-shadow: 0 -5px 10px -5px rgba(75,101,129,0.4), 0 5px 18px -5px rgba(75,101,129,0.4) 
 		box-shadow: 0px 15px 20px -15px rgba(75,101,129,0.4),  0px -15px 20px -15px rgba(75,101,129,0.4) 
    
 		.wrapper
 			.menu-block
-				// position: fixed
-				// .menu-wrap
 				+row-flex()
-				// position: fixed
+				// border: 1px solid #000
 				z-index: 9999
-				// width: 1134px
 				justify-content: space-between
 				align-items: center
 				min-height: 110px
 				background-color: #FFF
-				// box-shadow: 0px 5px 20px 0 rgba(75,101,129,0.4)
-				// border: 1px solid #000
-				// >*
-				// 	 border: 1px solid #000
 
 				.logo
-					+size(2)
+					+size(2) //больше 1140px
+
+					+size-lg(6) //md - ниже 1141px
+					+size-md(10) //md - ниже 943px
+					+size-sm(12) //sm - ниже 715px
 					margin-left: 3px
 					margin-top: -7px 
 					a
-						display: block
+						display: block 
 						text-indent: -9999px
 				.menu
 					+size(5)
+					+size-lg(6)
+					+size-md(10)
+					+size-sm(12) //sm - ниже 715px
 					margin-left: -104px
 					margin-top: 12px
 				.btn-block
 					+size(3)
+					+size-lg(6)
+					+size-md(10)
+					+size-sm(12)
 					margin-right: 6px
 					margin-bottom: 3px
 
@@ -264,25 +270,17 @@ p
 					// border: 1px solid green
 					min-height: 100vh
 					position: relative
-					height: 100%
+					// height: 100%
 
-					// .slider-wrap
-					// 	border: 1px solid green
-					// 	position: relative
-					// 	height: 100%
 					.quotes
 							z-index: 99
 							width: 100%
 							// border: 1px solid red
 							position: absolute
 							top: 176px
-							// margin: 50px auto 0px 
-							// max-width: 500px
 
 							.quote-dots
 								display: flex
-								// margin: 0 auto
-								// text-align: center
 
 								.dot-fill
 									background-color: #CFF1FF !important
@@ -389,6 +387,7 @@ p
 
 .why
 	// border: 1px solid red
+	// display: none
 	position: relative
 	margin: 60px auto 0 auto
 	max-width: 1920px
@@ -1314,16 +1313,12 @@ p
 				.btn-block-footer
 					margin-top: 47px
 					button
-						// min-width: 194.3px
-						// min-height: 45px
 						line-height: 20px
 						padding: 0
 						outline: none
 						border: none
 						&:hover
 							border: 2px solid #1100C2
-
-
 
 			.form-first
 				margin-left: 17px
@@ -1408,8 +1403,6 @@ p
 					font-family: "FontAwesome"
 					font-size: 17px
 					line-height: 14px					
-					// position: absolute
-					// left: 12px
 
 			.phone
 				padding-top: 6px
@@ -1477,15 +1470,6 @@ p
 
 
 
-.logo
-	+size(2)
-	margin-left: 3px
-	margin-top: -7px 
-	a
-		display: block
-		text-indent: -9999px
-
-
 
 .menu
 	nav 
@@ -1508,8 +1492,6 @@ p
 					text-decoration: none
 					&:hover
 						color: #21184C
-
-
 			
 			li.item //li.item - пункты меню
 				position: relative

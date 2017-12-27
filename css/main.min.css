@@ -2555,7 +2555,7 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px; }
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 714px) {
     .wrapper {
       padding-left: 15px;
       padding-right: 15px; } }
@@ -2578,6 +2578,14 @@ input[type="text"]:disabled:active {
   padding: 9px !important;
   outline: none !important;
   border: 2px solid #1100C2 !important; }
+
+#infowindowMap p {
+  margin: 2px auto;
+  font-family: "Opensans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1100C2; }
 
 .form-error {
   border: 1px solid red !important;
@@ -2770,6 +2778,15 @@ p {
   .btn-readmore-procc::before {
     content: "\f085"; }
 
+.logo {
+  width: -webkit-calc(16.66667% - 30px);
+  width: calc(16.66667% - 30px);
+  margin-left: 3px;
+  margin-top: -7px; }
+  .logo a {
+    display: block;
+    text-indent: -9999px; }
+
 .site-header .menu-full {
   margin: 0 auto;
   z-index: 99999999999999999999;
@@ -2804,6 +2821,18 @@ p {
       width: calc(16.66667% - 30px);
       margin-left: 3px;
       margin-top: -7px; }
+      @media screen and (max-width: 1140px) {
+        .site-header .menu-full .wrapper .menu-block .logo {
+          width: -webkit-calc(50% - 30px);
+          width: calc(50% - 30px); } }
+      @media screen and (max-width: 942px) {
+        .site-header .menu-full .wrapper .menu-block .logo {
+          width: -webkit-calc(83.33333% - 30px);
+          width: calc(83.33333% - 30px); } }
+      @media screen and (max-width: 714px) {
+        .site-header .menu-full .wrapper .menu-block .logo {
+          width: -webkit-calc(100% - 30px);
+          width: calc(100% - 30px); } }
       .site-header .menu-full .wrapper .menu-block .logo a {
         display: block;
         text-indent: -9999px; }
@@ -2812,11 +2841,35 @@ p {
       width: calc(41.66667% - 30px);
       margin-left: -104px;
       margin-top: 12px; }
+      @media screen and (max-width: 1140px) {
+        .site-header .menu-full .wrapper .menu-block .menu {
+          width: -webkit-calc(50% - 30px);
+          width: calc(50% - 30px); } }
+      @media screen and (max-width: 942px) {
+        .site-header .menu-full .wrapper .menu-block .menu {
+          width: -webkit-calc(83.33333% - 30px);
+          width: calc(83.33333% - 30px); } }
+      @media screen and (max-width: 714px) {
+        .site-header .menu-full .wrapper .menu-block .menu {
+          width: -webkit-calc(100% - 30px);
+          width: calc(100% - 30px); } }
     .site-header .menu-full .wrapper .menu-block .btn-block {
       width: -webkit-calc(25% - 30px);
       width: calc(25% - 30px);
       margin-right: 6px;
       margin-bottom: 3px; }
+      @media screen and (max-width: 1140px) {
+        .site-header .menu-full .wrapper .menu-block .btn-block {
+          width: -webkit-calc(50% - 30px);
+          width: calc(50% - 30px); } }
+      @media screen and (max-width: 942px) {
+        .site-header .menu-full .wrapper .menu-block .btn-block {
+          width: -webkit-calc(83.33333% - 30px);
+          width: calc(83.33333% - 30px); } }
+      @media screen and (max-width: 714px) {
+        .site-header .menu-full .wrapper .menu-block .btn-block {
+          width: -webkit-calc(100% - 30px);
+          width: calc(100% - 30px); } }
 
 .site-header .slider-full {
   position: relative;
@@ -2841,8 +2894,7 @@ p {
       width: -webkit-calc(50% - 30px);
       width: calc(50% - 30px);
       min-height: 100vh;
-      position: relative;
-      height: 100%; }
+      position: relative; }
       .site-header .slider-full .wrapper .slider-block .slider .quotes {
         z-index: 99;
         width: 100%;
@@ -3979,15 +4031,6 @@ p {
       width: -webkit-calc(58.33333% - 30px);
       width: calc(58.33333% - 30px); }
 
-.logo {
-  width: -webkit-calc(16.66667% - 30px);
-  width: calc(16.66667% - 30px);
-  margin-left: 3px;
-  margin-top: -7px; }
-  .logo a {
-    display: block;
-    text-indent: -9999px; }
-
 .menu nav ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4095,21 +4138,6 @@ p {
   /**/ }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
-  /*Disable Animation on Mobile Devices*/
-  .animated {
-    /*CSS transitions*/
-    -o-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
-    /*CSS transforms*/
-    -ms-transform: none !important;
-    -webkit-transform: none !important;
-    transform: none !important;
-    /*CSS animations*/
-    -webkit-animation: none !important;
-    animation: none !important; } }
-
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   /**/ }

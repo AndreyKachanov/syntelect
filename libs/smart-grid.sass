@@ -1,22 +1,19 @@
 $columns: 12
 $atom: (100% / $columns)
 
-$break_lg: 1100px
-$break_md: 960px
-$break_sm: 780px
-$break_xs: 560px
+$break_lg: 1140px
+$break_md: 942px
+$break_sm: 714px
 
 $offset: 30px
 $offset_lg: $offset
 $offset_md: $offset
 $offset_sm: $offset
-$offset_xs: $offset
 
 $offset_one_side: ($offset / 2)
 $offset_lg_one_side: ($offset_lg / 2)
 $offset_md_one_side: ($offset_md / 2)
 $offset_sm_one_side: ($offset_sm / 2)
-$offset_xs_one_side: ($offset_xs / 2)
 
 $fields: 15px
 $fields_sm: 15px
@@ -85,10 +82,6 @@ $fields_sm: 15px
 =size-sm($n)
     $val: 100% / $columns * $n
     +sm(width, #{calc(#{$val} - #{$offset_sm})})
-
-=size-xs($n)
-    $val: 100% / $columns * $n
-    +xs(width, #{calc(#{$val} - #{$offset_xs})})
 
 =shift($n)
     $val: 100% / $columns * $n
@@ -194,32 +187,6 @@ $fields_sm: 15px
     $val: 100% / $columns * $n
     +sm(padding-right, #{calc(#{$val} + #{$offset_sm_one_side})})
 
-=shift-xs($n)
-    $val: 100% / $columns * $n
-    +xs(margin-left, #{calc(#{$val} + #{$offset_xs_one_side})})
-    +xs(margin-right, #{calc(#{$val} + #{$offset_xs_one_side})})
-
-=shift-xs-left($n)
-    $val: 100% / $columns * $n
-    +xs(margin-left, #{calc(#{$val} + #{$offset_xs_one_side})})
-
-=shift-xs-right($n)
-    $val: 100% / $columns * $n
-    +xs(margin-right, #{calc(#{$val} + #{$offset_xs_one_side})})
-
-=shift-xs-padding($n)
-    $val: 100% / $columns * $n
-    +xs(padding-left, #{calc(#{$val} + #{$offset_xs_one_side})})
-    +xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})})
-
-=shift-xs-padding-left($n)
-    $val: 100% / $columns * $n
-    +xs(padding-left, #{calc(#{$val} + #{$offset_xs_one_side})})
-
-=shift-xs-padding-right($n)
-    $val: 100% / $columns * $n
-    +xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})})
-
 =lg($name, $value)
     @media screen and (max-width: $break_lg)
         #{$name}: $value
@@ -242,14 +209,6 @@ $fields_sm: 15px
 
 =sm-block()
     @media screen and (max-width: $break_sm)
-        @content
-
-=xs($name, $value)
-    @media screen and (max-width: $break_xs)
-        #{$name}: $value
-
-=xs-block()
-    @media screen and (max-width: $break_xs)
         @content
 
 =from($min_width)

@@ -101,6 +101,6 @@ Linkou. Taiwan, 24441')?>
 <?php wp_footer(); ?>
 
 
-<div title="Наверх" class="top"><i class="fa fa-angle-double-up"></i></div>
+<div title="Back to top" class="top"><i class="fa fa-angle-double-up"></i></div>
 </body>
 </html>
