@@ -32,8 +32,8 @@ function initialize() {
         title: "Syntelect",
         icon: {
             path: fontawesome.markers.MAP_MARKER,
-            scale: 0.5,
-            strokeWeight: 0.2,
+            scale: 0.6,
+            strokeWeight: 0.6,
             strokeColor: '#101ac3', 
             strokeOpacity: 1,
             fillColor: '#101ac3',

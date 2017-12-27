@@ -37,16 +37,6 @@
 			transition: all 0.3s ease-in-out !important;
 		}
 
-/*
-		.borderSolidContainer_<=$i?> {
-
-		}
-
-		.borderSolidTriangle_<=$i?> {
-
-		}*/
-
-
 		<? $i++; endforeach; ?>
 
 		.borderSolidContainer_1 { border-top: 2px solid #08005A !important; }

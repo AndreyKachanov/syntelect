@@ -19,12 +19,6 @@ jQuery(function() {
 
 		if (!error) { // eсли oшибок нeт
 
-		 //    $("#input-file").change(function (){
-		 //      var fileName = $(this).val();
-		 //      $(".filename").html(fileName);
-		 //    });			
-			// var file_size = jQuery("#input-file")[0].files[0].size;
-
 			var name = jQuery("#name").val();
 			if(name.length < 3 || name.length > 50 ) {
 				jQuery("#name").addClass("form-error");

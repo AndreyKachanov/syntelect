@@ -98,7 +98,7 @@ input[type="text"]:disabled:active
 	
 body
 	overflow-x: hidden
-	min-width: 320px
+	min-width: 290px
 	background-color: #fff
 
 #my-page
@@ -226,29 +226,26 @@ p
 				align-items: center
 				min-height: 110px
 				background-color: #FFF
-
+ 
 				.logo
-					+size(2) //больше 1140px
-
-					+size-lg(6) //md - ниже 1141px
-					+size-md(10) //md - ниже 943px
-					+size-sm(12) //sm - ниже 715px
+					+size(2) //больше 1134px
+					+size-md(2)//ниже 1134px до 1024
+					+size-sm(12)//ниже 1024 до 714
+					// +size-xs(12)//ниже 714 до 290
 					margin-left: 3px
-					margin-top: -7px 
+					margin-top: -7px  
 					a
 						display: block 
-						text-indent: -9999px
+	 					text-indent: -9999px
 				.menu
 					+size(5)
-					+size-lg(6)
-					+size-md(10)
+					+size-md(5)
 					+size-sm(12) //sm - ниже 715px
 					margin-left: -104px
 					margin-top: 12px
 				.btn-block
 					+size(3)
-					+size-lg(6)
-					+size-md(10)
+					+size-md(3)
 					+size-sm(12)
 					margin-right: 6px
 					margin-bottom: 3px
@@ -338,7 +335,7 @@ p
 	margin: 0 auto
 	max-width: 1920px
 	min-height: 768px
-	background-image: url('../img/foto_splash_text.svg') 
+	background-image: url('../img/foto_splash_text.png') 
 	background-repeat: no-repeat
 	background-size: 645px 768px
 	// background-size: cover

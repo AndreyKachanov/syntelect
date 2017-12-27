@@ -86,17 +86,16 @@ gulp.task('grid', function() {
 	        fields: '15px' /* side fields */
 	    },
 	    breakPoints: {
-	        lg: {
-	            width: '1140px', /* -> @media (max-width: 1140px) */
-	        },
 	        md: {
-	            width: '942px', /* -> @media (max-width: 942px) */ 
+	            width: '1134px', /* -> @media (max-width: 1134px) */
 	        },
 	        sm: {
+	            width: '1024px', /* -> @media (max-width: 1024px) */ 
+	        },
+	        xs: {
 	            width: '714px', /* -> @media (max-width: 714px) */
 	            fields: '15px' /* set fields only if you want to change container.fields */
-	        }
-
+	        },
 	        // xs: {
 	        //     width: '560px'
 	        // }

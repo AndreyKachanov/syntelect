@@ -1,10 +1,710 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1134px)
+	.site-header
+		.menu-full
+			margin: 0 auto
+			z-index: 99999999999999999999
+			max-width: 1920px
+			max-height: 757px
+			background-color: #fff
+			box-shadow: 0px 15px 20px -15px rgba(75,101,129,0.4),  0px -15px 20px -15px rgba(75,101,129,0.4) 
+	   
+			.wrapper
+				.menu-block
+					+row-flex()
+					// border: 1px solid #000
+					z-index: 9999
+					justify-content: space-between
+					align-items: center
+					min-height: 110px
+					background-color: #FFF
+	 
+					.logo
+						+size(2) //больше 1134px
+						+size-md(2)//ниже 1134px до 1024
+						+size-sm(12)//ниже 1024 до 714
+						// +size-xs(12)//ниже 714 до 290
+						margin-left: 3px
+						margin-top: -7px  
+						a
+							display: block 
+		 					text-indent: -9999px
+					.menu
+						+size(5)
+						+size-md(5)
+						+size-sm(12) //sm - ниже 715px
+						margin-left: -104px
+						margin-top: 12px
+					.btn-block
+						+size(3)
+						+size-md(3)
+						+size-sm(12)
+						margin-right: 6px
+						margin-bottom: 3px
 
+		.slider-full
+			position: relative
+			max-width: 1920px
+			max-height: 757px
+			background-repeat: no-repeat
+			background-position: top right
+			background-size: contain
+			margin: 0px auto 50px auto
+			.wrapper
+				// border: 1px solid red
+				.slider-block
+					+row-flex()
+					.slider
+						+size(6)
+						// border: 1px solid green
+						min-height: 100vh
+						position: relative
+						// height: 100%
 
+						.quotes
+								z-index: 99
+								width: 100%
+								// border: 1px solid red
+								position: absolute
+								top: 176px
+
+								.quote-dots
+									display: flex
+
+									.dot-fill
+										background-color: #CFF1FF !important
+
+									.nav-dot
+										height: 16px	
+										width: 16px									
+										display: inline-block
+										border-radius: 50px
+										background-color: rgba(158,170,194,0.5)
+										margin-right: 10px
+										cursor: pointer
+										&:last-of-type
+											margin: 0
+									
+								.quote-contain
+									.show
+										opacity: 1 !important
+										visibility: visible !important
+
+									.quote-rotate
+										position: absolute
+										top: 26px
+										left: -2px
+										opacity: 0
+										overflow: visible
+										visibility: hidden
+										transition: opacity, 0.3s, ease
+										font-family: $default-font
+										font-weight: normal
+										font-size: 48px
+										color: #1100C2
+										line-height: 56px
+										// border: 1px solid #000
+						
+						a
+							position: absolute
+							top: 448px
+							z-index: 99
+
+						.syntel-bg
+							position: absolute
+							top: 358px
+							// border: 1px solid red
+							color: #F4F5F8
+							font-family: $default-font
+							font-weight: normal
+							font-size: 120px
+							line-height: 141px
+
+	.why
+		// border: 1px solid red
+		// display: none
+		position: relative
+		margin: 60px auto 0 auto
+		max-width: 1920px
+		background: url('../img/dots_wave.svg') no-repeat center top
+		background-size: contain
+		z-index: 9999999
+
+		.wrapper
+			.h2
+				font-family: $default-font
+				color: #1100C2
+				font-weight: bold
+				font-size: 36px
+				line-height: 32px
+				margin-bottom: 17px			
+
+			.h3
+				text-align: center
+				letter-spacing: normal
+				margin: 0 auto 80px auto
+				max-width: 62%
+				text-align: center			
+			.why-content
+				// margin-top: 335px
+				position: relative
+
+				.hvastalka
+					// border: 1px solid green
+					display: flex
+					justify-content: center
+					align-items: center
+					margin: 310px auto 0 auto
+					width: 544px
+					height: 540px
+					background: url('../img/bg_poly_spl.svg') no-repeat center center
+					background-size: 544px 540px
+					position: relative
+
+					.center
+						// border: 1px solid red
+						position: relative
+						max-height: 147px
+						width: 360px
+						height: 281px
+						max-width: 360px
+						max-height: 281px
+						overflow: hidden
+						left: 8px
+
+						.title
+							color: #08005A
+							font-family: $default-font
+							font-size: 24px
+							font-weight: bold
+							line-height: 29px
+							text-align: center
+
+						.text
+							position: relative
+							top: 31px
+							max-height: 210px
+							overflow: hidden
+							// border: 1px solid #000
+							opacity: 0.8
+							color: #08005A
+							font-family: $default-font
+							font-size: 14px
+							font-style: italic
+							line-height: 19px
+							text-align: center						
+
+						.title-default
+							// border: 1px solid red
+							padding-top: 58px
+							color: #08005A
+							font-family: $default-font
+							font-size: 36px
+							font-weight: bold
+							line-height: 27px
+							text-align: center
+							margin: 0 auto 4px auto
+							max-width: 225px						
+							max-height: 87px
+							overflow: hidden
+
+						.text-default
+							// border: 1px solid red
+							color: #08005A
+							font-family: $default-font
+							font-size: 24px
+							line-height: 27px
+							text-align: center
+							max-width: 360px									
+							max-height: 171px
+							overflow: hidden
+					
+					
+					.item
+						position: absolute
+
+						.reason
+							color: #65738E
+							font-family: $default-font
+							font-size: 16px
+							font-weight: 600
+							line-height: 19px
+							text-align: center
+						
+						.title 
+							display: flex
+							align-items: center
+							justify-content: center
+							z-index: 999999999
+							color: #1100C2
+							font-family: $default-font
+							font-size: 20px
+							font-weight: bold
+							line-height: 24px
+							text-align: center
+							word-wrap: break-word						
+							width: 261px
+							max-width: 261px
+							height: 48px
+							max-height: 48px
+							overflow: hidden
+							&:hover
+								cursor: pointer
+
+								~ .container .point
+									background-color: $pizduha-color-hover							
+
+						.text
+							display: none
+						.icon
+							z-index: 999999
+							position: absolute
+							width: 63px
+							height: 63px
+							border-radius: 50%
+							background-color: #1100C2
+							box-shadow: 5px 5px 20px 0 rgba(75,101,129,0.4)
+							background-size: contain
+							background-repeat: no-repeat
+							background-position: center center
+							transition: all 0.3s ease-in-out
+							&:hover
+								// cursor: pointer
+								~ .container .point
+									background-color: $pizduha-color-hover						
+						.container
+							width: 84% 
+							z-index: 0
+							margin: 0 auto
+							position: relative
+							height: 200px
+							transition: all 0.3s ease-in-out
+							.triangle
+								position: absolute
+								transition: all 0.3s ease-in-out
+							.point
+								position: absolute
+								width: 12px
+								height: 12px
+								border-radius: 50%
+								background-color: $pizduha-color									
+
+						&:nth-of-type(1)// основной первый блок
+							top: -92px
+							left: 267px
+							.icon
+								top: 193px
+								left: 104px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-left: 2px solid $solid-border-color
+		
+							.reason
+								text-align: center
+								position: relative 
+								top: 15px
+								left: 5px
+							.title
+								text-align: center
+								position: relative
+								top: 5px
+								left: 4px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-left: 2px solid $solid-border-color
+
+							.text
+								border: 1px solid red
+								// display: block
+								top: 441px
+								left: -44px				
+
+							.container
+						    	top: 13px
+						    	border-top: 2px dashed $dash-border-color
+					    		.point
+					    			top: -7px
+						    	.triangle
+						    		top: 22px
+						    		right: -72px
+						    		width: 137px
+						    		height: 169px
+						    		transform: rotate(37deg)
+						    		border-left: 2px dashed $dash-border-color
+						    		border-bottom: none	
+										
+						&:nth-of-type(2)
+							// border: 1px solid red
+							top: 0px
+							right: 0px
+							.icon
+								bottom: 21px
+								left: 21px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-left: 2px solid $solid-border-color
+			
+							.title
+								text-align: left
+								justify-content: flex-start
+								position: relative
+								right: -187px
+								top: 66px	
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-left: 2px solid $solid-border-color
+
+							.reason
+								text-align: left
+								position: relative
+								top: 73px
+								right: -187px			
+
+							.container
+								right: -166px
+								top: 74px
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+								.triangle
+									top: 15px
+									left: -108px
+									width: 137px
+									height: 169px
+									transform: rotate(60deg)
+									border-left: 2px dashed $dash-border-color
+									// border: 1px solid red
+								.point
+									top: -7px
+									right: -6px
+
+						&:nth-of-type(3)
+							// border: 1px solid red
+							top: 172px
+							right: -70px
+							.icon
+								bottom: 21px
+								left: 21px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-top: 2px solid $solid-border-color
+			
+							.title
+								text-align: left
+								justify-content: flex-start
+								position: relative
+								right: -157px
+								top: 175px	
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-top: 2px solid $solid-border-color
+
+							.reason
+								text-align: left
+								position: relative
+								top: 184px
+								right: -155px			
+
+							.container
+								width: 216px
+								right: -133px
+								bottom: -183px
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+								.triangle
+									top: -21px
+									left: -120px
+									width: 97px
+									height: 169px
+									transform: rotate(18deg)
+									border-top: 2px dashed $dash-border-color
+									// border: 1px solid red
+								.point
+									top: -7px
+									right: -6px
+
+						&:nth-of-type(4)
+							// border: 1px solid red
+							top: 340px
+							right: 1px
+							.icon
+								bottom: 21px
+								left: 21px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-top: 2px solid $solid-border-color
+			
+							.title
+								text-align: left
+								justify-content: flex-start
+								position: relative
+								right: -189px
+								top: 212px	
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-top: 2px solid $solid-border-color
+
+							.reason
+								text-align: left
+								position: relative
+								top: 211px
+								right: -190px			
+
+							.container
+								width: 222px
+								right: -162px
+								bottom: -234px
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+								.triangle
+									top: -43px
+									left: -160px
+									width: 132px
+									height: 155px
+									transform: rotate(29deg)
+									border-top: 2px dashed $dash-border-color
+									// border: 1px solid red
+								.point
+									top: -8px
+									right: -8px
+
+						&:nth-of-type(5)
+							// border: 1px solid red
+							bottom: 0px
+							left: 276px
+							.icon
+								top: 81px
+								left: 99px
+								&:hover
+									~ .container
+										border-bottom: 2px solid $solid-border-color
+										.triangle
+											border-right: 2px solid $solid-border-color
+			
+							.title
+								text-align: center
+								position: relative
+								top: 287px
+								left: -4px	
+								&:hover
+									~ .container
+										border-bottom: 2px solid $solid-border-color
+										.triangle
+											border-right: 2px solid $solid-border-color
+							.reason
+								text-align: center
+								position: relative
+								top: 287px
+								left: -5px			
+
+							.container
+								width: 220px
+								// border: 1px solid red
+								top: 4px
+								border-bottom: 2px dashed $dash-border-color
+								.triangle
+									// border: 1px solid red
+									top: 6px
+									left: -69px
+									width: 137px
+									height: 169px
+									transform: rotate(38deg)
+									border-right: 2px dashed $dash-border-color
+								.point
+									bottom: -7px
+									right: 0px
+
+						&:nth-of-type(6)
+							// border: 1px solid red
+							top: 340px
+							left: 1px
+							.icon
+								bottom: 21px
+								right: 2px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-left: 2px solid $solid-border-color
+			
+							.title
+								text-align: left
+								justify-content: flex-end
+								position: relative
+								left: -165px
+								top: 225px	
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-left: 2px solid $solid-border-color
+
+							.reason
+								text-align: right
+								position: relative
+								top: 234px
+								left: -164px			
+
+							.container
+								width: 222px
+								left: -142px
+								bottom: -234px
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+								.triangle
+									top: -62px
+									right: -165px
+									width: 132px
+									height: 155px
+									transform: rotate(59deg)
+									border-left: 2px dashed $dash-border-color
+									// border: 1px solid red
+								.point
+									top: -8px
+									left: -8px
+
+						&:nth-of-type(7)
+							// border: 1px solid red
+							top: 172px
+							left: -70px
+							.icon
+								bottom: 21px
+								right: -2px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-top: 2px solid $solid-border-color
+			
+							.title
+								// height: 60px
+								// max-height: 60px					
+								// border: 1px solid red
+								text-align: right
+								justify-content: flex-end
+								position: relative
+								left: -122px
+								top: 162px	
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-top: 2px solid $solid-border-color
+
+							.reason
+								text-align: right
+								position: relative
+								top: 161px
+								left: -123px			
+
+							.container
+								width: 216px
+								left: -111px
+								bottom: -183px
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+								.triangle
+									top: -21px
+									right: -120px
+									width: 97px
+									height: 169px
+									transform: rotate(-18deg)
+									border-top: 2px dashed $dash-border-color
+									// border: 1px solid red
+								.point
+									top: -7px
+									left: -6px
+
+						&:nth-of-type(8)
+							// border: 1px solid red
+							top: 0px
+							left: 0px
+							.icon
+								bottom: 21px
+								right: 0px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-right: 2px solid $solid-border-color
+			
+							.title
+								text-align: right
+								justify-content: flex-end
+								position: relative
+								left: -161px
+								top: 55px	
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-right: 2px solid $solid-border-color
+
+							.reason
+								text-align: right
+								position: relative
+								top: 54px
+								left: -164px			
+
+							.container
+								left: -143px
+								top: 74px
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+								.triangle
+									top: 15px
+									right: -108px
+									width: 137px
+									height: 169px
+									transform: rotate(-60deg)
+									border-right: 2px dashed $dash-border-color
+									// border: 1px solid red
+								.point
+									top: -7px
+									left: -6px																																																									
+
+	.bottom-menu
+		padding-top: 32px
+		min-height: 80px
+		// border: 1px solid green
+		.wrapper
+
+			.menu-block-bottom
+				+row-flex()
+				justify-content: space-between
+
+				>*
+					// border: 1px solid #000
+				.logo
+					// border: 1px solid #000
+				.copy
+					+size(3)
+					color: #65738E
+					font-family: "Opensans", sans-serif
+					font-size: 14px
+					line-height: 19px
+
+				.menu
+					padding-left: 0px
+					// border: 1px solid #000
+					+size(7)
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
