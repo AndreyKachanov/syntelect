@@ -2,6 +2,16 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1134px)
+	// h2, .h2
+	// 	font-size: 30px
+	// 	line-height: 27px
+
+	h3, .h3	
+		font-family: $default-font
+		font-weight: normal
+		font-size: 18px
+		line-height: 23px
+		color: #65738E
 	.btn
 		min-width: 162px
 		min-height: 35px  
@@ -339,7 +349,7 @@
 		position: relative
 		margin: 0px auto 0 auto
 		max-width: 1920px
-		background: url('../img/dots_wave.svg') no-repeat center top
+		background: url('../img/dots_wave.svg') no-repeat center 82px
 		background-size: contain
 		z-index: 9999999
 
@@ -348,8 +358,8 @@
 				font-family: $default-font
 				color: #1100C2
 				font-weight: bold
-				font-size: 36px
-				line-height: 32px
+				font-size: 30px
+				line-height: 35px
 				margin-bottom: 17px			
 
 			.h3
@@ -367,10 +377,10 @@
 					display: flex
 					justify-content: center
 					align-items: center
-					margin: 310px auto 0 auto
+					margin: 226px auto 0 auto
 					width: 544px
 					height: 540px
-					background: url('../img/bg_poly_spl.svg') no-repeat center center
+					background: url('../img/bg_poly_spl.svg') no-repeat -20px center
 					background-size: 544px 540px
 					position: relative
 
@@ -378,33 +388,34 @@
 						// border: 1px solid red
 						position: relative
 						max-height: 147px
-						width: 360px
+						width: 300px
 						height: 281px
-						max-width: 360px
+						max-width: 300px
 						max-height: 281px
 						overflow: hidden
-						left: 8px
+						left: -19px
+						top: 20px
 
 						.title
 							color: #08005A
 							font-family: $default-font
-							font-size: 24px
+							font-size: 20px
 							font-weight: bold
-							line-height: 29px
+							line-height: 24px
 							text-align: center
 
 						.text
 							position: relative
-							top: 31px
-							max-height: 210px
+							top: 18px
+							max-height: 181px
 							overflow: hidden
 							// border: 1px solid #000
 							opacity: 0.8
 							color: #08005A
 							font-family: $default-font
-							font-size: 14px
+							font-size: 12px
 							font-style: italic
-							line-height: 19px
+							line-height: 17px
 							text-align: center						
 
 						.title-default
@@ -412,9 +423,9 @@
 							padding-top: 58px
 							color: #08005A
 							font-family: $default-font
-							font-size: 36px
+							font-size: 32px
 							font-weight: bold
-							line-height: 27px
+							line-height: 24px
 							text-align: center
 							margin: 0 auto 4px auto
 							max-width: 225px						
@@ -425,8 +436,8 @@
 							// border: 1px solid red
 							color: #08005A
 							font-family: $default-font
-							font-size: 24px
-							line-height: 27px
+							font-size: 22px
+							line-height: 25px
 							text-align: center
 							max-width: 360px									
 							max-height: 171px
@@ -451,9 +462,9 @@
 							z-index: 999999999
 							color: #1100C2
 							font-family: $default-font
-							font-size: 20px
+							font-size: 18px
 							font-weight: bold
-							line-height: 24px
+							line-height: 21px
 							text-align: center
 							word-wrap: break-word						
 							width: 261px
@@ -472,8 +483,8 @@
 						.icon
 							z-index: 999999
 							position: absolute
-							width: 63px
-							height: 63px
+							width: 55px
+							height: 55px
 							border-radius: 50%
 							background-color: #1100C2
 							box-shadow: 5px 5px 20px 0 rgba(75,101,129,0.4)
@@ -486,25 +497,26 @@
 								~ .container .point
 									background-color: $pizduha-color-hover						
 						.container
-							width: 84% 
+							// border: 1px solid red
+							width: 73% 
 							z-index: 0
 							margin: 0 auto
 							position: relative
-							height: 200px
+							height: 120px
 							transition: all 0.3s ease-in-out
 							.triangle
 								position: absolute
 								transition: all 0.3s ease-in-out
 							.point
 								position: absolute
-								width: 12px
-								height: 12px
+								width: 10px
+								height: 10px
 								border-radius: 50%
 								background-color: $pizduha-color									
 
 						&:nth-of-type(1)// основной первый блок
-							top: -92px
-							left: 267px
+							top: -156px
+							left: 129px
 							.icon
 								top: 193px
 								left: 104px
@@ -517,13 +529,13 @@
 							.reason
 								text-align: center
 								position: relative 
-								top: 15px
-								left: 5px
+								top: 71px
+								left: 0px
 							.title
 								text-align: center
 								position: relative
-								top: 5px
-								left: 4px
+								top: 57px
+								left: -1px
 								&:hover
 									~ .container
 										border-top: 2px solid $solid-border-color
@@ -531,76 +543,29 @@
 											border-left: 2px solid $solid-border-color
 
 							.text
-								border: 1px solid red
+								// border: 1px solid red
 								// display: block
 								top: 441px
 								left: -44px				
 
 							.container
-						    	top: 13px
+						    	top: 62px
 						    	border-top: 2px dashed $dash-border-color
+						    	// border: 1px solid red
 					    		.point
 					    			top: -7px
 						    	.triangle
-						    		top: 22px
-						    		right: -72px
-						    		width: 137px
-						    		height: 169px
-						    		transform: rotate(37deg)
+						    		top: 24px
+						    		right: -58px
+						    		width: 122px
+						    		height: 118px
+						    		transform: rotate(48deg)
 						    		border-left: 2px dashed $dash-border-color
 						    		border-bottom: none	
 										
 						&:nth-of-type(2)
 							// border: 1px solid red
-							top: 0px
-							right: 0px
-							.icon
-								bottom: 21px
-								left: 21px
-								&:hover
-									~ .container
-										border-top: 2px solid $solid-border-color
-										.triangle
-											border-left: 2px solid $solid-border-color
-			
-							.title
-								text-align: left
-								justify-content: flex-start
-								position: relative
-								right: -187px
-								top: 66px	
-								&:hover
-									~ .container
-										border-top: 2px solid $solid-border-color
-										.triangle
-											border-left: 2px solid $solid-border-color
-
-							.reason
-								text-align: left
-								position: relative
-								top: 73px
-								right: -187px			
-
-							.container
-								right: -166px
-								top: 74px
-								border-top: 2px dashed $dash-border-color
-								// border: 1px solid red
-								.triangle
-									top: 15px
-									left: -108px
-									width: 137px
-									height: 169px
-									transform: rotate(60deg)
-									border-left: 2px dashed $dash-border-color
-									// border: 1px solid red
-								.point
-									top: -7px
-									right: -6px
-
-						&:nth-of-type(3)
-							// border: 1px solid red
-							top: 172px
+							top: -13px
 							right: -70px
 							.icon
 								bottom: 21px
@@ -609,48 +574,47 @@
 									~ .container
 										border-top: 2px solid $solid-border-color
 										.triangle
-											border-top: 2px solid $solid-border-color
+											border-left: 2px solid $solid-border-color
 			
 							.title
 								text-align: left
 								justify-content: flex-start
 								position: relative
-								right: -157px
-								top: 175px	
+								right: -146px
+								top: 29px	
 								&:hover
 									~ .container
 										border-top: 2px solid $solid-border-color
 										.triangle
-											border-top: 2px solid $solid-border-color
+											border-left: 2px solid $solid-border-color
 
 							.reason
 								text-align: left
 								position: relative
-								top: 184px
-								right: -155px			
+								top: 41px
+								right: -145px			
 
 							.container
-								width: 216px
-								right: -133px
-								bottom: -183px
+								right: -93px
+								top: 32px
 								border-top: 2px dashed $dash-border-color
 								// border: 1px solid red
 								.triangle
-									top: -21px
-									left: -120px
-									width: 97px
-									height: 169px
-									transform: rotate(18deg)
-									border-top: 2px dashed $dash-border-color
+									top: 29px
+									left: -84px
+									width: 133px
+									height: 103px
+									transform: rotate(64deg)
+									border-left: 2px dashed $dash-border-color
 									// border: 1px solid red
 								.point
 									top: -7px
 									right: -6px
 
-						&:nth-of-type(4)
+						&:nth-of-type(3)
 							// border: 1px solid red
-							top: 340px
-							right: 1px
+							top: 129px
+							right: -127px
 							.icon
 								bottom: 21px
 								left: 21px
@@ -664,8 +628,8 @@
 								text-align: left
 								justify-content: flex-start
 								position: relative
-								right: -189px
-								top: 212px	
+								right: -135px
+								top: 109px	
 								&:hover
 									~ .container
 										border-top: 2px solid $solid-border-color
@@ -675,31 +639,80 @@
 							.reason
 								text-align: left
 								position: relative
-								top: 211px
-								right: -190px			
+								top: 118px
+								right: -133px			
 
 							.container
-								width: 222px
-								right: -162px
-								bottom: -234px
+								width: 191px
+								right: -92px
+								bottom: -111px
 								border-top: 2px dashed $dash-border-color
 								// border: 1px solid red
 								.triangle
-									top: -43px
-									left: -160px
-									width: 132px
-									height: 155px
-									transform: rotate(29deg)
+									top: -30px
+									left: -119px
+									width: 87px
+									height: 169px
+									transform: rotate(26deg)
 									border-top: 2px dashed $dash-border-color
 									// border: 1px solid red
 								.point
-									top: -8px
+									top: -7px
+									right: -6px
+
+						&:nth-of-type(4)
+							// border: 1px solid red
+							top: 267px
+							right: -64px
+							.icon
+								bottom: 21px
+								left: 21px
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-top: 2px solid $solid-border-color
+			
+							.title
+								text-align: left
+								justify-content: flex-start
+								position: relative
+								right: -149px
+								top: 161px	
+								&:hover
+									~ .container
+										border-top: 2px solid $solid-border-color
+										.triangle
+											border-top: 2px solid $solid-border-color
+
+							.reason
+								text-align: left
+								position: relative
+								top: 160px
+								right: -150px			
+
+							.container
+								width: 185px
+								right: -101px
+								bottom: -176px
+								border-top: 2px dashed $dash-border-color
+								// border: 1px solid red
+								.triangle
+									top: -75px
+									left: -160px
+									width: 132px
+									height: 139px
+									transform: rotate(49deg)
+									border-top: 2px dashed $dash-border-color
+									// border: 1px solid red
+								.point
+									top: -7px
 									right: -8px
 
 						&:nth-of-type(5)
 							// border: 1px solid red
-							bottom: 0px
-							left: 276px
+							bottom: -5px
+							left: 133px
 							.icon
 								top: 81px
 								left: 99px
@@ -712,7 +725,7 @@
 							.title
 								text-align: center
 								position: relative
-								top: 287px
+								top: 223px
 								left: -4px	
 								&:hover
 									~ .container
@@ -722,30 +735,32 @@
 							.reason
 								text-align: center
 								position: relative
-								top: 287px
+								top: 222px
 								left: -5px			
 
 							.container
-								width: 220px
+								width: 190px
 								// border: 1px solid red
-								top: 4px
+								top: 20px
+								left: -4px
 								border-bottom: 2px dashed $dash-border-color
 								.triangle
 									// border: 1px solid red
-									top: 6px
-									left: -69px
+									top: -25px
+									left: -78px
 									width: 137px
-									height: 169px
-									transform: rotate(38deg)
+									height: 113px
+									transform: rotate(45deg)
 									border-right: 2px dashed $dash-border-color
 								.point
-									bottom: -7px
+									bottom: -6px
 									right: 0px
 
 						&:nth-of-type(6)
+							// display: none
 							// border: 1px solid red
-							top: 340px
-							left: 1px
+							top: 271px
+							left: -116px
 							.icon
 								bottom: 21px
 								right: 2px
@@ -759,8 +774,8 @@
 								text-align: left
 								justify-content: flex-end
 								position: relative
-								left: -165px
-								top: 225px	
+								left: -125px
+								top: 166px	
 								&:hover
 									~ .container
 										border-top: 2px solid $solid-border-color
@@ -770,31 +785,31 @@
 							.reason
 								text-align: right
 								position: relative
-								top: 234px
-								left: -164px			
+								top: 177px
+								left: -124px			
 
 							.container
-								width: 222px
-								left: -142px
-								bottom: -234px
+								width: 192px
+								left: -73px
+								bottom: -170px
 								border-top: 2px dashed $dash-border-color
 								// border: 1px solid red
 								.triangle
-									top: -62px
-									right: -165px
-									width: 132px
-									height: 155px
-									transform: rotate(59deg)
+									top: -92px
+									right: -166px
+									width: 133px
+									height: 153px
+									transform: rotate(41deg)
 									border-left: 2px dashed $dash-border-color
 									// border: 1px solid red
 								.point
-									top: -8px
+									top: -6px
 									left: -8px
 
 						&:nth-of-type(7)
 							// border: 1px solid red
-							top: 172px
-							left: -70px
+							top: 130px
+							left: -182px
 							.icon
 								bottom: 21px
 								right: -2px
@@ -811,8 +826,8 @@
 								text-align: right
 								justify-content: flex-end
 								position: relative
-								left: -122px
-								top: 162px	
+								left: -93px
+								top: 77px	
 								&:hover
 									~ .container
 										border-top: 2px solid $solid-border-color
@@ -822,21 +837,21 @@
 							.reason
 								text-align: right
 								position: relative
-								top: 161px
-								left: -123px			
+								top: 76px
+								left: -109px			
 
 							.container
-								width: 216px
-								left: -111px
-								bottom: -183px
+								width: 188px
+								left: -62px
+								bottom: -108px
 								border-top: 2px dashed $dash-border-color
 								// border: 1px solid red
 								.triangle
-									top: -21px
-									right: -120px
+									top: -31px
+									right: -129px
 									width: 97px
 									height: 169px
-									transform: rotate(-18deg)
+									transform: rotate(-26deg)
 									border-top: 2px dashed $dash-border-color
 									// border: 1px solid red
 								.point
@@ -845,8 +860,8 @@
 
 						&:nth-of-type(8)
 							// border: 1px solid red
-							top: 0px
-							left: 0px
+							top: -16px
+							left: -120px
 							.icon
 								bottom: 21px
 								right: 0px
@@ -860,8 +875,8 @@
 								text-align: right
 								justify-content: flex-end
 								position: relative
-								left: -161px
-								top: 55px	
+								left: -119px
+								top: 24px	
 								&:hover
 									~ .container
 										border-top: 2px solid $solid-border-color
@@ -871,20 +886,21 @@
 							.reason
 								text-align: right
 								position: relative
-								top: 54px
-								left: -164px			
+								top: 23px
+								left: -122px			
 
 							.container
-								left: -143px
-								top: 74px
+								width: 184px
+								left: -75px
+								top: 35px
 								border-top: 2px dashed $dash-border-color
 								// border: 1px solid red
 								.triangle
-									top: 15px
-									right: -108px
+									top: 27px
+									right: -90px
 									width: 137px
-									height: 169px
-									transform: rotate(-60deg)
+									height: 116px
+									transform: rotate(-64deg)
 									border-right: 2px dashed $dash-border-color
 									// border: 1px solid red
 								.point

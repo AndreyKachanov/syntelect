@@ -4118,6 +4118,12 @@ p {
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1134px) {
+  h3, .h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #65738E; }
   .btn {
     min-width: 162px;
     min-height: 35px;
@@ -4513,7 +4519,7 @@ p {
     position: relative;
     margin: 0px auto 0 auto;
     max-width: 1920px;
-    background: url("../img/dots_wave.svg") no-repeat center top;
+    background: url("../img/dots_wave.svg") no-repeat center 82px;
     -webkit-background-size: contain;
             background-size: contain;
     z-index: 9999999; }
@@ -4521,8 +4527,8 @@ p {
       font-family: "Raleway", sans-serif;
       color: #1100C2;
       font-weight: bold;
-      font-size: 36px;
-      line-height: 32px;
+      font-size: 30px;
+      line-height: 35px;
       margin-bottom: 17px; }
     .why .wrapper .h3 {
       text-align: center;
@@ -4545,48 +4551,49 @@ p {
         -webkit-align-items: center;
             -ms-flex-align: center;
                 align-items: center;
-        margin: 310px auto 0 auto;
+        margin: 226px auto 0 auto;
         width: 544px;
         height: 540px;
-        background: url("../img/bg_poly_spl.svg") no-repeat center center;
+        background: url("../img/bg_poly_spl.svg") no-repeat -20px center;
         -webkit-background-size: 544px 540px;
                 background-size: 544px 540px;
         position: relative; }
         .why .wrapper .why-content .hvastalka .center {
           position: relative;
           max-height: 147px;
-          width: 360px;
+          width: 300px;
           height: 281px;
-          max-width: 360px;
+          max-width: 300px;
           max-height: 281px;
           overflow: hidden;
-          left: 8px; }
+          left: -19px;
+          top: 20px; }
           .why .wrapper .why-content .hvastalka .center .title {
             color: #08005A;
             font-family: "Raleway", sans-serif;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
-            line-height: 29px;
+            line-height: 24px;
             text-align: center; }
           .why .wrapper .why-content .hvastalka .center .text {
             position: relative;
-            top: 31px;
-            max-height: 210px;
+            top: 18px;
+            max-height: 181px;
             overflow: hidden;
             opacity: 0.8;
             color: #08005A;
             font-family: "Raleway", sans-serif;
-            font-size: 14px;
+            font-size: 12px;
             font-style: italic;
-            line-height: 19px;
+            line-height: 17px;
             text-align: center; }
           .why .wrapper .why-content .hvastalka .center .title-default {
             padding-top: 58px;
             color: #08005A;
             font-family: "Raleway", sans-serif;
-            font-size: 36px;
+            font-size: 32px;
             font-weight: bold;
-            line-height: 27px;
+            line-height: 24px;
             text-align: center;
             margin: 0 auto 4px auto;
             max-width: 225px;
@@ -4595,8 +4602,8 @@ p {
           .why .wrapper .why-content .hvastalka .center .text-default {
             color: #08005A;
             font-family: "Raleway", sans-serif;
-            font-size: 24px;
-            line-height: 27px;
+            font-size: 22px;
+            line-height: 25px;
             text-align: center;
             max-width: 360px;
             max-height: 171px;
@@ -4626,9 +4633,9 @@ p {
             z-index: 999999999;
             color: #1100C2;
             font-family: "Raleway", sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
-            line-height: 24px;
+            line-height: 21px;
             text-align: center;
             word-wrap: break-word;
             width: 261px;
@@ -4645,8 +4652,8 @@ p {
           .why .wrapper .why-content .hvastalka .item .icon {
             z-index: 999999;
             position: absolute;
-            width: 63px;
-            height: 63px;
+            width: 55px;
+            height: 55px;
             -webkit-border-radius: 50%;
                     border-radius: 50%;
             background-color: #1100C2;
@@ -4662,11 +4669,11 @@ p {
             .why .wrapper .why-content .hvastalka .item .icon:hover ~ .container .point {
               background-color: #1100C2; }
           .why .wrapper .why-content .hvastalka .item .container {
-            width: 84%;
+            width: 73%;
             z-index: 0;
             margin: 0 auto;
             position: relative;
-            height: 200px;
+            height: 120px;
             -webkit-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out; }
@@ -4677,14 +4684,14 @@ p {
               transition: all 0.3s ease-in-out; }
             .why .wrapper .why-content .hvastalka .item .container .point {
               position: absolute;
-              width: 12px;
-              height: 12px;
+              width: 10px;
+              height: 10px;
               -webkit-border-radius: 50%;
                       border-radius: 50%;
               background-color: #08005A; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(1) {
-            top: -92px;
-            left: 267px; }
+            top: -156px;
+            left: 129px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .icon {
               top: 193px;
               left: 104px; }
@@ -4695,39 +4702,38 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .reason {
               text-align: center;
               position: relative;
-              top: 15px;
-              left: 5px; }
+              top: 71px;
+              left: 0px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title {
               text-align: center;
               position: relative;
-              top: 5px;
-              left: 4px; }
+              top: 57px;
+              left: -1px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title:hover ~ .container {
                 border-top: 2px solid #08005A; }
                 .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .title:hover ~ .container .triangle {
                   border-left: 2px solid #08005A; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .text {
-              border: 1px solid red;
               top: 441px;
               left: -44px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .container {
-              top: 13px;
+              top: 62px;
               border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .container .point {
                 top: -7px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(1) .container .triangle {
-                top: 22px;
-                right: -72px;
-                width: 137px;
-                height: 169px;
-                -webkit-transform: rotate(37deg);
-                    -ms-transform: rotate(37deg);
-                        transform: rotate(37deg);
+                top: 24px;
+                right: -58px;
+                width: 122px;
+                height: 118px;
+                -webkit-transform: rotate(48deg);
+                    -ms-transform: rotate(48deg);
+                        transform: rotate(48deg);
                 border-left: 2px dashed #6D94C0;
                 border-bottom: none; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(2) {
-            top: 0px;
-            right: 0px; }
+            top: -13px;
+            right: -70px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .icon {
               bottom: 21px;
               left: 21px; }
@@ -4742,8 +4748,8 @@ p {
                   -ms-flex-pack: start;
                       justify-content: flex-start;
               position: relative;
-              right: -187px;
-              top: 66px; }
+              right: -146px;
+              top: 29px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title:hover ~ .container {
                 border-top: 2px solid #08005A; }
                 .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .title:hover ~ .container .triangle {
@@ -4751,27 +4757,27 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .reason {
               text-align: left;
               position: relative;
-              top: 73px;
-              right: -187px; }
+              top: 41px;
+              right: -145px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container {
-              right: -166px;
-              top: 74px;
+              right: -93px;
+              top: 32px;
               border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container .triangle {
-                top: 15px;
-                left: -108px;
-                width: 137px;
-                height: 169px;
-                -webkit-transform: rotate(60deg);
-                    -ms-transform: rotate(60deg);
-                        transform: rotate(60deg);
+                top: 29px;
+                left: -84px;
+                width: 133px;
+                height: 103px;
+                -webkit-transform: rotate(64deg);
+                    -ms-transform: rotate(64deg);
+                        transform: rotate(64deg);
                 border-left: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(2) .container .point {
                 top: -7px;
                 right: -6px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(3) {
-            top: 172px;
-            right: -70px; }
+            top: 129px;
+            right: -127px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .icon {
               bottom: 21px;
               left: 21px; }
@@ -4786,8 +4792,8 @@ p {
                   -ms-flex-pack: start;
                       justify-content: flex-start;
               position: relative;
-              right: -157px;
-              top: 175px; }
+              right: -135px;
+              top: 109px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .title:hover ~ .container {
                 border-top: 2px solid #08005A; }
                 .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .title:hover ~ .container .triangle {
@@ -4795,28 +4801,28 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .reason {
               text-align: left;
               position: relative;
-              top: 184px;
-              right: -155px; }
+              top: 118px;
+              right: -133px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .container {
-              width: 216px;
-              right: -133px;
-              bottom: -183px;
+              width: 191px;
+              right: -92px;
+              bottom: -111px;
               border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .container .triangle {
-                top: -21px;
-                left: -120px;
-                width: 97px;
+                top: -30px;
+                left: -119px;
+                width: 87px;
                 height: 169px;
-                -webkit-transform: rotate(18deg);
-                    -ms-transform: rotate(18deg);
-                        transform: rotate(18deg);
+                -webkit-transform: rotate(26deg);
+                    -ms-transform: rotate(26deg);
+                        transform: rotate(26deg);
                 border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(3) .container .point {
                 top: -7px;
                 right: -6px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(4) {
-            top: 340px;
-            right: 1px; }
+            top: 267px;
+            right: -64px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .icon {
               bottom: 21px;
               left: 21px; }
@@ -4831,8 +4837,8 @@ p {
                   -ms-flex-pack: start;
                       justify-content: flex-start;
               position: relative;
-              right: -189px;
-              top: 212px; }
+              right: -149px;
+              top: 161px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .title:hover ~ .container {
                 border-top: 2px solid #08005A; }
                 .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .title:hover ~ .container .triangle {
@@ -4840,28 +4846,28 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .reason {
               text-align: left;
               position: relative;
-              top: 211px;
-              right: -190px; }
+              top: 160px;
+              right: -150px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .container {
-              width: 222px;
-              right: -162px;
-              bottom: -234px;
+              width: 185px;
+              right: -101px;
+              bottom: -176px;
               border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .container .triangle {
-                top: -43px;
+                top: -75px;
                 left: -160px;
                 width: 132px;
-                height: 155px;
-                -webkit-transform: rotate(29deg);
-                    -ms-transform: rotate(29deg);
-                        transform: rotate(29deg);
+                height: 139px;
+                -webkit-transform: rotate(49deg);
+                    -ms-transform: rotate(49deg);
+                        transform: rotate(49deg);
                 border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(4) .container .point {
-                top: -8px;
+                top: -7px;
                 right: -8px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(5) {
-            bottom: 0px;
-            left: 276px; }
+            bottom: -5px;
+            left: 133px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .icon {
               top: 81px;
               left: 99px; }
@@ -4872,7 +4878,7 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .title {
               text-align: center;
               position: relative;
-              top: 287px;
+              top: 223px;
               left: -4px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .title:hover ~ .container {
                 border-bottom: 2px solid #08005A; }
@@ -4881,27 +4887,28 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .reason {
               text-align: center;
               position: relative;
-              top: 287px;
+              top: 222px;
               left: -5px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .container {
-              width: 220px;
-              top: 4px;
+              width: 190px;
+              top: 20px;
+              left: -4px;
               border-bottom: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .container .triangle {
-                top: 6px;
-                left: -69px;
+                top: -25px;
+                left: -78px;
                 width: 137px;
-                height: 169px;
-                -webkit-transform: rotate(38deg);
-                    -ms-transform: rotate(38deg);
-                        transform: rotate(38deg);
+                height: 113px;
+                -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
                 border-right: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(5) .container .point {
-                bottom: -7px;
+                bottom: -6px;
                 right: 0px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(6) {
-            top: 340px;
-            left: 1px; }
+            top: 271px;
+            left: -116px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .icon {
               bottom: 21px;
               right: 2px; }
@@ -4916,8 +4923,8 @@ p {
                   -ms-flex-pack: end;
                       justify-content: flex-end;
               position: relative;
-              left: -165px;
-              top: 225px; }
+              left: -125px;
+              top: 166px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .title:hover ~ .container {
                 border-top: 2px solid #08005A; }
                 .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .title:hover ~ .container .triangle {
@@ -4925,28 +4932,28 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .reason {
               text-align: right;
               position: relative;
-              top: 234px;
-              left: -164px; }
+              top: 177px;
+              left: -124px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .container {
-              width: 222px;
-              left: -142px;
-              bottom: -234px;
+              width: 192px;
+              left: -73px;
+              bottom: -170px;
               border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .container .triangle {
-                top: -62px;
-                right: -165px;
-                width: 132px;
-                height: 155px;
-                -webkit-transform: rotate(59deg);
-                    -ms-transform: rotate(59deg);
-                        transform: rotate(59deg);
+                top: -92px;
+                right: -166px;
+                width: 133px;
+                height: 153px;
+                -webkit-transform: rotate(41deg);
+                    -ms-transform: rotate(41deg);
+                        transform: rotate(41deg);
                 border-left: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(6) .container .point {
-                top: -8px;
+                top: -6px;
                 left: -8px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(7) {
-            top: 172px;
-            left: -70px; }
+            top: 130px;
+            left: -182px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .icon {
               bottom: 21px;
               right: -2px; }
@@ -4961,8 +4968,8 @@ p {
                   -ms-flex-pack: end;
                       justify-content: flex-end;
               position: relative;
-              left: -122px;
-              top: 162px; }
+              left: -93px;
+              top: 77px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .title:hover ~ .container {
                 border-top: 2px solid #08005A; }
                 .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .title:hover ~ .container .triangle {
@@ -4970,28 +4977,28 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .reason {
               text-align: right;
               position: relative;
-              top: 161px;
-              left: -123px; }
+              top: 76px;
+              left: -109px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .container {
-              width: 216px;
-              left: -111px;
-              bottom: -183px;
+              width: 188px;
+              left: -62px;
+              bottom: -108px;
               border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .container .triangle {
-                top: -21px;
-                right: -120px;
+                top: -31px;
+                right: -129px;
                 width: 97px;
                 height: 169px;
-                -webkit-transform: rotate(-18deg);
-                    -ms-transform: rotate(-18deg);
-                        transform: rotate(-18deg);
+                -webkit-transform: rotate(-26deg);
+                    -ms-transform: rotate(-26deg);
+                        transform: rotate(-26deg);
                 border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(7) .container .point {
                 top: -7px;
                 left: -6px; }
           .why .wrapper .why-content .hvastalka .item:nth-of-type(8) {
-            top: 0px;
-            left: 0px; }
+            top: -16px;
+            left: -120px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .icon {
               bottom: 21px;
               right: 0px; }
@@ -5006,8 +5013,8 @@ p {
                   -ms-flex-pack: end;
                       justify-content: flex-end;
               position: relative;
-              left: -161px;
-              top: 55px; }
+              left: -119px;
+              top: 24px; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .title:hover ~ .container {
                 border-top: 2px solid #08005A; }
                 .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .title:hover ~ .container .triangle {
@@ -5015,20 +5022,21 @@ p {
             .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .reason {
               text-align: right;
               position: relative;
-              top: 54px;
-              left: -164px; }
+              top: 23px;
+              left: -122px; }
             .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .container {
-              left: -143px;
-              top: 74px;
+              width: 184px;
+              left: -75px;
+              top: 35px;
               border-top: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .container .triangle {
-                top: 15px;
-                right: -108px;
+                top: 27px;
+                right: -90px;
                 width: 137px;
-                height: 169px;
-                -webkit-transform: rotate(-60deg);
-                    -ms-transform: rotate(-60deg);
-                        transform: rotate(-60deg);
+                height: 116px;
+                -webkit-transform: rotate(-64deg);
+                    -ms-transform: rotate(-64deg);
+                        transform: rotate(-64deg);
                 border-right: 2px dashed #6D94C0; }
               .why .wrapper .why-content .hvastalka .item:nth-of-type(8) .container .point {
                 top: -7px;
