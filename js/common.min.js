@@ -51,45 +51,94 @@ jQuery(function() {
 
   // Fixed menu
 	jQuery("#menu-full").before(jQuery("#menu-full").clone().addClass("fixed"));
-	jQuery(window).scroll(function(){
-		if(jQuery(window).scrollTop() >= 110){
-			jQuery('.fixed').addClass('slideDown');
+	jQuery(window).scroll(function() {
+		if (window.matchMedia('(min-width: 1134px)').matches) {
+      if (jQuery(window).scrollTop() >= 110){
 
-      jQuery('#change-bg').css({
-        top       : "110px",
-        transition : 'all 0.7s ease-in-out'
-      });
+        // if (window.matchMedia('(max-width: 1134px)').matches) {
 
-      jQuery("#change-bg").prev("div").css({
-        top       : "220px",
-        transition : 'all 0.7s ease-in-out'
-      });
+        // }
+  			jQuery('.fixed').addClass('slideDown');
 
-      jQuery("#about").css({
-        'margin-top'       : '50px',
-        transition : 'all 0.7s ease-in-out'
-      });      
+        jQuery('#change-bg').css({
+          top       : "110px",
+          transition : 'all 0.7s ease-in-out'
+        });
 
-			
-		}
-		else{
-			jQuery('.fixed').removeClass('slideDown');
+        jQuery("#change-bg").prev("div").css({
+          top       : "220px",
+          transition : 'all 0.7s ease-in-out'
+        });
 
-			jQuery('#change-bg').css({
-        top       : "0px",
-        transition : 'all 0.3s ease-in-out'
-      });
+        jQuery("#about").css({
+          'margin-top'       : '50px',
+          transition : 'all 0.7s ease-in-out'
+        });      
 
-      jQuery("#change-bg").prev("div").css({
-        top       : "110px",
-        transition : 'all 0.3s ease-in-out'
-      });
+  			
+  		}
+  		else{
+  			jQuery('.fixed').removeClass('slideDown');
 
-      jQuery("#about").css({
-        'margin-top'       : '0px',
-        transition : 'all 0.7s ease-in-out'
-      });             			
-		}
+  			jQuery('#change-bg').css({
+          top       : "0px",
+          transition : 'all 0.3s ease-in-out'
+        });
+
+        jQuery("#change-bg").prev("div").css({
+          top       : "110px",
+          transition : 'all 0.3s ease-in-out'
+        });
+
+        jQuery("#about").css({
+          'margin-top'       : '0px',
+          transition : 'all 0.7s ease-in-out'
+        });             			
+  		}
+    }
+
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      if (jQuery(window).scrollTop() >= 65){
+
+        jQuery('.fixed').addClass('slideDown');
+
+        jQuery('#change-bg').css({
+          top       : "65px",
+          transition : 'all 0.7s ease-in-out'
+        });
+
+        jQuery("#change-bg").prev("div").css({
+          top       : "172px",
+          transition : 'all 0.7s ease-in-out'
+        });
+
+        jQuery("#about").css({
+          'margin-top'       : '50px',
+          transition : 'all 0.7s ease-in-out'
+        });      
+
+        
+      }
+      else{
+        jQuery('.fixed').removeClass('slideDown');
+
+        jQuery('#change-bg').css({
+          top       : "0px",
+          transition : 'all 0.3s ease-in-out'
+        });
+
+        jQuery("#change-bg").prev("div").css({
+          top       : "65px",
+          transition : 'all 0.3s ease-in-out'
+        });
+
+        jQuery("#about").css({
+          'margin-top'       : '0px',
+          transition : 'all 0.7s ease-in-out'
+        });                   
+      }
+    }    
+     
 	});
     // end fixed menu
 

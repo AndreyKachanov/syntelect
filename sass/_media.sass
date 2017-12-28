@@ -2,12 +2,155 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1134px)
+	.btn
+		min-width: 162px
+		min-height: 35px  
+		display: inline-block
+		cursor: pointer
+		border-radius: 25px
+		text-align: center
+		font-family: "Opensans", sans-serif
+		font-size: 12px
+		line-height: 31px
+		text-decoration: none
+
+		&:visited
+			color:#1100C2
+
+		&-bg
+			line-height: 35px
+			background-color: #1100C2	
+			box-shadow: 0 2px 10px 0 #4D5AFF
+			color: #fff !important
+			transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
+			&::before
+				transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
+				content: "\f003"
+				color: #fff
+				font-family: "FontAwesome"
+				font-size: 15px
+				line-height: 15px
+				margin-right: 10px
+			&:hover
+				transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
+				color: #1100C2 !important
+				background-color: #fff !important
+				border: 2px solid #1100C2
+				line-height: 31px
+				box-shadow: none !important
+				&::before
+					transition: color .2s, background-color .4s, box-shadow .2s ease-in-out
+					color: #1100C2 !important
+
+		&-light  
+			transition: all .2s ease-in-out
+			color: #1100C2
+			border: 2px solid #1100C2
+			&::before
+				transition: all .2s ease-in-out
+				content: "\f003"
+				color: #1100C2
+				font-family: "FontAwesome"
+				font-size: 15px
+				line-height: 15px
+				margin-right: 10px
+			&:hover
+				transition: all .2s ease-in-out
+				color: #fff
+				border-color: #fff
+				background-color: #1100C2
+				border: 2px solid #1100C2
+				&::before
+					transition: all .2s ease-in-out
+					color: #fff
+	
+	.menu
+		nav 
+			ul
+				display: flex
+				flex-wrap: nowrap
+
+				li:nth-of-type(2)
+					a::before
+						display: none
+
+				li.home //кнопка Home
+					position: relative
+					top: -4px
+					right: 0px
+					a
+						font-size: 18px
+						line-height: 17px
+						color: #1100C2							
+						text-decoration: none
+						&:hover
+							color: #21184C
+				
+				li.item //li.item - пункты меню
+					position: relative
+					&::after
+						content: ''
+						opacity: 0
+						transition: all .6s ease-in-out
+
+					&:hover
+						&::after
+							content: ''
+							position: absolute
+							bottom: 0
+							right: 6%
+							width: 85%
+							height: 2px
+							background-color: #1000C2
+							opacity: 1
+							transition: all .6s ease-in-out
+						a
+							color: #21184C
+							&::before
+								background-color: #1000C2				
+					a									
+						display: block
+						position: relative
+						font-size: 13px
+						line-height: 14px
+						letter-spacing: 0.6px
+						text-transform: uppercase
+						color: #08005A
+						font-family: $default-font
+						font-weight: normal
+						text-decoration: none
+						padding-right: 10px
+						padding-left: 10px
+						padding-bottom: 8px
+						white-space: nowrap
+						&::before
+							content: ''
+							position: absolute
+							left: 0px
+							top: 5%
+							height: 50%
+							width: 1px
+							background-color: #A9ADB9
+
 	.site-header
+		.fixed
+			// border: 1px solid red
+			height: 65px
+			width: 100%
+			min-width: 1024px
+			position: fixed
+			top: -150px
+			left: 0px 
+			right: 0
+			z-index: 999
+			transition: 0.4s top cubic-bezier(.3, .73, .3, .74)
+			.btn-block
+				padding-left: 10px !important
+
 		.menu-full
 			margin: 0 auto
 			z-index: 99999999999999999999
 			max-width: 1920px
-			max-height: 757px
 			background-color: #fff
 			box-shadow: 0px 15px 20px -15px rgba(75,101,129,0.4),  0px -15px 20px -15px rgba(75,101,129,0.4) 
 	   
@@ -18,7 +161,7 @@
 					z-index: 9999
 					justify-content: space-between
 					align-items: center
-					min-height: 110px
+					min-height: 65px
 					background-color: #FFF
 	 
 					.logo
@@ -26,8 +169,9 @@
 						+size-md(2)//ниже 1134px до 1024
 						+size-sm(12)//ниже 1024 до 714
 						// +size-xs(12)//ниже 714 до 290
-						margin-left: 3px
-						margin-top: -7px  
+						padding-left: 41px
+						margin-left: 0px
+						margin-top: 0px  
 						a
 							display: block 
 		 					text-indent: -9999px
@@ -35,14 +179,18 @@
 						+size(5)
 						+size-md(5)
 						+size-sm(12) //sm - ниже 715px
-						margin-left: -104px
-						margin-top: 12px
+						margin-left: 0px
+						margin-right: 46px
+						margin-top: 15px
+
 					.btn-block
 						+size(3)
 						+size-md(3)
 						+size-sm(12)
-						margin-right: 6px
-						margin-bottom: 3px
+						padding-left: 18px
+						margin-right: 0px
+						margin-bottom: 0px
+
 
 		.slider-full
 			position: relative
@@ -50,25 +198,26 @@
 			max-height: 757px
 			background-repeat: no-repeat
 			background-position: top right
-			background-size: contain
+			background-size: 548px 482px
 			margin: 0px auto 50px auto
 			.wrapper
 				// border: 1px solid red
 				.slider-block
 					+row-flex()
 					.slider
-						+size(6)
+						+size(5)
 						// border: 1px solid green
-						min-height: 100vh
+						min-height: 482px
 						position: relative
 						// height: 100%
 
 						.quotes
+								// border: 1px solid red
 								z-index: 99
 								width: 100%
-								// border: 1px solid red
 								position: absolute
-								top: 176px
+								top: 75px
+								left: 45px
 
 								.quote-dots
 									display: flex
@@ -102,31 +251,93 @@
 										transition: opacity, 0.3s, ease
 										font-family: $default-font
 										font-weight: normal
-										font-size: 48px
+										font-size: 36px
 										color: #1100C2
-										line-height: 56px
+										line-height: 42px
+										padding-right: 30px
 										// border: 1px solid #000
 						
 						a
 							position: absolute
-							top: 448px
+							top: 276px
+							left: 45px
 							z-index: 99
 
 						.syntel-bg
-							position: absolute
-							top: 358px
 							// border: 1px solid red
+							position: absolute
+							top: 197px
+							left: 45px
 							color: #F4F5F8
 							font-family: $default-font
 							font-weight: normal
-							font-size: 120px
-							line-height: 141px
+							font-size: 100px
+							line-height: 117px
+	.about
+		// border: 1px solid red
+		position: relative
+		margin: 0 auto
+		max-width: 1920px
+		min-height: 768px
+		background-image: url('../img/foto_splash_text.png') 
+		background-repeat: no-repeat
+		background-position: -66px 68px
+		background-size: 434px 526px
+		// background-size: cover
 
+		&:before
+			// border: 1px solid black
+			display: block
+			content: ''
+			width: 392px
+			height: 750px
+			top: -148px
+			position: absolute
+			z-index: -1
+			background-image: url('../img/dot_circle.svg')
+			background-repeat: no-repeat
+			background-position: -30px -21px
+			// background-size: 614px 850px
+			background-size: 392px 760px	
+
+
+		.wrapper
+			.about-content
+
+
+				+row-flex()
+				+size(7)
+				+size-md(7)
+				// +shift-md-left(5)
+				margin-left: 41%
+
+				.h2
+					font-family: $default-font
+					font-weight: normal
+					color: #08005A
+					margin-top: 77px
+					margin-bottom: 23px
+					font-size: 30px
+					line-height: 35px
+				.h3
+					text-align: left
+					margin-bottom: 29px
+					font-size: 18px
+					line-height: 21px
+				.content				
+					font-family: "Opensans", sans-serif
+					font-weight: normal
+					font-size: 14px
+					line-height: 19px
+					color: #65738E
+					opacity: .8
+					p
+						margin-bottom: 18px
 	.why
 		// border: 1px solid red
 		// display: none
 		position: relative
-		margin: 60px auto 0 auto
+		margin: 0px auto 0 auto
 		max-width: 1920px
 		background: url('../img/dots_wave.svg') no-repeat center top
 		background-size: contain
