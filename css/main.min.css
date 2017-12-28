@@ -4118,6 +4118,18 @@ p {
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1134px) {
+  #panel-heading {
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    position: absolute;
+    top: 100px;
+    font-family: "Opensans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    padding: 10px 0px;
+    color: #fff; }
   .btn-readmore-procc {
     font-size: 15px !important;
     line-height: 35px !important;
@@ -5287,6 +5299,284 @@ p {
               font-size: 12px;
               font-style: italic;
               line-height: 19px; }
+  .contacts {
+    position: relative;
+    margin: 67px auto 0 auto;
+    max-width: 1920px; }
+    .contacts .wrapper .h2 {
+      font-family: "Raleway", sans-serif;
+      color: #1100C2;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 13px; }
+    .contacts .wrapper .h3 {
+      margin: 0 auto;
+      max-width: 62%;
+      text-align: center;
+      font-size: 18px;
+      line-height: 21px; }
+    .contacts .wrapper .contacts-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-top: 64px;
+      margin-left: -30px;
+      margin-right: -30px; }
+      .contacts .wrapper .contacts-content input[type="text"], .contacts .wrapper .contacts-content input[type="email"], .contacts .wrapper .contacts-content input[type="file"], .contacts .wrapper .contacts-content textarea {
+        font-family: "Opensans", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #1100C2;
+        padding: 10px;
+        -webkit-border-radius: 0;
+                border-radius: 0;
+        border: 1px solid #9EAAC2; }
+        .contacts .wrapper .contacts-content input[type="text"]:focus, .contacts .wrapper .contacts-content input[type="text"]:active, .contacts .wrapper .contacts-content input[type="email"]:focus, .contacts .wrapper .contacts-content input[type="email"]:active, .contacts .wrapper .contacts-content input[type="file"]:focus, .contacts .wrapper .contacts-content input[type="file"]:active, .contacts .wrapper .contacts-content textarea:focus, .contacts .wrapper .contacts-content textarea:active {
+          padding: 9px;
+          outline: none;
+          border: 2px solid #1100C2; }
+        .contacts .wrapper .contacts-content input[type="text"]::-webkit-input-placeholder, .contacts .wrapper .contacts-content input[type="email"]::-webkit-input-placeholder, .contacts .wrapper .contacts-content input[type="file"]::-webkit-input-placeholder, .contacts .wrapper .contacts-content textarea::-webkit-input-placeholder {
+          font-family: "Opensans", sans-serif;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: #9EAAC2; }
+        .contacts .wrapper .contacts-content input[type="text"]::-moz-placeholder, .contacts .wrapper .contacts-content input[type="email"]::-moz-placeholder, .contacts .wrapper .contacts-content input[type="file"]::-moz-placeholder, .contacts .wrapper .contacts-content textarea::-moz-placeholder {
+          font-family: "Opensans", sans-serif;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: #9EAAC2; }
+        .contacts .wrapper .contacts-content input[type="text"]:-ms-input-placeholder, .contacts .wrapper .contacts-content input[type="email"]:-ms-input-placeholder, .contacts .wrapper .contacts-content input[type="file"]:-ms-input-placeholder, .contacts .wrapper .contacts-content textarea:-ms-input-placeholder {
+          font-family: "Opensans", sans-serif;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: #9EAAC2; }
+        .contacts .wrapper .contacts-content input[type="text"]:-moz-placeholder, .contacts .wrapper .contacts-content input[type="email"]:-moz-placeholder, .contacts .wrapper .contacts-content input[type="file"]:-moz-placeholder, .contacts .wrapper .contacts-content textarea:-moz-placeholder {
+          font-family: "Opensans", sans-serif;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: #9EAAC2; }
+      .contacts .wrapper .contacts-content input[type="file"] {
+        width: 0px; }
+      .contacts .wrapper .contacts-content input[type="text"], .contacts .wrapper .contacts-content input[type="email"] {
+        margin-bottom: 20px;
+        width: 92%; }
+      .contacts .wrapper .contacts-content .jfilestyle {
+        width: 92%;
+        margin-bottom: 0;
+        height: 44px; }
+        .contacts .wrapper .contacts-content .jfilestyle span.focus-jfilestyle {
+          display: block;
+          position: absolute;
+          top: 1px;
+          right: 0px;
+          height: 43px;
+          width: 88px;
+          height: 43px; }
+          .contacts .wrapper .contacts-content .jfilestyle span.focus-jfilestyle label {
+            width: 100%;
+            display: block;
+            height: 100%;
+            font-family: "Opensans", sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            color: #fff;
+            background-color: #6D94C0;
+            outline: none;
+            border: none; }
+        .contacts .wrapper .contacts-content .jfilestyle input[type="text"] {
+          background-color: #fff;
+          margin-bottom: 0 !important; }
+      .contacts .wrapper .contacts-content .form-title {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: -webkit-calc(33.33333% - 30px);
+        width: calc(33.33333% - 30px); } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .contacts .wrapper .contacts-content .form-title {
+          width: -webkit-calc(41.66667% - 30px);
+          width: calc(41.66667% - 30px); } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .contacts .wrapper .contacts-content .form-title {
+          margin-left: -webkit-calc(8.33333% + 15px);
+          margin-left: calc(8.33333% + 15px); } }
+
+@media only screen and (max-width: 1134px) {
+        .contacts .wrapper .contacts-content .form-title .title {
+          color: #1100C2;
+          font-family: "Raleway", sans-serif;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px; }
+        .contacts .wrapper .contacts-content .form-title .text {
+          margin-top: 15px !important;
+          opacity: 0.8;
+          color: #65738E;
+          font-family: "Opensans", sans-serif;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 20px;
+          margin-top: 8px; }
+        .contacts .wrapper .contacts-content .form-title .btn-block-footer {
+          margin-top: 47px; }
+          .contacts .wrapper .contacts-content .form-title .btn-block-footer button {
+            font-size: 15px;
+            line-height: 20px;
+            line-height: 20px;
+            padding: 0;
+            outline: none;
+            border: none;
+            padding: 12px 66px; }
+            .contacts .wrapper .contacts-content .form-title .btn-block-footer button::before {
+              font-size: 18px;
+              line-height: 18px; }
+            .contacts .wrapper .contacts-content .form-title .btn-block-footer button:hover {
+              border: 2px solid #1100C2;
+              padding: 10px 64px; }
+      .contacts .wrapper .contacts-content .form-first {
+        margin-left: 17px;
+        width: -webkit-calc(33.33333% - 30px);
+        width: calc(33.33333% - 30px); } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .contacts .wrapper .contacts-content .form-first {
+          width: -webkit-calc(41.66667% - 30px);
+          width: calc(41.66667% - 30px); } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .contacts .wrapper .contacts-content .form-first {
+          margin-right: -webkit-calc(8.33333% + 15px);
+          margin-right: calc(8.33333% + 15px); } }
+
+@media only screen and (max-width: 1134px) {
+      .contacts .wrapper .contacts-content .form-second {
+        margin-top: 20px;
+        margin-right: 16px;
+        width: -webkit-calc(33.33333% - 30px);
+        width: calc(33.33333% - 30px); } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .contacts .wrapper .contacts-content .form-second {
+          width: -webkit-calc(41.66667% - 30px);
+          width: calc(41.66667% - 30px); } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .contacts .wrapper .contacts-content .form-second {
+          margin-left: -webkit-calc(50% + 15px);
+          margin-left: calc(50% + 15px); } }
+
+@media only screen and (max-width: 1134px) {
+        .contacts .wrapper .contacts-content .form-second textarea {
+          min-height: 110px;
+          min-width: 92%;
+          width: 92%;
+          overflow: hidden; }
+  .wave-dots {
+    height: 149px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url("../img/dots_wave.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+    border-bottom: 5px solid #CED4E0; }
+  .address {
+    background-color: #F4F5F8;
+    position: relative;
+    padding: 45px 0;
+    margin: 0px auto;
+    max-width: 1920px; }
+    .address .wrapper .address-block {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      color: #08005A;
+      font-family: "Raleway", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .address .wrapper .address-block > * {
+        width: -webkit-calc(33.33333% - 30px);
+        width: calc(33.33333% - 30px); }
+      .address .wrapper .address-block .addr {
+        position: relative;
+        text-align: left;
+        padding-left: 32px;
+        padding-top: 4px; }
+        .address .wrapper .address-block .addr::before {
+          color: #1100C2;
+          content: "\f041";
+          font-family: "FontAwesome";
+          position: absolute;
+          left: 0px;
+          top: 11px;
+          font-size: 20px;
+          line-height: 17px; }
+      .address .wrapper .address-block .email {
+        position: relative;
+        text-align: center;
+        padding-top: 5px;
+        padding-left: 2px; }
+        .address .wrapper .address-block .email a {
+          margin-left: 9px;
+          text-decoration: none;
+          color: #08005A; }
+        .address .wrapper .address-block .email::before {
+          color: #1100C2;
+          content: "\f0e0";
+          font-family: "FontAwesome";
+          font-size: 17px;
+          line-height: 14px; }
+      .address .wrapper .address-block .phone {
+        padding-top: 6px;
+        padding-right: 14px;
+        position: relative;
+        text-align: right; }
+        .address .wrapper .address-block .phone .fax {
+          margin-top: 10px; }
+          .address .wrapper .address-block .phone .fax span {
+            font-size: 16px;
+            color: #08005A;
+            font-family: "Opensans", sans-serif;
+            font-weight: normal;
+            line-height: 14px; }
+        .address .wrapper .address-block .phone a {
+          font-size: 19px;
+          color: #08005A;
+          font-family: "Opensans", sans-serif;
+          font-weight: normal;
+          line-height: 16px;
+          text-decoration: none; }
+        .address .wrapper .address-block .phone::before {
+          margin-right: 9px;
+          color: #1100C2;
+          content: "\f095";
+          font-family: "FontAwesome";
+          font-size: 20px;
+          line-height: 17px; }
   .bottom-menu {
     padding-top: 32px;
     min-height: 80px; }
@@ -5304,17 +5594,48 @@ p {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between; }
+      .bottom-menu .wrapper .menu-block-bottom .logo {
+        width: -webkit-calc(16.66667% - 30px);
+        width: calc(16.66667% - 30px);
+        margin-left: 35px;
+        margin-top: -7px;
+        margin-bottom: 10px; } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .bottom-menu .wrapper .menu-block-bottom .logo {
+          width: -webkit-calc(16.66667% - 30px);
+          width: calc(16.66667% - 30px); } }
+
+@media only screen and (max-width: 1134px) {
       .bottom-menu .wrapper .menu-block-bottom .copy {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1;
         width: -webkit-calc(25% - 30px);
         width: calc(25% - 30px);
+        margin-left: 20px;
         color: #65738E;
         font-family: "Opensans", sans-serif;
         font-size: 14px;
-        line-height: 19px; }
+        line-height: 19px; } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .bottom-menu .wrapper .menu-block-bottom .copy {
+          width: -webkit-calc(100% - 30px);
+          width: calc(100% - 30px); } }
+
+@media only screen and (max-width: 1134px) {
       .bottom-menu .wrapper .menu-block-bottom .menu {
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+            -ms-flex-order: 0;
+                order: 0;
         padding-left: 0px;
         width: -webkit-calc(58.33333% - 30px);
         width: calc(58.33333% - 30px); } }
+      @media only screen and (max-width: 1134px) and (max-width: 1134px) {
+        .bottom-menu .wrapper .menu-block-bottom .menu {
+          width: -webkit-calc(58.33333% - 30px);
+          width: calc(58.33333% - 30px); } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {

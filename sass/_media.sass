@@ -2,9 +2,18 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1134px)
-	// h2, .h2
-	// 	font-size: 30px
-	// 	line-height: 27px
+	#panel-heading
+		border-radius: 3px
+		// display: none
+		position: absolute
+		top: 100px
+		font-family: "Opensans", sans-serif
+		font-weight: bold
+		font-size: 18px
+		line-height: 20px
+		text-align: center
+		padding: 10px 0px
+		color: #fff
 
 	.btn-readmore-procc
 		font-size: 15px !important
@@ -1174,6 +1183,270 @@
 							font-size: 12px
 							font-style: italic
 							line-height: 19px
+	.contacts
+		// border: 1px solid red
+		position: relative
+		margin: 67px auto 0 auto
+		max-width: 1920px
+
+		.wrapper
+			.h2
+				font-family: $default-font
+				color: #1100C2
+				font-weight: bold
+				font-size: 30px
+				line-height: 35px
+				margin-bottom: 13px
+
+			.h3
+				margin: 0 auto
+				max-width: 62%
+				text-align: center
+				font-size: 18px
+				line-height: 21px
+			
+			.contacts-content
+				// border: 1px solid green
+				+row-flex()
+				justify-content: space-between
+				margin-top: 64px
+				margin-left: -30px
+				margin-right: -30px
+
+				input[type="text"], input[type="email"], input[type="file"], textarea
+					font-family: "Opensans", sans-serif
+					font-weight: normal
+					font-size: 16px
+					line-height: 22px
+					color: #1100C2
+					padding: 10px
+					border-radius: 0	
+					border: 1px solid #9EAAC2
+					&:focus, &:active
+						padding: 9px 
+						outline: none
+						border: 2px solid #1100C2
+					&::-webkit-input-placeholder
+						font-family: "Opensans", sans-serif
+						font-weight: normal
+						font-size: 16px
+						line-height: 22px
+						color: #9EAAC2 
+					&::-moz-placeholder
+						font-family: "Opensans", sans-serif
+						font-weight: normal
+						font-size: 16px
+						line-height: 22px
+						color: #9EAAC2
+					&:-ms-input-placeholder
+						font-family: "Opensans", sans-serif
+						font-weight: normal
+						font-size: 16px
+						line-height: 22px
+						color: #9EAAC2
+					&:-moz-placeholder
+						font-family: "Opensans", sans-serif
+						font-weight: normal
+						font-size: 16px
+						line-height: 22px
+						color: #9EAAC2
+				
+						
+				input[type="file"]
+					width: 0px
+
+				input[type="text"], input[type="email"]
+					margin-bottom: 20px
+					width: 92%
+				
+				.jfilestyle
+					width: 92%
+					margin-bottom: 0
+					height: 44px
+					span.focus-jfilestyle
+						display: block
+						position: absolute
+						top: 1px
+						right: 0px
+						height: 43px
+						width: 88px
+						height: 43px
+						label
+							width: 100%
+							display: block
+							height: 100%
+							font-family: "Opensans", sans-serif
+							font-weight: 600
+							font-size: 14px
+							line-height: 19px
+							color: #fff
+							background-color: #6D94C0
+							outline: none
+							border: none
+
+					input[type="text"]
+						background-color: #fff
+						margin-bottom: 0 !important
+
+							
+
+				// >*
+				// 	border: 1px solid red
+
+				.form-title
+					padding-left: 15px
+					padding-right: 15px
+					// border: 1px solid red
+					+size(4)
+					+size-md(5)
+					+shift-md-left(1)
+					.title
+						color: #1100C2
+						font-family: $default-font
+						font-weight: bold
+						font-size: 20px
+						line-height: 24px
+					.text
+						margin-top: 15px !important
+						opacity: 0.8
+						color: #65738E
+						font-family: "Opensans", sans-serif
+						font-weight: normal
+						font-size: 15px
+						line-height: 20px
+						margin-top: 8px
+					.btn-block-footer
+						margin-top: 47px
+						button
+							&::before
+								font-size: 18px
+								line-height: 18px
+
+							font-size: 15px
+							line-height: 20px
+							line-height: 20px
+							padding: 0
+							outline: none
+							border: none
+							padding: 12px 66px	
+							&:hover
+								border: 2px solid #1100C2
+								padding: 10px 64px	
+
+				.form-first
+					margin-left: 17px
+					+size(4)
+					+size-md(5)
+					+shift-md-right(1)
+				.form-second
+					margin-top: 20px
+					margin-right: 16px
+					// border: 1px solid red
+					+size(4)
+					+size-md(5)
+					+shift-md-left(6)
+
+
+					textarea
+						min-height: 110px
+						min-width: 92%
+						width: 92%
+						overflow: hidden		
+	.wave-dots
+		height: 149px
+		max-width: 1920px
+		margin: 0 auto
+		background-image: url('../img/dots_wave.svg')
+		background-position: center top
+		background-repeat: no-repeat
+		background-size: cover
+		border-bottom: 5px solid #CED4E0
+
+	.address
+		background-color: #F4F5F8
+		// border: 1px solid red
+		position: relative
+		padding: 45px 0
+		margin: 0px auto
+		max-width: 1920px
+		.wrapper
+			.address-block
+				+row-flex()
+
+				color: #08005A
+				font-family: $default-font
+				font-size: 18px
+				font-weight: 500
+				line-height: 21px		
+				justify-content: center
+				
+				>*
+					+size(4)
+					// border: 1px solid red
+					
+
+				.addr
+					position: relative
+					text-align: left
+					padding-left: 32px
+					padding-top: 4px
+					&::before
+						color: #1100C2
+						content: "\f041"
+						font-family: "FontAwesome"
+						position: absolute
+						left: 0px
+						top: 11px
+						font-size: 20px
+						line-height: 17px
+
+				.email				
+					position: relative
+					text-align: center
+					padding-top: 5px
+					padding-left: 2px
+					a
+						margin-left: 9px
+						text-decoration: none
+						color: #08005A
+					&::before
+						color: #1100C2
+						content: "\f0e0"
+						font-family: "FontAwesome"
+						font-size: 17px
+						line-height: 14px					
+
+				.phone
+					padding-top: 6px
+					padding-right: 14px
+
+					.fax
+						margin-top: 10px
+						span
+							
+							font-size: 16px
+							color: #08005A
+							font-family: "Opensans", sans-serif
+							font-weight: normal
+							line-height: 14px
+
+					position: relative
+					text-align: right
+					a
+						font-size: 19px
+						color: #08005A
+						font-family: "Opensans", sans-serif
+						font-weight: normal
+						line-height: 16px
+						text-decoration: none
+
+					&::before
+						margin-right: 9px
+						color: #1100C2
+						content: "\f095"
+						font-family: "FontAwesome"
+						font-size: 20px
+						line-height: 17px
 
 	.bottom-menu
 		padding-top: 32px
@@ -1188,18 +1461,28 @@
 				>*
 					// border: 1px solid #000
 				.logo
+					+size(2)
+					+size-md(2)
+					margin-left: 35px
+					margin-top: -7px
+					margin-bottom: 10px 
 					// border: 1px solid #000
 				.copy
+					order: 1
 					+size(3)
+					+size-md(12)
+					margin-left: 20px									
 					color: #65738E
 					font-family: "Opensans", sans-serif
 					font-size: 14px
 					line-height: 19px
 
 				.menu
+					order: 0
 					padding-left: 0px
 					// border: 1px solid #000
 					+size(7)
+					+size-md(7)
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
