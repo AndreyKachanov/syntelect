@@ -52,6 +52,8 @@ jQuery(function() {
   // Fixed menu
 	jQuery("#menu-full").before(jQuery("#menu-full").clone().addClass("fixed"));
 	jQuery(window).scroll(function() {
+
+    // если ширина экрана >110
 		if (window.matchMedia('(min-width: 1134px)').matches) {
       if (jQuery(window).scrollTop() >= 110){
 
@@ -97,6 +99,7 @@ jQuery(function() {
   		}
     }
 
+    // если ширина экрана >65
     if (window.matchMedia('(min-width: 1024px)').matches) {
       if (jQuery(window).scrollTop() >= 65){
 
