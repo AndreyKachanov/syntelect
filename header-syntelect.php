@@ -101,13 +101,35 @@
 				<div class="menu-full" id="menu-full">
 					<div class="wrapper">
 						<div class="menu-block" id="menu">
+							  	<div id="mmenu-container">
+									  <a href="#my-menu" class="mm hamburger hamburger--spring">
+											<span class="hamburger-box">
+												<span class="hamburger-inner"></span>
+												</span>					  	
+									  </a>
+								</div>
+								<div id="menu-for-mmenu">
+									<? if ($menu_items = get_field('items')): ?>
+										<nav id="my-menu">
+											<ul>
+												<? foreach($menu_items as $item): ?>
+													<li class="item">
+														<a href="/#<?=$item['block_name']?>">
+															<?=$item['item_name']?>
+														</a>
+													</li>
+												<? endforeach; ?>
+											</ul>	
+										</nav>
+									<? endif; ?>									
+								</div>
 		 						<h1 class="logo">
 								    <a href="/"
 								    	<?php if (get_field('logo')['image']) echo "style='background: url(" . get_field('logo')['image'] . ") no-repeat; width: " . getimagesize(get_field('logo')['image'])[0] .  "px; height: " . getimagesize(get_field('logo')['image'])[1] . "px;'"?> 
 								    >
 								    	<?=(get_field('logo')['title'] ?? '')?>
 								    </a>
-								</h1>						
+								</h1>														
 		 						<div class="menu">
 									<? if ($menu_items = get_field('items')): ?>
 										<nav>

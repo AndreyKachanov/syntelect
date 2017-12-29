@@ -99,7 +99,7 @@ jQuery(function() {
   		}
     }
 
-    // если ширина экрана >65
+    // если ширина экрана > 1024
     if (window.matchMedia('(min-width: 1024px)').matches) {
       if (jQuery(window).scrollTop() >= 65){
 
@@ -140,7 +140,50 @@ jQuery(function() {
           transition : 'all 0.7s ease-in-out'
         });                   
       }
-    }    
+    }
+
+    // если ширина экрана >715
+    if (window.matchMedia('(min-width: 715px)').matches) {
+      if (jQuery(window).scrollTop() >= 65){
+
+        jQuery('.fixed').addClass('slideDown');
+
+        jQuery('#change-bg').css({
+          top       : "65px",
+          transition : 'all 0.7s ease-in-out'
+        });
+
+        jQuery("#change-bg").prev("div").css({
+          top       : "172px",
+          transition : 'all 0.7s ease-in-out'
+        });
+
+        jQuery("#about").css({
+          'margin-top'       : '50px',
+          transition : 'all 0.7s ease-in-out'
+        });      
+
+        
+      }
+      else{
+        jQuery('.fixed').removeClass('slideDown');
+
+        jQuery('#change-bg').css({
+          top       : "0px",
+          transition : 'all 0.3s ease-in-out'
+        });
+
+        jQuery("#change-bg").prev("div").css({
+          top       : "65px",
+          transition : 'all 0.3s ease-in-out'
+        });
+
+        jQuery("#about").css({
+          'margin-top'       : '0px',
+          transition : 'all 0.7s ease-in-out'
+        });                   
+      }
+    } 
      
 	});
     // end fixed menu
@@ -295,6 +338,30 @@ jQuery(function() {
   jQuery('.top').click(function() {
     jQuery('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
   });
-  // end Button the top               
+  // end Button the top
+
+  // Mmenu
+  if (jQuery("#my-menu").length){
+    // jQuery("#my-menu").css("display", "block");
+    jQuery('#my-menu').mmenu({
+      extensions: ['theme-dark', 'fx-menu-zoom', 'pagedim-black'],
+      navbar: {
+        title: 'Site Menu:'
+      },
+      offCanvas: {
+        position: 'left'
+      }
+    });
+
+    var api = jQuery('#my-menu').data('mmenu');
+    api.bind('open:finish', function() {
+      jQuery('.hamburger').addClass('is-active');
+    });
+
+    api.bind('close:finish', function() {
+      jQuery('.hamburger').removeClass('is-active');
+    });         
+  } 
+  // end mmenu                
 
 });

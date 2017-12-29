@@ -1,0 +1,99 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300");
+html {font-size: 62.5%; font-family: 'Open Sans', sans-serif;}
+body {font-size: 1.6rem; min-height: 100vh;}
+h1 {font-size: 3rem; margin-bottom: 1rem;}
+h2 {font-size: 1.6rem;}
+header {position: relative;}
+main {padding: 2rem;}
+
+/************** NAVIGATION ***************/
+
+#hamburger ul {
+  display: flex; 
+  flex-wrap: wrap; 
+  max-width: 1080px; 
+  margin: 0 auto;   
+   background: #999;
+}
+#hamburger ul,
+#hamburger li {
+  flex: 1;  
+}
+#hamburger li:last-child {
+   border-bottom: none;
+}
+#hamburger a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  font-size: 1.8rem;
+}
+#hamburger a:hover {
+  background: #adacac;
+  color: #fff;
+}
+#hamburger li {
+  position: relative;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+}  
+#hamburger input,
+#hamburger label {
+  display: none;
+  width: 36px; 
+  height: 36px; 
+  background: #555; 
+  color: #fff; 
+  text-align: center; 
+  line-height: 36px;
+  font-size: 1.6rem;
+  border-radius: 2px;
+} 
+#hamburger label {
+   position: absolute; 
+   top: 8px; 
+   right: 8px; 
+   transition: .4s;
+}
+#hamburger label:hover {cursor:pointer;}
+#hamburger label:before {
+  font-family: FontAwesome;
+  font-size: 24px;
+  content: "\f0c9";
+  text-align: center;
+}
+
+/************* MEDIA QUERIES **************/
+
+@media only screen and (max-width: 1080px){
+   #hamburger {
+      position: relative;
+   }
+  #hamburger ul {
+    transform: translateY(0);
+    box-shadow: 0 0 5px rgba(0,0,0, .7);
+      transition: all .5s;
+      position: absolute;
+      width: 100%;
+  }
+  #hamburger li {
+    flex: none; 
+    width: 100%;
+    border-bottom: solid 1px #777;
+  } 
+  #hamburger input[type="checkbox"]:checked + ul  {
+    transform: translateY(-100%);
+    width: 100%;
+    background: #999;   
+      transition: all .5s;
+  }
+  #hamburger label{
+      display: block;
+   }  
+  #hamburger input[type="checkbox"]:checked + ul li:nth-child(1){
+    background: #777; 
+    color: #fff;
+  }  
+}

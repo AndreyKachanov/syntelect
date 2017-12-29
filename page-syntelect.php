@@ -19,6 +19,10 @@ get_header('syntelect'); ?>
 						<h3 class="h3"><?=(get_field('why_group')['sub_title'] ?? '')?></h3>
 						<? if ($why = get_field('why_group')['why_repeater']): ?>
 						<div class="why-content">
+							<div id="center2" class="center2">									
+									<div class="title-default"><?=(get_field('why_group')['title_center'] ?? '')?></div>
+									<div class="text-default"><?=(get_field('why_group')['text_center'] ?? '')?></div>
+							</div>
 							<div class="hvastalka" id="hvastalka">
 
 								<? $i=1; foreach ($why as $item): ?>
@@ -36,7 +40,6 @@ get_header('syntelect'); ?>
 										</div>
 									</div>
 								<? $i++; endforeach; ?>
-
 								<div class="center">									
 									<div id="default-title" class="title-default"><?=(get_field('why_group')['title_center'] ?? '')?></div>
 									<div id="default-text" class="text-default"><?=(get_field('why_group')['text_center'] ?? '')?></div>
