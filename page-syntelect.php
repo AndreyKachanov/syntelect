@@ -105,6 +105,30 @@ get_header('syntelect'); ?>
 
 						<? endforeach; ?>						
 					</div>
+
+					<div class="proc-block-sm" id="readmore-proc-sm">
+
+						<? $i=0; foreach($processes as $process): ?>
+							
+							<div class="proc-item">
+								<div class="wrap-proc-img">									
+									<div class="proc-img" style="background: url('<?=($process['process_sub_group']['image'] ?? '')?>') no-repeat  center, url('<?=get_template_directory_uri()?>/img/ico_splash.svg') no-repeat center center, url('<?=get_template_directory_uri()?>/img/ico_splash.svg') no-repeat center center; background-size: contain, contain;">
+									</div>													
+								</div>
+
+								<div class="proc-text-wrap">
+									<div class="proc-heading">
+										<?=($process['process_sub_group']['title'] ?? '')?>
+									</div>
+									<div class="proc-text">
+										<?=($process['process_sub_group']['text'] ?? '')?>
+									</div>									
+								</div>
+
+							</div>
+
+						<? endforeach; ?>						
+					</div>					
 					<? endif; ?>	
 				</div>
 			</section>

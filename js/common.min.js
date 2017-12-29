@@ -183,7 +183,50 @@ jQuery(function() {
           transition : 'all 0.7s ease-in-out'
         });                   
       }
-    } 
+    }
+
+    // если ширина экрана >715
+    if (window.matchMedia('(min-width: 290px)').matches) {
+      if (jQuery(window).scrollTop() >= 65){
+
+        jQuery('.fixed').addClass('slideDown');
+
+        jQuery('#change-bg').css({
+          top       : "65px",
+          transition : 'all 0.7s ease-in-out'
+        });
+
+        jQuery("#change-bg").prev("div").css({
+          top       : "172px",
+          transition : 'all 0.7s ease-in-out'
+        });
+
+        jQuery("#about").css({
+          'margin-top'       : '50px',
+          transition : 'all 0.7s ease-in-out'
+        });      
+
+        
+      }
+      else{
+        jQuery('.fixed').removeClass('slideDown');
+
+        jQuery('#change-bg').css({
+          top       : "0px",
+          transition : 'all 0.3s ease-in-out'
+        });
+
+        jQuery("#change-bg").prev("div").css({
+          top       : "65px",
+          transition : 'all 0.3s ease-in-out'
+        });
+
+        jQuery("#about").css({
+          'margin-top'       : '0px',
+          transition : 'all 0.7s ease-in-out'
+        });                   
+      }
+    }      
      
 	});
     // end fixed menu
@@ -217,14 +260,24 @@ jQuery(function() {
       buttoncss: 'readmore-css',
       animationspeed: 500            
     });
+    if (window.matchMedia('(min-width: 1134px)').matches) {
+      
+      jQuery('#readmore-proc').showMore({
+        minheight: 1727,
+        buttontxtmore: glob_read_more_procc,
+        buttontxtless: glob_show_less,
+        buttoncss: 'btn btn-light btn-readmore-procc',
+        animationspeed: 500            
+      });
+    }
 
-    jQuery('#readmore-proc').showMore({
-      minheight: 1727,
+    jQuery('#readmore-proc-sm').showMore({
+      minheight: 1000,
       buttontxtmore: glob_read_more_procc,
       buttontxtless: glob_show_less,
       buttoncss: 'btn btn-light btn-readmore-procc',
       animationspeed: 500            
-    });
+    });    
 
 
     // end read more        

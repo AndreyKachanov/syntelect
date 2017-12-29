@@ -15,7 +15,7 @@
 									<div class="text">
 										<?=(get_field('contacts_group')['contact_form_group']['text'] ?? 'If you have any further questions, please don’t hesitate to contact us.')?>
 									</div>
-			 						<div class="btn-block-footer">
+			 						<div class="btn-block-footer" id="btn-lg">
 			 							<button id="submit" type="submit" class="btn btn-bg"><?=(get_field('send') ?? 'Send')?></button>						
 									</div>																					
 								</div>
@@ -27,7 +27,10 @@
 								<div class="form-second">
 									<input type="text" name="subject" id="subject" placeholder="<?=(get_field('contacts_group')['form_fields_group']['subject'] ?? 'Subject')?>" >
 									<textarea name="message" id="message" placeholder="<?=(get_field('contacts_group')['form_fields_group']['text_area'] ?? 'Text area')?>" ></textarea>
-								</div>								
+								</div>
+			 						<div class="btn-block-footer" id="btn-xs">
+			 							<button id="submit" type="submit" class="btn btn-bg"><?=(get_field('send') ?? 'Send')?></button>						
+									</div>																
 							</div>
 						</form>
 				</div>				

@@ -153,6 +153,8 @@
 										<?=(get_field('contact_us_now') ?? '')?>									
 									</a>							
 								</div>
+								<div class="list-sm"><a href="#contacts"><i class="fa fa-envelope-o" aria-hidden="true"></a></i>
+								</div>
 						</div>
 					</div>
 				</div>

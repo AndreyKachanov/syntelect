@@ -28,7 +28,7 @@ jQuery(function() {
 				var email = jQuery("#email").val();
 				if (!isValidEmail(email)) {
 					jQuery("#email").addClass("form-error");
-					jQuery("#panel-heading").addClass('succ-error').html('Please enter a valid Email!').hide().fadeIn(100);;
+					jQuery("#panel-heading").addClass('succ-error').html('Please enter a valid Email!').hide().fadeIn(100);
 					
 				} else {
 					var subject = jQuery("#subject").val();
