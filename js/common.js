@@ -1,52 +1,64 @@
 // Text slider
-var spinner = {
-    index: 0,
-    auto: function(currentIndex) {
-      if (currentIndex != undefined) {
-        spinner.index = currentIndex % spinner.quotes.length;
-      } else {
-        spinner.index = (spinner.index + 1) % spinner.quotes.length;
-      }
-      spinner.quotes.removeClass("show");
-      jQuery(spinner.quotes[spinner.index]).addClass("show");
-      spinner.dots.removeClass('dot-fill');
-      jQuery(spinner.dots[spinner.index]).addClass('dot-fill');
-    },
+// var spinner = {
+//     index: 0,
+//     auto: function(currentIndex) {
+//       if (currentIndex != undefined) {
+//         spinner.index = currentIndex % spinner.quotes.length;
+//       } else {
+//         spinner.index = (spinner.index + 1) % spinner.quotes.length;
+//       }
+//       spinner.quotes.removeClass("show");
+//       jQuery(spinner.quotes[spinner.index]).addClass("show");
+//       spinner.dots.removeClass('dot-fill');
+//       jQuery(spinner.dots[spinner.index]).addClass('dot-fill');
+//     },
 
-    initial: function(){
-      this.quotes = jQuery(".quote-rotate");
-      this.images = jQuery(".quote-image");
-      spinner.quotes.first().addClass("show");
-      //dots
-      if (spinner.quotes.length != 1) {
-          for (i = 0; i < spinner.quotes.length; i++) {
-            jQuery('.quote-dots').append("<div data-img=" + i + " class='nav-dot'></div>");
-          }
-          this.dots = jQuery(".nav-dot");
-          jQuery(spinner.dots).first().addClass('dot-fill');
-      }
-    },
+//     initial: function(){
+//       this.quotes = jQuery(".quote-rotate");
+//       this.images = jQuery(".quote-image");
+//       spinner.quotes.first().addClass("show");
+//       //dots
+//       if (spinner.quotes.length != 1) {
+//           for (i = 0; i < spinner.quotes.length; i++) {
+//             jQuery('.quote-dots').append("<div data-img=" + i + " class='nav-dot'></div>");
+//           }
+//           this.dots = jQuery(".nav-dot");
+//           jQuery(spinner.dots).first().addClass('dot-fill');
+//       }
+//     },
 
-    dotnav: function(){
-      jQuery(spinner.dots).on("click", function(){
-        var currentIndex = jQuery(spinner.dots).index(this);
-        spinner.auto(currentIndex);
-        window.clearInterval(interval);
-        interval = window.setInterval(spinner.auto, 6500);
+//     dotnav: function(){
+//       jQuery(spinner.dots).on("click", function(){
+//         var currentIndex = jQuery(spinner.dots).index(this);
+//         spinner.auto(currentIndex);
+//         window.clearInterval(interval);
+//         interval = window.setInterval(spinner.auto, 6500);
 
-      });
-    }
-}
+//       });
+//     }
+// }
 // end text slider
 
 
 
 jQuery(function() {
 
+  
+  // text rotator Morphext
+  jQuery("#js-rotating").Morphext({
+      animation: "fadeInLeft", // Overrides default "bounceIn"
+      separator: "|", // Overrides default ","
+      speed: 5000, // Overrides default 2000
+      complete: function () {
+          // Overrides default empty function
+      }
+  });
+  // end text rotator  
+
     // Text slider
- 	spinner.initial();
- 	spinner.dotnav();
- 	interval = window.setInterval(spinner.auto, 5000);
+ 	// spinner.initial();
+ 	// spinner.dotnav();
+ 	// interval = window.setInterval(spinner.auto, 5000);
     // end text slider
 
   // Fixed menu
@@ -55,7 +67,7 @@ jQuery(function() {
 
     // если ширина экрана >110
 		if (window.matchMedia('(min-width: 1134px)').matches) {
-      if (jQuery(window).scrollTop() >= 110){
+      if (jQuery(window).scrollTop() >= 85){
 
         // if (window.matchMedia('(max-width: 1134px)').matches) {
 
@@ -63,18 +75,18 @@ jQuery(function() {
   			jQuery('.fixed').addClass('slideDown');
 
         jQuery('#change-bg').css({
-          top       : "110px",
-          transition : 'all 0.7s ease-in-out'
+          // top       : "85px",
+          // transition : 'all 0.7s ease-in-out'
         });
 
         jQuery("#change-bg").prev("div").css({
-          top       : "220px",
-          transition : 'all 0.7s ease-in-out'
+          // top       : "220px",
+          // transition : 'all 0.7s ease-in-out'
         });
 
         jQuery("#about").css({
-          'margin-top'       : '50px',
-          transition : 'all 0.7s ease-in-out'
+          // 'margin-top'       : '50px',
+          // transition : 'all 0.7s ease-in-out'
         });      
 
   			
@@ -83,18 +95,18 @@ jQuery(function() {
   			jQuery('.fixed').removeClass('slideDown');
 
   			jQuery('#change-bg').css({
-          top       : "0px",
-          transition : 'all 0.3s ease-in-out'
+          // top       : "0px",
+          // transition : 'all 0.3s ease-in-out'
         });
 
         jQuery("#change-bg").prev("div").css({
-          top       : "110px",
-          transition : 'all 0.3s ease-in-out'
+          // top       : "85px",
+          // transition : 'all 0.3s ease-in-out'
         });
 
         jQuery("#about").css({
-          'margin-top'       : '0px',
-          transition : 'all 0.7s ease-in-out'
+          // 'margin-top'       : '0px',
+          // transition : 'all 0.7s ease-in-out'
         });             			
   		}
     }
@@ -106,18 +118,18 @@ jQuery(function() {
         jQuery('.fixed').addClass('slideDown');
 
         jQuery('#change-bg').css({
-          top       : "65px",
-          transition : 'all 0.7s ease-in-out'
+          // top       : "65px",
+          // transition : 'all 0.7s ease-in-out'
         });
 
         jQuery("#change-bg").prev("div").css({
-          top       : "172px",
-          transition : 'all 0.7s ease-in-out'
+          // top       : "172px",
+          // transition : 'all 0.7s ease-in-out'
         });
 
         jQuery("#about").css({
-          'margin-top'       : '50px',
-          transition : 'all 0.7s ease-in-out'
+          // 'margin-top'       : '50px',
+          // transition : 'all 0.7s ease-in-out'
         });      
 
         
@@ -126,41 +138,41 @@ jQuery(function() {
         jQuery('.fixed').removeClass('slideDown');
 
         jQuery('#change-bg').css({
-          top       : "0px",
-          transition : 'all 0.3s ease-in-out'
+          // top       : "0px",
+          // transition : 'all 0.3s ease-in-out'
         });
 
         jQuery("#change-bg").prev("div").css({
-          top       : "65px",
-          transition : 'all 0.3s ease-in-out'
+          // top       : "65px",
+          // transition : 'all 0.3s ease-in-out'
         });
 
         jQuery("#about").css({
-          'margin-top'       : '0px',
-          transition : 'all 0.7s ease-in-out'
+          // 'margin-top'       : '0px',
+          // transition : 'all 0.7s ease-in-out'
         });                   
       }
     }
 
-    // если ширина экрана >715
+    // если ширина экрана <715
     if (window.matchMedia('(min-width: 715px)').matches) {
       if (jQuery(window).scrollTop() >= 65){
 
         jQuery('.fixed').addClass('slideDown');
 
         jQuery('#change-bg').css({
-          top       : "65px",
-          transition : 'all 0.7s ease-in-out'
+          // top       : "65px",
+          // transition : 'all 0.7s ease-in-out'
         });
 
         jQuery("#change-bg").prev("div").css({
-          top       : "172px",
-          transition : 'all 0.7s ease-in-out'
+          // top       : "172px",
+          // transition : 'all 0.7s ease-in-out'
         });
 
         jQuery("#about").css({
-          'margin-top'       : '50px',
-          transition : 'all 0.7s ease-in-out'
+          // 'margin-top'       : '50px',
+          // transition : 'all 0.7s ease-in-out'
         });      
 
         
@@ -169,18 +181,18 @@ jQuery(function() {
         jQuery('.fixed').removeClass('slideDown');
 
         jQuery('#change-bg').css({
-          top       : "0px",
-          transition : 'all 0.3s ease-in-out'
+          // top       : "0px",
+          // transition : 'all 0.3s ease-in-out'
         });
 
         jQuery("#change-bg").prev("div").css({
-          top       : "65px",
-          transition : 'all 0.3s ease-in-out'
+          // top       : "65px",
+          // transition : 'all 0.3s ease-in-out'
         });
 
         jQuery("#about").css({
-          'margin-top'       : '0px',
-          transition : 'all 0.7s ease-in-out'
+          // 'margin-top'       : '0px',
+          // transition : 'all 0.7s ease-in-out'
         });                   
       }
     }
@@ -192,18 +204,18 @@ jQuery(function() {
         jQuery('.fixed').addClass('slideDown');
 
         jQuery('#change-bg').css({
-          top       : "65px",
-          transition : 'all 0.7s ease-in-out'
+          // top       : "65px",
+          // transition : 'all 0.7s ease-in-out'
         });
 
         jQuery("#change-bg").prev("div").css({
-          top       : "172px",
-          transition : 'all 0.7s ease-in-out'
+          // top       : "172px",
+          // transition : 'all 0.7s ease-in-out'
         });
 
         jQuery("#about").css({
-          'margin-top'       : '50px',
-          transition : 'all 0.7s ease-in-out'
+          // 'margin-top'       : '50px',
+          // transition : 'all 0.7s ease-in-out'
         });      
 
         
@@ -212,18 +224,18 @@ jQuery(function() {
         jQuery('.fixed').removeClass('slideDown');
 
         jQuery('#change-bg').css({
-          top       : "0px",
-          transition : 'all 0.3s ease-in-out'
+          // top       : "0px",
+          // transition : 'all 0.3s ease-in-out'
         });
 
         jQuery("#change-bg").prev("div").css({
-          top       : "65px",
-          transition : 'all 0.3s ease-in-out'
+          // top       : "65px",
+          // transition : 'all 0.3s ease-in-out'
         });
 
         jQuery("#about").css({
-          'margin-top'       : '0px',
-          transition : 'all 0.7s ease-in-out'
+          // 'margin-top'       : '0px',
+          // transition : 'all 0.7s ease-in-out'
         });                   
       }
     }      
@@ -243,7 +255,10 @@ jQuery(function() {
 
     var $el = jQuery("#change-bg").bgswitcher({ 
       images: glob_slides_img,   
-      effect: glob_effect
+      effect: 'fade',
+      duration: 800,
+      easing: 'swing'     
+
     });    
 
     jQuery(".nav-dot").on("click", function() {
@@ -321,10 +336,13 @@ jQuery(function() {
           });
   };
 
+
+
   // нажатие на иконку
   jQuery("#hvastalka .icon").click(function() {
     // удаление классов iconHoveClass_*
     jQuery("#hvastalka .icon").removeClassWild("iconHoveClass_*");
+    jQuery("#hvastalka .title").removeClass("titleHoverClass");
     // удаление линий треугольника
     jQuery("#hvastalka .container").removeClassWild("borderSolidContainer_*");
     jQuery("#hvastalka .triangle").removeClassWild("borderSolidTriangle_*");
@@ -332,6 +350,7 @@ jQuery(function() {
     var item = jQuery(this).attr("data-item");
     // добавление класса иконке
     jQuery(this).addClass("iconHoveClass_" + item);
+    jQuery('#hvastalka .title[data-item=' + item +']').addClass("titleHoverClass");
     // добавление классов треугольнику...
     jQuery(this).siblings('.container').addClass('borderSolidContainer_' + item).children(".triangle").addClass('borderSolidTriangle_' + item);
 
@@ -341,6 +360,7 @@ jQuery(function() {
   // нажатие на заголовок
   jQuery("#hvastalka .title").click(function() {
     // удаление классов iconHoveClass_*
+    jQuery("#hvastalka .title").removeClass("titleHoverClass");
     jQuery("#hvastalka .icon").removeClassWild("iconHoveClass_*");
     // удаление классов треугольника...
     jQuery("#hvastalka .container").removeClassWild("borderSolidContainer_*");
@@ -349,6 +369,8 @@ jQuery(function() {
     var item = jQuery(this).attr("data-item");
     // добавление класса текущей иконке(определяем по data-item)
     jQuery('#hvastalka .icon[data-item=' + item +']').addClass("iconHoveClass_" + item);
+
+    jQuery('#hvastalka .title[data-item=' + item +']').addClass("titleHoverClass");
     // аналогично добавляем классы треугольнику
     jQuery('#hvastalka .container[data-item=' + item +']').addClass('borderSolidContainer_' + item);
     jQuery('#hvastalka .container[data-item=' + item +']').children(".triangle").addClass('borderSolidTriangle_' + item);
@@ -357,7 +379,7 @@ jQuery(function() {
 
 
   // По клику на иконку или заголовок заменяем в блоку .center содержимое
-  jQuery("#hvastalka .title").add("#hvastalka .icon").click(function() {
+  jQuery("#hvastalka .title").add("#hvastalka .icon").hover(function() {
     // обнуляем фон кругляшки
     jQuery('#hvastalka .point').css('background-color', "#08005A");
 
@@ -379,6 +401,7 @@ jQuery(function() {
     
   });
 
+
   // add Button the top
   jQuery(window).scroll(function() {
     if (jQuery(this).scrollTop() > jQuery(this).height() ) {
@@ -397,14 +420,30 @@ jQuery(function() {
   if (jQuery("#my-menu").length){
     // jQuery("#my-menu").css("display", "block");
     jQuery('#my-menu').mmenu({
-      extensions: ['theme-dark', 'fx-menu-zoom', 'pagedim-black'],
-      navbar: {
-        title: 'Site Menu:'
-      },
-      offCanvas: {
-        position: 'left'
-      }
-    });
+          extensions  : [ "shadow-panels", "fx-panels-slide-100", "border-none", "theme-black", "fullscreen" ],
+          offCanvas : {
+        //  position  : "right"
+          },
+            navbars   : {
+      content : [ "prev", "searchfield", "close" ],
+      height  : 2
+    },
+    setSelected: true,
+    searchfield: {
+      resultsPanel: true
+    }}, { });
+
+        jQuery(".mh-head.mm-sticky").mhead({
+          scroll: {
+            hide: 200
+          }
+        });
+
+
+
+        jQuery(".mh-head:not(.mm-sticky)").mhead({
+          scroll: false
+        });    
 
     var api = jQuery('#my-menu').data('mmenu');
     api.bind('open:finish', function() {
@@ -415,6 +454,28 @@ jQuery(function() {
       jQuery('.hamburger').removeClass('is-active');
     });         
   } 
-  // end mmenu                
+  // end mmenu
+
+  // jQuery("#js-rotating").Morphext({
+  //     // The [in] animation type. Refer to Animate.css for a list of available animations.
+  //     animation: "fadein",
+  //     // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+  //     separator: "|",
+  //     // The delay between the changing of each phrase in milliseconds.
+  //     speed: 5000,
+  //     complete: function () {
+  //         // Called after the entrance animation is executed.
+  //     }
+  // }); 
+
+      // jQuery( document ).ready(function() {
+      //   jQuery("#js-rotating").Morphext({
+      //     animation: "bounceIn",
+      //     separator: ",",
+      //     speed: 2000,
+      //     complete: function () {
+      //     }
+      //   });
+      // });                   
 
 });

@@ -1,7 +1,7 @@
 jQuery(function() {
 	jQuery("#contact_form").submit(function() { // пeрeхвaтывaeм всe при сoбытии oтпрaвки
 
-	    jQuery('#panel-heading').width(jQuery('.contacts-content').width());
+	    // jQuery('#panel-heading').width(jQuery('#contacts .wrapper').width());
 
 		var form = jQuery(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
 		var error = false;		

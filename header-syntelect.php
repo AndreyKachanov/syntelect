@@ -4,6 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 	<? if ($why = get_field('why_group')['why_repeater']): ?>
 		<style>
 		<? $i=1; foreach ($why as $item): ?>
@@ -35,6 +36,10 @@
 			box-shadow: 5px 5px 20px 0 rgba(75,101,129,0.4) !important;
 			cursor: pointer !important;
 			transition: all 0.3s ease-in-out !important;
+		}
+		
+		.titleHoverClass {
+			color: #08005A !important;
 		}
 
 		<? $i++; endforeach; ?>
@@ -114,7 +119,7 @@
 											<ul>
 												<? foreach($menu_items as $item): ?>
 													<li class="item">
-														<a href="/#<?=$item['block_name']?>">
+														<a href="/index.php/#<?=$item['block_name']?>">
 															<?=$item['item_name']?>
 														</a>
 													</li>
@@ -167,11 +172,18 @@
 									    <div class="quotes">
 										    <div class="quote-dots"></div>
 											    <div class="quote-contain">																
-											 		<? foreach($sliders as $slide): ?>
-											 			<div class="quote-rotate">
-											 				<?=($slide['slider_group']['text'] ?? '')?>
+												<div id="flags_language_selector">
+													<?php language_selector_flags(); ?>													
+												</div >
+											 			<div class="" id="js-rotating">
+											 				<? $i=0; foreach($sliders as $slide): ?>
+											 					<?=($slide['slider_group']['text'] ?? '')?>
+											 					<?php
+											 						if ($i != count($slide['slider_group'])) 
+											 							echo "|";
+											 					?>
+											 				<? $i++; endforeach; ?>
 											 			</div>
-											 		<? endforeach; ?>
 								 				</div>
 								 		</div>
 							 	<? endif; ?>													

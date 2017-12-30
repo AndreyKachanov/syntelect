@@ -35,6 +35,9 @@ gulp.task('js', ['common-js'], function() {
 		'libs/components-font-awesome/fontawesome-markers.min.js',
 		'libs/Easy-Responsive-Tabs-to-Accordion/js/easyResponsiveTabs.js',
 		'libs/jQuery.mmenu/dist/jquery.mmenu.all.js',
+		'libs/Morphext/dist/morphext.js',
+		'libs/jquery.mhead.js',
+		'libs/jquery.mmenu.all.js',
 		'js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
