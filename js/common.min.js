@@ -275,24 +275,25 @@ jQuery(function() {
       buttoncss: 'readmore-css',
       animationspeed: 500            
     });
-    if (window.matchMedia('(min-width: 1134px)').matches) {
+    
+    // if (window.matchMedia('(min-width: 1134px)').matches) {
       
-      jQuery('#readmore-proc').showMore({
-        minheight: 1727,
-        buttontxtmore: glob_read_more_procc,
-        buttontxtless: glob_show_less,
-        buttoncss: 'btn btn-light btn-readmore-procc',
-        animationspeed: 500            
-      });
-    }
+    //   jQuery('#readmore-proc').showMore({
+    //     minheight: 1727,
+    //     buttontxtmore: glob_read_more_procc,
+    //     buttontxtless: glob_show_less,
+    //     buttoncss: 'btn btn-light btn-readmore-procc',
+    //     animationspeed: 500            
+    //   });
+    // }
 
-    jQuery('#readmore-proc-sm').showMore({
-      minheight: 1000,
-      buttontxtmore: glob_read_more_procc,
-      buttontxtless: glob_show_less,
-      buttoncss: 'btn btn-light btn-readmore-procc',
-      animationspeed: 500            
-    });    
+    // jQuery('#readmore-proc-sm').showMore({
+    //   minheight: 1000,
+    //   buttontxtmore: glob_read_more_procc,
+    //   buttontxtless: glob_show_less,
+    //   buttoncss: 'btn btn-light btn-readmore-procc',
+    //   animationspeed: 500            
+    // });    
 
 
     // end read more        

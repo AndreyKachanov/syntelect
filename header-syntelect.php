@@ -119,7 +119,7 @@
 											<ul>
 												<? foreach($menu_items as $item): ?>
 													<li class="item">
-														<a href="/index.php/#<?=$item['block_name']?>">
+														<a href="index.php/#<?=$item['block_name']?>">
 															<?=$item['item_name']?>
 														</a>
 													</li>
@@ -165,6 +165,9 @@
 				</div>
 				<div id="change-bg" class="slider-full">
 					<div class="wrapper">
+						<div id="flags_language_selector">
+							<?php language_selector_flags(); ?>													
+						</div >						
 						<div class="slider-block">
 							<div class="slider">
 								<? if ($sliders = get_field('slider_repeater')): ?>
@@ -172,9 +175,6 @@
 									    <div class="quotes">
 										    <div class="quote-dots"></div>
 											    <div class="quote-contain">																
-												<div id="flags_language_selector">
-													<?php language_selector_flags(); ?>													
-												</div >
 											 			<div class="" id="js-rotating">
 											 				<? $i=0; foreach($sliders as $slide): ?>
 											 					<?=($slide['slider_group']['text'] ?? '')?>

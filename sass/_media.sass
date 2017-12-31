@@ -2,6 +2,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1134px)
+	.site-header .slider-full #flags_language_selector
+		top: 40px
+		left: 44px
 	#panel-heading
 		border-radius: 3px
 		// display: none
@@ -248,7 +251,7 @@
 								z-index: 99
 								width: 100%
 								position: absolute
-								top: 75px
+								top: 103px
 								left: 45px
 
 								.quote-dots
@@ -283,11 +286,15 @@
 										transition: opacity, 0.3s, ease
 										font-family: $default-font
 										font-weight: normal
-										font-size: 36px
+										
 										color: #1100C2
 										line-height: 42px
 										padding-right: 30px
 										// border: 1px solid #000
+									
+									#js-rotating
+										font-size: 36px
+										line-height: 42px	
 						
 						a
 							position: absolute
@@ -1490,6 +1497,8 @@
 					+size-md(7)
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1024px)
+	.site-header .slider-full #flags_language_selector
+		left: 36px
 
 	.hamburger-box
 		width: 18px
@@ -1700,6 +1709,7 @@
 			box-shadow: 0px 15px 20px -15px rgba(75,101,129,0.4),  0px -15px 20px -15px rgba(75,101,129,0.4) 
 	   
 			.wrapper
+				padding-right: 30px
 				.menu-block
 					+row-flex()
 					// border: 1px solid #000
@@ -1755,6 +1765,7 @@
 			background-position: top right
 			background-size: 369px 352px
 			margin: 0px auto 50px auto
+			
 			.wrapper
 				// border: 1px solid red
 				.slider-block
@@ -1774,7 +1785,7 @@
 								z-index: 99
 								width: 100%
 								position: absolute
-								top: 75px
+								top: 127px
 								left: 45px
 
 								.quote-dots
@@ -1814,6 +1825,9 @@
 										line-height: 40px
 										padding-right: 30px
 										// border: 1px solid #000
+									#js-rotating
+										font-size: 34px
+										line-height: 40px											
 						
 						a
 							position: absolute
@@ -2809,6 +2823,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 714px)
+	.site-header .slider-full #flags_language_selector
+		left: 25px
+		top: 339px
 	#showmore-button-readmore
 		line-height: 22px
 
@@ -3051,6 +3068,7 @@
 			box-shadow: 0px 15px 20px -15px rgba(75,101,129,0.4),  0px -15px 20px -15px rgba(75,101,129,0.4) 
 	   
 			.wrapper
+				padding-right: 15px
 				.menu-block
 					+row-flex()
 					// border: 1px solid #000
@@ -3136,16 +3154,16 @@
 						+size-xs(12)
 						// border: 1px solid green
 						min-height: 198px
-						margin-top: 266px
+						margin-top: 314px
 						position: relative
 						// height: 100%
 
 						.quotes
 								// border: 1px solid red
 								z-index: 99
-								width: 100%
+								width: 95%
 								position: absolute
-								top: 75px
+								top: 93px
 								left: 37px
 
 								.quote-dots
@@ -3166,6 +3184,7 @@
 											margin: 0
 									
 								.quote-contain
+									padding-right: 15px
 									.show
 										opacity: 1 !important
 										visibility: visible !important
@@ -3185,6 +3204,9 @@
 										line-height: 33px
 										padding-right: 30px
 										// border: 1px solid #000
+									#js-rotating
+										font-size: 27px
+										line-height: 33px											
 						
 						a
 							position: absolute
@@ -4327,91 +4349,34 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+	.slider-full
+		position: relative
+		max-width: 1920px
+		max-height: 757px
+		background-repeat: no-repeat
+		background-position: top right
+		background-size: contain !important 
+		margin: 0px auto 50px auto
 
 
-@media only screen and (min-width : 1134px)
-	.site-header .slider-full
-		min-height: 500px !important	
+@media only screen and (min-width : 1134px)		
+	.slider-full
+		position: relative
+		max-width: 1920px
+		max-height: 757px
+		background-repeat: no-repeat
+		background-position: top right
+		background-size: 683px 617px !important
+		margin: 0px auto 50px auto
 
-	.site-header
+	.site-header .slider-full #flags_language_selector
+		margin-left: -15px
 
-		.slider-full
-			max-height: 757px
-			background-repeat: no-repeat
-			background-position: top right
-			background-size: 639px 529px
-			margin: 0px auto 50px auto
-			.wrapper
-				.slider-block
-					+row-flex()
-					.slider
-						+size(6)
-						// border: 1px solid green
-						min-height: 100vh
-						position: relative
-						// height: 100%
+	.site-header .slider-full .wrapper .slider-block .slider .quotes
+		top: 207px	
 
-						.quotes
-								z-index: 99
-								width: 100%
-								// border: 1px solid red
-								position: absolute
-								top: 176px
-
-								.quote-dots
-									display: flex
-
-									.dot-fill
-										background-color: #CFF1FF !important
-
-									.nav-dot
-										height: 16px	
-										width: 16px									
-										display: inline-block
-										border-radius: 50px
-										background-color: rgba(158,170,194,0.5)
-										margin-right: 10px
-										cursor: pointer
-										&:last-of-type
-											margin: 0
-									
-								.quote-contain
-									.show
-										opacity: 1 !important
-										visibility: visible !important
-
-									.quote-rotate
-										position: absolute
-										top: 26px
-										left: -2px
-										opacity: 0
-										overflow: visible
-										visibility: hidden
-										transition: opacity, 0.3s, ease
-										font-family: $default-font
-										font-weight: normal
-										font-size: 48px
-										color: #1100C2
-										line-height: 56px
-										// border: 1px solid #000
-						
-						a
-							position: absolute
-							top: 448px
-							z-index: 99
-
-						.syntel-bg
-							position: absolute
-							top: 358px
-							// border: 1px solid red
-							color: #F4F5F8
-							font-family: $default-font
-							font-weight: normal
-							font-size: 120px
-							line-height: 141px
-
-
+	
+					
 	.about
 		// border: 1px solid red
 		position: relative
@@ -4439,83 +4404,8 @@
 
 @media only screen and (min-width : 1450px)
 
-	.site-header
 
-		.slider-full
-			max-height: 757px
-			background-repeat: no-repeat
-			background-position: top right
-			background-size: 715px 605px
-			margin: 0px auto 50px auto
-			.wrapper
-				.slider-block
-					+row-flex()
-					.slider
-						+size(6)
-						// border: 1px solid green
-						min-height: 100vh
-						position: relative
-						// height: 100%
-
-						.quotes
-								z-index: 99
-								width: 100%
-								// border: 1px solid red
-								position: absolute
-								top: 176px
-
-								.quote-dots
-									display: flex
-
-									.dot-fill
-										background-color: #CFF1FF !important
-
-									.nav-dot
-										height: 16px	
-										width: 16px									
-										display: inline-block
-										border-radius: 50px
-										background-color: rgba(158,170,194,0.5)
-										margin-right: 10px
-										cursor: pointer
-										&:last-of-type
-											margin: 0
-									
-								.quote-contain
-									.show
-										opacity: 1 !important
-										visibility: visible !important
-
-									.quote-rotate
-										position: absolute
-										top: 26px
-										left: -2px
-										opacity: 0
-										overflow: visible
-										visibility: hidden
-										transition: opacity, 0.3s, ease
-										font-family: $default-font
-										font-weight: normal
-										font-size: 48px
-										color: #1100C2
-										line-height: 56px
-										// border: 1px solid #000
 						
-						a
-							position: absolute
-							top: 448px
-							z-index: 99
-
-						.syntel-bg
-							position: absolute
-							top: 358px
-							// border: 1px solid red
-							color: #F4F5F8
-							font-family: $default-font
-							font-weight: normal
-							font-size: 120px
-							line-height: 141px
-
 
 	.about
 		// border: 1px solid red

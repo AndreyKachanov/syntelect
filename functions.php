@@ -384,9 +384,22 @@ function language_selector_flags(){
     $languages = icl_get_languages('skip_missing=0&orderby=code');
     if(!empty($languages)){
         foreach($languages as $l){
-            if(!$l['active']) echo '<a href="'.$l['url'].'">';
-            echo '<img src="'.$l['country_flag_url'].'" height="12" alt="'.$l['language_code'].'" width="18" />';
-            if(!$l['active']) echo '</a>';
+
+        	if ($l['language_code'] != 'zh-hant') {
+	            if(!$l['active']) echo '<a title=' . switch_lang($l['language_code']) .' href="'.$l['url'].'">';
+	            echo "<div title=" . switch_lang($l['language_code']) . " >" . switch_lang($l['language_code']) . "</div>";
+	            if(!$l['active']) echo '</a>';
+            }
         }
     }
+}
+
+function switch_lang($lang_code) {
+	switch ($lang_code) {
+		case 'en': $new_lang = "En"; break;
+		case 'ru': $new_lang = "Ру"; break;
+		case 'zh-hant': $new_lang = "中文"; break;
+	}
+
+	return $new_lang;
 }

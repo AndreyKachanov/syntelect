@@ -2,10 +2,40 @@
 @import "libs"
 @import "vars"
 
-+reset()      
-
++reset()        
+  
 .wrapper  
 	+wrapper()
+
+.mm-menu.mm-hoverselected.mm-theme-black .mm-listview > li > a.mm-fullsubopen:hover + span, .mm-menu.mm-hoverselected.mm-theme-black .mm-listview > li > a:not(.mm-fullsubopen):hover 
+    background: rgba(181, 181, 181, 0.3)
+
+
+.mm-close
+	cursor: pointer	 
+.mm-menu.mm-theme-black .mm-search input, .mm-menu.mm-theme-black .mm-search input::placeholder
+	color: #1100C2 !important
+.mm-menu.mm-theme-black .mm-btn:after, .mm-menu.mm-theme-black .mm-btn:before,
+.mm-menu.mm-theme-black .mm-btn:after, .mm-menu.mm-theme-black .mm-btn:after
+	cursor: pointer
+	border-color: #1100C2
+
+.mm-listview, .mm-sronly
+	li
+		a
+			color: #1100C2	
+.mm-menu.mm-theme-black .mm-divider
+	font-family: "Opensans", sans-serif
+	color: #93929e
+	font-size: 13px	
+.mm-menu.mm-theme-black .mm-noresultsmsg
+	font-family: "Opensans", sans-serif
+	color: #1100C2	
+
+.mm-clear:after, .mm-clear:before, .mm-close:after, .mm-close:before
+	width: 8px
+	height: 8px
+	color: #1100C2	
 
 .mm-search
 	input
@@ -15,13 +45,7 @@
 .wpml-ls-statics-footer
 	display: none	
 
-#flags_language_selector
-	// position: relative
-	a
-		position: static
-	img
-    	margin: 1px
-    	border: 1px solid #333	
+	
 
 #btn-xs
 	display: none	
@@ -306,6 +330,36 @@ p
 		background-position: top right
 		background-size: contain
 		margin: 0px auto 50px auto
+
+		#flags_language_selector
+			display: flex
+			position: absolute
+			text-align: center
+			z-index: 999999
+			top: 100px
+			>*
+				line-height: 33px
+				width: 37px
+				height: 37px
+				border-radius: 50%
+				border: 1px solid #1100C2
+				font-family: "Opensans", sans-serif
+				font-size: 14px
+				margin-right: 10px
+				color: #1100C2				
+
+			div
+				order: 0
+			a
+				cursor: pointer
+				text-decoration: none
+				background-color: #CED4E0
+				color: #1100C2
+				order: 1
+				&:nth-of-type(1)
+					order: 2	
+			
+		
 		.wrapper
 			// border: 1px solid red
 			.slider-block
@@ -366,6 +420,9 @@ p
 									font-size: 48px
 									color: #1100C2
 									line-height: 56px
+									span
+										word-wrap: break-word
+										padding-right: 15px									
 										
 					
 					a

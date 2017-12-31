@@ -129,7 +129,12 @@ get_header('syntelect'); ?>
 
 						<? endforeach; ?>						
 					</div>					
-					<? endif; ?>	
+					<? endif; ?>
+			 		<div class="btn-block">
+						<a href="process.php" class="btn btn-light btn-readmore-procc">
+							<?=(get_field('learn_more_about_process') ?? 'Learn More About Process')?>									
+						</a>							
+					</div>		
 				</div>
 			</section>
 		</div>
